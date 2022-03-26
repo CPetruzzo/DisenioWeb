@@ -1,0 +1,84 @@
+body {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    font-size: 1.5rem;
+    background: url(/images/ANGELINANUT.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  h1{
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      padding: 11px;
+  }
+  
+    h2 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+    }
+
+    h3{
+        text-align: center; }
+
+    .myButton {
+        color: rgb(255, 255, 255); 
+        font-size: 18px; 
+        line-height: 18px; 
+        padding: 11px; 
+        border-radius: 6px; 
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+        font-weight: normal; 
+        text-decoration: none; 
+        font-style: normal; 
+        font-variant: normal; 
+        text-transform: none; 
+        background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); 
+        box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
+        border: 2px solid rgb(28, 110, 164); 
+        display: inline-block;}
+
+    .myButton:hover {
+        background: #1C6EA4; }
+
+    .myButton:active {
+        background: #144E75; }
+
+    .Seccion1 {
+        align-items:flex-start;
+        color:mediumblue;
+        background-image: linear-gradient(to right, rgb(214, 49, 19) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); 
+        box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
+        margin: 2cm; }
+    
+    .cuadro {
+        padding: 11px;
+         }
+
+    footer{
+        font-family:Verdana, Geneva, Tahoma, sans-serif
+    }
+
+    .IMG {
+        height:500px;
+        width: 400px;
+    }
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit:contain ;
+    }
+
+    /* PARA  ARMAR  UN CUADRO DE TEXTO*/ 
+
+    aside{
+        height: 100%;
+        width: 100%;
+        object-fit:contain ;
+    }
+    .ASD {
+        height:200px;
+        width: 1000px;
+    }
