@@ -20,6 +20,14 @@ body {
         font-size: larger;
     }
 
+    header {
+     place-content: top ;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     font-style: inherit;
+     background-color: aliceblue;
+     padding: 20px;
+     border-radius: 10px;
+    }
     h3 {
         text-align: center; }
 
