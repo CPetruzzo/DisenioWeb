@@ -1,26 +1,26 @@
 body {
     display: grid;
     min-height: 100vh;
-    place-items: center;
+    place-items: center ;
     font-size: 1.5rem;
     background: url(/images/ANGELINANUT.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
-  }
+}
 
-  h1{
+    h1 {
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      padding: 11px;
-  }
+    }
   
     h2 {
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         text-align: center;
+        font-size: larger;
     }
 
-    h3{
+    h3 {
         text-align: center; }
 
     .myButton {
@@ -40,16 +40,18 @@ body {
         border: 2px solid rgb(28, 110, 164); 
         display: inline-block;}
 
-    .myButton:hover {
-        background: #1C6EA4; }
-
-    .myButton:active {
-        background: #144E75; }
+        .myButton:hover {
+            background: #1C6EA4; }
+        .myButton:active {
+            background: #144E75; }
 
     .Seccion1 {
         align-items:flex-start;
         color:mediumblue;
-        background-image: linear-gradient(to right, rgb(214, 49, 19) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); 
+        background-image: linear-gradient(to right, 
+        rgb(15, 3, 1) 0%, 
+        rgb(35, 136, 203) 50%, 
+        rgb(20, 78, 117) 100%);
         box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
         margin: 2cm; }
     
@@ -61,6 +63,16 @@ body {
         font-family:Verdana, Geneva, Tahoma, sans-serif
     }
 
+    .PDF {
+        height:500px;
+        width: 1000px;
+    }
+        iframe {
+            height: 100%;
+            width: 100%;
+            object-fit:contain ;
+        }
+
     .IMG {
         height:500px;
         width: 400px;
@@ -68,12 +80,22 @@ body {
     img{
         height: 100%;
         width: 100%;
+        left: 0;
+        top: 0;
         object-fit:contain ;
     }
 
     /* PARA  ARMAR  UN CUADRO DE TEXTO*/ 
 
     aside{
+        padding-top: 1.5cm;
+        background-image: linear-gradient(to right, 
+        rgb(15, 3, 1) 0%, 
+        rgb(35, 136, 203) 50%, 
+        rgb(20, 78, 117) 100%);
+        text-align: center;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: xx-large;
         height: 100%;
         width: 100%;
         object-fit:contain ;
@@ -81,4 +103,8 @@ body {
     .ASD {
         height:200px;
         width: 1000px;
+    }
+
+    .nuevo {
+        background-color: azure;
     }
