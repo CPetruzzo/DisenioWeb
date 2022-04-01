@@ -13,13 +13,14 @@
     <body>
         
         <header>
-            <a href="#Seccion1">Turnos</a>
-            <a >Consultas</a>            
-            <a >Recetarios</a>
+            <a href="#FORMULARIO">Turnos</a>
+            <a href="#contact">Consultas</a>            
+            <a href="#ARCHIVOS">Recetarios</a>
         </header>
-    
-            <h1>Licenciada en Nutricion</h1> <!-- LOS H1 SON LAS COSAS QUE MAS SE BUSCAN EN GOOGLE (MAS RELEVANTES) -->
-            <h1>Angelina Pertus</h1> 
+    <div>
+        <h1><p>Licenciada en Nutricion</p><p>Angelina Pertus</p></h1> <!-- LOS H1 SON LAS COSAS QUE MAS SE BUSCAN EN GOOGLE (MAS RELEVANTES) -->
+    </div>
+             
             <h2>Saque su turno aquí</h2>
 
           
@@ -31,7 +32,7 @@
         TERMINA ACÁ -->
 
         <!-- ACA VA EL FORMULARIO -->
-        <div class="Seccion1">
+        <div id="FORMULARIO" class="Seccion1" >
             <div style="padding: 1cm;">
                 <form>
                 <h3>Nombre y Apellido</h3>
@@ -45,8 +46,8 @@
                 <input style="margin-left:91.5px;" type="text" value="lala@lala.lala">
                 <br>
                 <br>
-                <a href="pestaña1.html" target="_blank">
-                    <input type="submit" class="myButton" value="Presione aquí"> 
+                <a href="index2.html" style="margin-left: 112px;" target="_blank">
+                    <input style="align-content:center" type="submit" class="myButton" value="Presione aquí"> 
                 </a>
                 
                 </form>
@@ -57,7 +58,7 @@
         <div class="PDF">
             <iframe src="files\operadores-google.pdf" ></iframe>
         </div>
-        
+
         <!-- TEXTO -->
         <div class="ASD">
             <aside>
@@ -68,9 +69,30 @@
         <!-- LINK A OTRA PAGINA -->
         <a href="pestaña1.html" target="_blank" class="myButton">Confirmar</a><br><br>  
         
+        <h2>Contactate</h2>
+        <div id="contact">
+            <div id="contact-form" style="background-color: aquamarine; padding:20px; margin-left: -20px; border-style: solid;" class="FORMULARIO">
+                <form method="POST" action="https://formspree.io/f/mrgjkldq">
+                    <input type="hidden" name="_subject" value="Contact request from personal website" />
+                    <input type="email" name="_replyto" placeholder="Your email" required><br>
+                    <textarea name="message" placeholder="Tu mensaje" required></textarea><br>      
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <!-- End #contact-form -->
+        </div>
+        <!-- End #contact -->
+
         <!-- PIE DE PAGINA -->
         <footer>
-            <address > &#169CPetruzzo2022 </address>
+            <div class="to-top">
+                <a href="#">
+                    <ul>
+                       <li></li> 
+                    </ul>
+                </a>
+            </div>
+            <address style="text-align: center;"> &#169CPetruzzo2022 </address>
         </footer>
 
     </body>
