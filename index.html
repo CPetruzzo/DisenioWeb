@@ -15,7 +15,8 @@
 
 <!-- LO QUE SE VE EN LA PAGINA -->
 
-<body style="background-color: cadetblue;">
+<body style="background-color:black;">
+    
     <!-- BARRA NAVEGADORA FLOTANTE -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -60,8 +61,13 @@
         </nav>
     </header>
 
-    <div class="jump">
-        <img src="" alt="superior">
+    <!-- Separación -->
+    <div style="background-color: black;">
+        <p> 
+            <br>
+            <br>
+            <br>
+        </p>
     </div>
 
     <!-- ACERCA DE MI -->
@@ -89,7 +95,7 @@
         </div>
     </div>
 
-    <div class="jump">
+    <div class=jump>
         <br>
     </div>
 
@@ -113,7 +119,7 @@
 
     
     <!-- ACA VA EL FORMULARIO -->
-    <div id="FORMULARIO" class="container">
+    <!-- <div id="FORMULARIO" class="container">
         <div class="col-md-15">
             <div class="card mb-10" style="text-align: center; background-color: inherit; border: inherit;">
                 <div class="Seccion1">
@@ -137,22 +143,29 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     
 
     <!-- BOX DE CONTACTO -->
-    <div class="container">
+    <div class="container" padding: 5px;">
         <div class="col-md-15">
-            <div id="contact">
+            <div id="contact" class="card mb-10">
                 <h2>Contactate</h2>
-                <div id="contact-form" style="background-color: aquamarine;" class="card mb-10">
-                    <form method="POST" action="https://formspree.io/f/mrgjkldq">
-                        <input type="hidden" name="_subject" value="Contact request from personal website" />
-                        <input type="email" name="_replyto" placeholder="Your email" required><br>
-                        <textarea name="message" placeholder="Tu mensaje" required></textarea><br>
-                        <button type="submit">Send</button>
-                    </form>
-                </div>
+                <form method="POST" action="https://formspree.io/f/mrgjkldq">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Correo Electrónico</label>
+                    <br>
+                    <input type="hidden" name="_subject" value="Contact request from personal website" />
+                    <input type="email" name="_replyto" placeholder="Su correo" required><br>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Escriba aquí</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Su mensaje" rows="3"></textarea>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                    
+                  </div>
+                </form>
             </div>
         </div>
     </div>

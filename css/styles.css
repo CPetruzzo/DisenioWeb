@@ -28,38 +28,36 @@ header {
 }
 
 h1 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align:left;   
     margin-right: auto;
     margin-left: auto;    
 }
 
-.superior{
-    background-image: url();
-}
-#aboutMe {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-    font-size: larger;
-    background-color: #1C6EA4;
-    border: 5px solid grey;
-    border-radius: 5%;
-    padding: 20px;
-    margin-right: auto;
-    margin-left: auto;
-}
 
-#educacion {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-    font-size: larger;
-    background-color: #1C6EA4;
-    border: 5px solid grey;
-    border-radius: 5%;
-    padding: 20px;
-    margin-right: auto;
-    margin-left: auto;
-}
+    #aboutMe {
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        font-size: larger;
+        background-color: #1C6EA4;
+        border: 5px grey;
+        border-radius: 5%;
+        padding: 20px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #educacion {
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+        font-size: larger;
+        background-color: #1C6EA4;
+        border: 5px solid grey;
+        border-radius: 5%;
+        padding: 20px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 
 h3 {
     text-align: center; 
