@@ -2,18 +2,11 @@ body {
     display:block;
     min-height: 100vh;
     place-items: center ;
-    font-size: 1.5rem;
-    background: url(/images/ANGELINANUT.png);
-    background-repeat: no-repeat;
-    background-attachment:fixed;
-    background-position: center center;
-    background-size: cover;
+
 }
 
 html {
     scroll-behavior: smooth;
-    /*Comenta la línea (o dale el valor 'auto' a scroll behavior )
-    para probar la diferencia con y sin scroll suavizado*/
 }
 
 header {
@@ -36,19 +29,33 @@ header {
 
 h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-top: 150px;     
-    text-align: center;   
+    text-align:left;   
     margin-right: auto;
     margin-left: auto;    
 }
 
-h2 {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.superior{
+    background-image: url();
+}
+#aboutMe {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     font-size: larger;
     background-color: #1C6EA4;
-    border: 10px solid grey;
-    border-radius: 10%;
+    border: 5px solid grey;
+    border-radius: 5%;
+    padding: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#educacion {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    font-size: larger;
+    background-color: #1C6EA4;
+    border: 5px solid grey;
+    border-radius: 5%;
     padding: 20px;
     margin-right: auto;
     margin-left: auto;
@@ -59,42 +66,46 @@ h3 {
 }
 
 footer{
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align:center;
+}
+
+.social{
+    text-align:center
 }
 
 .myButton {
-        color: rgb(255, 255, 255); 
-        font-size: 18px; 
-        line-height: 18px; 
-        padding: 11px; 
-        border-radius: 6px; 
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-        font-weight: normal; 
-        text-decoration: none; 
-        font-style: normal; 
-        font-variant: normal; 
-        text-transform: none; 
-        background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); 
-        box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
-        border: 2px solid rgb(28, 110, 164); 
-        display: inline-block;
-        background-color: azure;
-        animation-duration: 3s;
-        animation:pulsate 1.5s ease;
-        animation-iteration-count:infinite;
-        }
-    
-        
-        @keyframes pulsate{
+    color: rgb(255, 255, 255); 
+    font-size: 18px; 
+    line-height: 18px; 
+    padding: 11px; 
+    border-radius: 6px; 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-weight: normal; 
+    text-decoration: none; 
+    font-style: normal; 
+    font-variant: normal; 
+    text-transform: none; 
+    background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); 
+    box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
+    border: 2px solid rgb(28, 110, 164); 
+    display: inline-block;
+    background-color: azure;
+    animation-duration: 3s;
+    animation:pulsate 1.5s ease;
+    animation-iteration-count:infinite;
+}
+
+    @keyframes pulsate{
         0%{transform:scale(1, 1)}
         50%{transform:scale(1.2, 1.2)}
         100%{transform:scale(1, 1)}}
-
+    
         .myButton:hover {
             background: #1C6EA4; }
         .myButton:active {
             background: #144E75; }
-
+    
         .Seccion1 {
             align-items:flex-start;
             color:mediumblue;
@@ -103,32 +114,23 @@ footer{
             rgb(35, 136, 203) 50%, 
             rgb(20, 78, 117) 100%);
             box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
-            margin: 2cm;
+            margin: 1cm;
             margin-right: auto;
             margin-left: auto;
-            padding: 20px;
+            padding: 10px;
         }
         
-        .cuadro {
-            padding: 11px;
-        }
+    iframe {
+        height: 100%;
+        width: 100%;
+        object-fit:contain ;
+    }
     
-
-
-    .PDF {
-        height:500px;
-        width: 1000px;
-    }
-        iframe {
-            height: 100%;
-            width: 100%;
-            object-fit:contain ;
-        }
-
     .IMG {
-        height:500px;
-        width: 400px;
+        height:auto;
+        width: auto;
     }
+
     img{
         height: 100%;
         width: 100%;
@@ -136,12 +138,12 @@ footer{
         top: 0;
         object-fit:contain ;
     }
-
+    
     a {
         text-decoration:solid;
         color: blue;    
         transition: color 0.8s linear 0.2s;
-        transition-property: text-decoration;
+        transition-property:all;
         transition-duration: 10s;
         transition-timing-function: linear;
         transition-delay: 0.5s;
@@ -149,8 +151,8 @@ footer{
     a:hover {
         color: red;
     }
-
-
+    
+    
       @keyframes slide-right {
         from {
           margin-left: 200px;
@@ -166,11 +168,10 @@ footer{
           margin-left: 0px;
         }
       } 
-
+    
     /* PARA  ARMAR  UN CUADRO DE TEXTO*/ 
-
     aside{
-        padding-top: 1.5cm;
+        padding: 0.5cm;
         background-image: linear-gradient(to right, 
         rgb(15, 3, 1) 0%, 
         rgb(35, 136, 203) 50%, 
@@ -178,54 +179,39 @@ footer{
         text-align: center;
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: xx-large;
+        color:aliceblue;
         height: 100%;
         width: 100%;
         object-fit:contain ;
     }
-    .ASD {
-        height:200px;
-        width: 1000px;
-    }
-
-    
-
+  
     #FORMULARIO {
       text-align: center;
     }
+    
+    @keyframes dropHeader{
+        0%{transform:translateY(-100%)}
+        100%{transform:translateY(0)}
+    }
+    
+    .fa {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    ul{
+        list-style-image: url(/images/logoArriba.png);
+    }
 
+    .to-top{
+        margin:75px;
+    }
 
-@keyframes dropHeader{
-  0%{transform:translateY(-100%)}
-  100%{transform:translateY(0)}
-}
-  
+    form{
 
-
-.fa {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-ul{
-  list-style-image: url(/images/logoArriba.png);
-}
-.to-top{
-  margin:75px;
-}
-
-#fa.fa-chevron-up:before{content:"\f077"}
-
-#fa.fa-chevron-down:before{content:"\f078"}
-
-  footer{
-      text-align:center
-  }
-  .social{
-      text-align:center
-  }
-  
- 
+    }
+    
