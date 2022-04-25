@@ -6,83 +6,140 @@
     <head>
         <meta charset="utf-8"> <!-- esto le dice que es el formato de caracteres que vamos a usar -->
         <title>ANGELINANUT</title> <!-- LO QUE SE VE EN EL BUSCADOR Y ARRIBA -->
-        <link rel="stylesheet" type="text/css" href="css/styles.css" /> 
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <!-- <script src="/js/archivo.js"></script> -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     </head>
+    
     <!-- LO QUE SE VE EN LA PAGINA -->
 
     <body>
-        <header>
-            <a href="#FORMULARIO">Turnos</a>
-            <a href="#contact">Consultas</a>            
-            <a href="#ARCHIVOS">Recetarios</a>
-        </header>
-    <div>
+            <header>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                    <a class="navbar-brand" href="#">AngelinaNut</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Recetarios</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Más
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="#FORMULARIO">Turnera</a></li>
+                            <li><a class="dropdown-item" href="#">Loggeate</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#contact">Contactate</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">TiendaOnline</a>
+                        </li>
+                        </ul>
+                        <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Escribí algo" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
+                    </div>
+                    </div>
+                </nav>
+            </header>
+
         
-        <h1> <!-- LOS H1 SON LAS COSAS QUE MAS SE BUSCAN EN GOOGLE (MAS RELEVANTES) -->
-            <p>Licenciada en Nutricion</p><p>Angelina Pertus</p>
-        </h1> 
-    </div>
+        <div class="container-xxl">
+            <h1 style="margin-top: 75px;"> <!-- LOS H1 SON LAS COSAS QUE MAS SE BUSCAN EN GOOGLE (MAS RELEVANTES) -->
+                <p>Licenciada en Nutricion</p>
+                <p>Angelina Pertus</p>
+            </h1> 
+        </div>
              
-        <h2>Saque su turno aquí</h2>
-        <!-- ESTO ERA COMO PONER UNA IMAGEN. ARRANCA ACÁ
-            <div class="IMG">
-            <img src="images\ANGELINANUT.jpg" alt="geli">
+        <div class="container" >
+            <div class="col-md-15">
+                <div class="card mb-10" style="background-color: inherit; border: inherit;">
+                    <h2>Saque su turno aquí</h2>
+                </div>
             </div>
-            <br><br>
-        TERMINA ACÁ -->
+        </div>
 
         <!-- ACA VA EL FORMULARIO -->
-        <div id="FORMULARIO" class="Seccion1" >
-            <div style="padding: 1cm;">
-                <form>
-                <h3>Nombre y Apellido</h3>
-                <input style="margin-left:91.5px;" type="text" value="Pepe Argento">
-                <h3>Dirección</h3>
-                <input type="text" value="Calle Falsa"> 
-                <input type="text" value="123">
-                <h3>Edad</h3>
-                <input style="margin-left:91.5px;" type="text" value="125">
-                <h3>Correo Electrónico</h3>
-                <input style="margin-left:91.5px;" type="text" value="lala@lala.lala">
-                <br>
-                <br>
-                <a href="index2.html" style="margin-left: 112px;" target="_blank">
-                    <input style="align-content:center" type="submit" class="myButton" value="Presione aquí"> 
-                </a>
-                
-                </form>
+        <div id="FORMULARIO" class="container" >
+                    <div class="col-md-15">
+                        <div class="card mb-10" style="text-align: center; background-color: inherit; border: inherit;" >
+                            <div class="Seccion1" >
+                                <form >
+                                    <h3>Nombre y Apellido</h3>
+                                    <input type="text" value="Pepe Argento">
+                                    <h3>Dirección</h3>
+                                    <input type="text" value="Calle Falsa"> 
+                                    <input type="text" value="123">
+                                    <h3>Edad</h3>
+                                    <input type="text" value="125">
+                                    <h3>Correo Electrónico</h3>
+                                    <input type="text" value="lala@lala.lala">
+                                    
+                                    <br><br>
+                                    
+                                    <a href="index2.html" target="_blank">
+                                        <input style="align-content:center" type="submit" class="myButton" value="Presione aquí"> 
+                                    </a>    
+                                </form>
+                            </div>
+                        </div>
+                </div>
             </div>
         </div><br><br>
 
         <!-- ACA PUSE UN PDF QUE SE VE EN LA PAGINA -->
-        <div class="PDF">
-            <iframe src="files\operadores-google.pdf" ></iframe>
-        </div>
-
-        <!-- TEXTO -->
-        <div class="ASD">
-            <aside>
-                Al presionar el siguiente botón usted renuncia a toda opción de comerse una hamburguesa un miércoles al mediodía.        
-            </aside>
+        <div class="container">
+                <div class="col-md-10">
+                    <div class="card mb-9" style="text-align: center; background-color: inherit; border: inherit;" >
+                    <div class="PDF">
+                        <iframe src="files\operadores-google.pdf" ></iframe>
+                    </div>
+                </div>
+    
+            <!-- TEXTO -->
+            <div class="ASD">
+                <aside>
+                    Al presionar el siguiente botón usted renuncia a toda opción de comerse una hamburguesa un miércoles al mediodía.        
+                </aside>
+            </div>
+            </div>
         </div>
         
         <!-- LINK A OTRA PAGINA -->
-        <a href="pestaña1.html" target="_blank" class="myButton">Confirmar</a><br><br>  
-        
-        <h2>Contactate</h2>
-        <div id="contact">
-            <div id="contact-form" style="background-color: aquamarine; padding:20px; margin-left: -20px; border-style: solid;" class="FORMULARIO">
-                <form method="POST" action="https://formspree.io/f/mrgjkldq">
-                    <input type="hidden" name="_subject" value="Contact request from personal website" />
-                    <input type="email" name="_replyto" placeholder="Your email" required><br>
-                    <textarea name="message" placeholder="Tu mensaje" required></textarea><br>      
-                    <button type="submit">Send</button>
-                </form>
-            </div>
-            <!-- End #contact-form -->
+        <div class="container">
+            <div class="col-md-15"></div>
+            <a href="pestaña1.html" target="_blank" class="myButton">Confirmar</a><br><br>  
         </div>
-        <!-- End #contact -->
 
+        <div class="container">
+            <div class="col-md-15">
+                <div id="contact">
+                    <h2>Contactate</h2>
+                    <div id="contact-form" style="background-color: aquamarine; padding:20px; margin-left: -20px; border-style: solid;" class="FORMULARIO">
+                        <form method="POST" action="https://formspree.io/f/mrgjkldq">
+                            <input type="hidden" name="_subject" value="Contact request from personal website" />
+                            <input type="email" name="_replyto" placeholder="Your email" required><br>
+                            <textarea name="message" placeholder="Tu mensaje" required></textarea><br>      
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>
+                    <!-- End #contact-form -->
+                </div>
+                <!-- End #contact -->
+        
+            </div>
+        </div>
+        
         <!-- PIE DE PAGINA -->
         <footer>
             <div class="to-top">
@@ -95,5 +152,9 @@
             <address style="text-align: center;"> &#169CPetruzzo2022 </address>
         </footer>
 
+
     </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
 </html>
