@@ -35,29 +35,6 @@ h1 {
 }
 
 
-    #aboutMe {
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        text-align: center;
-        font-size: larger;
-        background-color: #1C6EA4;
-        border: 5px grey;
-        border-radius: 5%;
-        padding: 20px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    #educacion {
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        text-align: center;
-        font-size: larger;
-        background-color: #1C6EA4;
-        border: 5px solid grey;
-        border-radius: 5%;
-        padding: 20px;
-        margin-right: auto;
-        margin-left: auto;
-    }
 
 h3 {
     text-align: center; 
@@ -136,42 +113,12 @@ footer{
         top: 0;
         object-fit:contain ;
     }
-    
-    a {
-        text-decoration:solid;
-        color: blue;    
-        transition: color 0.8s linear 0.2s;
-        transition-property:all;
-        transition-duration: 10s;
-        transition-timing-function: linear;
-        transition-delay: 0.5s;
-    }
-    a:hover {
-        color: red;
-    }
-    
-    
-      @keyframes slide-right {
-        from {
-          margin-left: 200px;
-        }
-        50% {
-          margin-left: -200px;
-          opacity: 1;
-        }
-        50% {
-          opacity: 0.9;
-        }
-        to {
-          margin-left: 0px;
-        }
-      } 
-    
-    /* PARA  ARMAR  UN CUADRO DE TEXTO*/ 
+
+    /* PARA  ARMAR  UN CUADRO DE TEXTO 
     aside{
         padding: 0.5cm;
         background-image: linear-gradient(to right, 
-        rgb(15, 3, 1) 0%, 
+        rgb(85, 85, 85) 0%, 
         rgb(35, 136, 203) 50%, 
         rgb(20, 78, 117) 100%);
         text-align: center;
@@ -182,7 +129,7 @@ footer{
         width: 100%;
         object-fit:contain ;
     }
-  
+   */
     #FORMULARIO {
       text-align: center;
     }
@@ -191,25 +138,7 @@ footer{
         0%{transform:translateY(-100%)}
         100%{transform:translateY(0)}
     }
-    
-    .fa {
-        display: inline-block;
-        font: normal normal normal 14px/1 FontAwesome;
-        font-size: inherit;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-    
-    ul{
-        list-style-image: url(/images/logoArriba.png);
-    }
-
+        
     .to-top{
         margin:75px;
     }
-
-    form{
-
-    }
-    

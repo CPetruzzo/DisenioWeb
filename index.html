@@ -5,7 +5,7 @@
 <!-- INFORMACION IMPORTANTE PERO QUE NO SE VE -->
 
 <head>
-    <meta charset="utf-8"> <!-- esto le dice que es el formato de caracteres que vamos a usar -->
+    <meta charset="utf-3"> <!-- esto le dice que es el formato de caracteres que vamos a usar -->
     <title>PortFolio Facundo Wegher Osci - HTML5 Y CSS con Bootstrap</title> <!-- LO QUE SE VE EN EL BUSCADOR Y ARRIBA -->
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <!-- <script src="/js/archivo.js"></script> -->
@@ -29,10 +29,10 @@
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Acerca de mi</a>
+                            <a class="nav-link active"  href="#aboutMe">Acerca de mi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Proyectos</a>
+                            <a class="nav-link" href="#proyectos">Proyectos</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
@@ -40,8 +40,8 @@
                                 Más
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                <li><a class="dropdown-item" href="#FORMULARIO">Curriculum Vitae</a></li>
-                                <li><a class="dropdown-item" href="#">Juegos</a></li>
+                                <li><a class="dropdown-item" href="#experiencia">Curriculum Vitae</a></li>
+                                <li><a class="dropdown-item" href="#educacion">Educación</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -61,62 +61,120 @@
         </nav>
     </header>
 
-    <!-- Separación -->
-    <div style="background-color: black;">
-        <p> 
-            <br>
-            <br>
-            <br>
-        </p>
-    </div>
-
+   
     <!-- ACERCA DE MI -->
-    <div id=aboutMe class="container-xxl">
-        <div class="col-md-15">
-            <h1>
-                Acerca de mi
-            </h1>
-            <p>
-                Soy un Ingeniero en Alimentos oriundo de Santa Fe, en busca de mi camino y aprendiendo todo lo que puedo. 
-                <br>
-                Actualmente me encuentro realizando un curso de programación de videojuegos en PixiS y #ArgentinaPrograma.
-            </p>
-
+    <div id=aboutMe  class="container" style="background-color: inherit;">
+        <br>
+        <br>
+        <br>
+        <div class="bg-success p-2" style="--bs-bg-opacity: .5;">
+            <div class="col-md-15" style="background-color: inherit;">
+                <h1>
+                    Acerca de mi
+                </h1>
+                <p>
+                    Soy un Ingeniero en Alimentos oriundo de Santa Fe, en busca de mi camino y aprendiendo todo lo que
+                    puedo.
+                    <br>
+                    Actualmente me encuentro realizando un curso de programación de videojuegos en PixiS y
+                    #ArgentinaPrograma.
+                </p>
+            </div>
         </div>
     </div>
 
-    <div class="jump">
+    <div id=educacion class="container" style="background-color: inherit;">
         <br>
-    </div>
-
-    <div id=educacion class="container-xxl">
-        <div class="col-md-15">
-            <h1>Educación</h1>
+        <br>
+        <br>
+        <div class="bg-success p-2" style="--bs-bg-opacity: .5;">
+            <div class="col-md-15" style="background-color: inherit;">
+                <h1>
+                    Educación
+                </h1>
+                <p>
+                    Ingeniero en Alimentos. FIQ - UNL 
+                    <br>
+                    Técnico Químico.
+                </p>
+            </div>
         </div>
     </div>
 
-    <div class=jump>
+  
+
+    <!-- PROYECTOS -->
+    <div id=proyectos class="container">
         <br>
+        <br>
+        <br>
+        
+        <h1>
+            Proyectos
+        </h1>
+        <div class="bg-success p-2" style="--bs-bg-opacity: .5;">
+            <div class="row align-items-start">
+                <div class="col">
+                    <div class="card mb-3" style="width: 18rem;">
+                        <img src="images/ANGELINANUT.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">AngelinaNUT</h5>
+                            <p class="card-text">Proyecto de Página para licenciada en nutrición</p>
+                            <a href="https://cpetruzzo.github.io/AngelinaNUT/" class="btn btn-primary">Ir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-3" style="width: 18rem;">
+                        <img src="images/ANGELINANUT.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">AngelinaNUT</h5>
+                            <p class="card-text">Proyecto de Página para licenciada en nutrición</p>
+                            <a href="https://cpetruzzo.github.io/AngelinaNUT/" class="btn btn-primary">Ir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-3" style="width: 18rem;">
+                        <img src="images/ANGELINANUT.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">AngelinaNUT</h5>
+                            <p class="card-text">Proyecto de Página para licenciada en nutrición</p>
+                            <a href="https://cpetruzzo.github.io/AngelinaNUT/" class="btn btn-primary">Ir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <br>
 
     <!-- ACA PUSE UN PDF QUE SE VE EN LA PAGINA -->
     <div id=experiencia class="container">
+        <br>
+        <br>
+        <br>
         <div class="col-md-15">
             <h1>Experiencia</h1>
-            <div class="card mb-9" style="text-align: center; background-color: inherit; border: inherit;">
+            <div class="card mb-10" style="text-align: center; background-color: inherit; border: inherit;">
                 <div style="height: 300px">
                     <iframe src="files\CV FACUNDO WEGHER.pdf">
                     </iframe>
                 </div>
             </div>
-
         </div>
+
         <!-- LINK A OTRA PAGINA -->
         <div class="col-md-15">
-            <a href="files\CV FACUNDO WEGHER.pdf" class="myButton">Descargar CV</a><br><br>
+            <a href="files\CV FACUNDO WEGHER.pdf">
+                <br>
+                <button type="submit" class="btn btn-primary">Descargar PDF</button>
+            </a><br>
         </div>
     </div>
-
+    
+   
     
     <!-- ACA VA EL FORMULARIO -->
     <!-- <div id="FORMULARIO" class="container">
@@ -147,47 +205,47 @@
     
 
     <!-- BOX DE CONTACTO -->
-    <div class="container" padding: 5px;">
-        <div class="col-md-15">
-            <div id="contact" class="card mb-10">
-                <h2>Contactate</h2>
-                <form method="POST" action="https://formspree.io/f/mrgjkldq">
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Correo Electrónico</label>
-                    <br>
-                    <input type="hidden" name="_subject" value="Contact request from personal website" />
-                    <input type="email" name="_replyto" placeholder="Su correo" required><br>
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Escriba aquí</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Su mensaje" rows="3"></textarea>
-                    <br>
-                    <button type="submit" class="btn btn-primary">Send</button>
-                    
-                  </div>
-                </form>
+    <div class="container" style="background-color: inherit;">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="bg-success p-2" style="--bs-bg-opacity: .5;">
+            <div class="col-md-15" style="background-color: inherit;">
+                <div id="contact" class="card mb-10" style="padding: 40px; background-color: inherit; border: 10px;">
+                    <h2>Contactate conmigo</h2>
+                    <form method="POST" action="https://formspree.io/f/mrgjkldq">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Correo Electrónico</label>
+                            <br>
+                            <input type="hidden" name="_subject" value="Contact request from personal website" />
+                            <input type="email" name="_replyto" placeholder="Su correo" required><br>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Escriba aquí</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Su mensaje"
+                                rows="3"></textarea>
+                            <br>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+    
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 
+    <br>
+    <br>
+    <br>
+    <br>
+
     <!-- PIE DE PAGINA -->
     <footer>
-        <div style="background-color: black;">
-            <div class="col-md-15">
-                <div class="card mb-10" style="background-color: inherit; border: inherit;">
-                    <div class="to-top">
-                        <a href="#">
-                            <ul>
-                                <li></li>
-                            </ul>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Firmita -->
-        <address style="text-align: center;"> &#169CPetruzzo2022 </address>
+        <div style="background-color: azure; padding-bottom: 20px;">
+            <address style="text-align: center;"> &#169CPetruzzo2022 </address>
+        </div>
     </footer>
 
 </body>
