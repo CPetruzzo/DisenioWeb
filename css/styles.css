@@ -2,7 +2,7 @@ body {
     display:block;
     min-height: 100vh;
     place-items: center ;
-
+    background-color: black;
 }
 
 html {
@@ -13,7 +13,6 @@ header {
     top: 0px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: inherit;
-    background-color:black;
     background-attachment:local;
     border-radius: 10px;
     position:sticky;
