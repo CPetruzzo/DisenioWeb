@@ -39,6 +39,12 @@ h1 {
     margin: auto;
 }
 
+#picture{
+    width:200px;
+    height:200px;
+    border-radius:100%;
+    margin-right: auto;
+}
 
 h3 {
     text-align: center; 
