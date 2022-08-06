@@ -54,16 +54,69 @@
                             <a class="nav-link disabled">TiendaOnline</a>
                         </li>
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Escribí algo" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Buscar</button>
-                    </form>
+
+                    <div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
+                            data-bs-target="#modelId">
+                            Log in
+                        </button>
+
+                        <!-- Modal -->
+                        <div id="modalbackdrop">
+                            <div class="modal fade" id="modelId" tabindex="-1" role="dialog"
+                                aria-labelledby="modelTitleId" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Log in</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <img class="mb-4"
+                                                    src="https://www.dropbox.com/s/zgbbayj1iqd9fjf/CF_Mark.jpg?raw=1"
+                                                    alt="" width="72">
+                                                <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+                                                <div class="form-floating">
+                                                    <input type="email" class="form-control" id="floatingInput"
+                                                        placeholder="name@example.com">
+                                                    <label for="floatingInput">Email address</label>
+                                                </div>
+                                                <div class="form-floating">
+                                                    <input type="password" class="form-control" id="floatingPassword"
+                                                        placeholder="Password">
+                                                    <label for="floatingPassword">Password</label>
+                                                </div>
+
+                                                <div class="checkbox mb-3">
+                                                    <label>
+                                                        <input type="checkbox" value="remember-me"> Remember me
+                                                    </label>
+                                                </div>
+                                                <button class="w-100 btn btn-lg btn-dark" type="submit">Sign in</button>
+                                                <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </nav>
     </header>
 
-    
+
     <!-- IMAGENES QUE NECESITO -->
 
     <div class="container-fluid">
@@ -195,17 +248,29 @@
             <div class="col-md-15" style="background-color: inherit;">
                 <div id="contact" class="card mb-10" style="padding: 40px; background-color: inherit; border: 10px;">
                     <h2>Contactate conmigo</h2>
+                    <!-- CONTACTO que manda msj posta a formspree-->
+
+                    <!-- modify this form HTML and place wherever you want your form -->
                     <form action="https://formspree.io/f/mrgjkldq" method="POST">
-                        <label>
-                            Your email:
-                            <input type="email" name="email">
-                        </label>
-                        <label>
-                            Your message:
-                            <textarea name="message"></textarea>
-                        </label>
-                        <!-- your other form fields go here -->
-                        <button type="submit">Send</button>
+                        <div>
+                            <label class="col">
+                                Su correo:
+                                <br>
+                                <input type="email" placeholder="correo@correo.com" name="email">
+                            </label>
+                        </div>
+                        <div style="margin-left:10px">
+                            <label class="row mensaje">
+                                Su mensaje:
+                                <br>
+                                <textarea rows="4" name="message"
+                                    placeholder="Contenido del mensaje que desea enviar"></textarea>
+                            </label>
+                        </div>
+                        <div style="margin-top:15px">
+                            <!-- your other form fields go here -->
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </div>
                     </form>
                 </div>
             </div>

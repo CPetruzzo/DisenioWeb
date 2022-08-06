@@ -6,6 +6,13 @@ body {
     background-color: black;
 }
 
+
+.modal-backdrop.fade.show {
+    opacity: 0;     
+    opacity: backdrop-opacity;
+    position: inherit;
+}
+
 header {
     top: 0px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
