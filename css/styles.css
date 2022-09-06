@@ -1,3 +1,8 @@
+.imgPaUsar{
+    width: 200px;
+    height: 200px;
+}
+
 body {
     scroll-behavior: smooth;
     display:block;
