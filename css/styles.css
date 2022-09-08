@@ -257,6 +257,14 @@ iframe {
     box-sizing: border-box;
 }
 
+h1{
+    color:white
+}
+
+h2{
+    color:white;
+}
+
 .container .box .content h2 {
     color: #fff;
     transition: 0.5s;
