@@ -292,3 +292,9 @@ h2{
 .container .box:hover .content p {
     transform: translateY(0px);
 }
+
+/* @keyframes animacion{
+    0%{
+        transform: translateY(50%);
+    }
+} */
