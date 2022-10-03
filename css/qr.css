@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor{
+    background-color: tomato;
+    padding: 50px;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form input{
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.btn{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: slateblue;
+    color: white;
+}
+
+.contenedorQR{
+    margin-top: 20px;
+}
