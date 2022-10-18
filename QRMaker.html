@@ -14,18 +14,64 @@
 
     <script defer src="/js/qr.js"></script>
     <script defer src="/DisenioWeb/js/qr.js"></script>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 
 <body>
+
     <div class="contenedor">
         <h1>Creador de QR</h1>
         <form action="" id="formulario" class="formulario">
             <input type="text" name="" id="link" placeholder="Escribe el texto o URL">
             <button class="btn">Generar QR</button>
+            <button class="btn" id="btnToPDF" onclick="exportPDF('contenedorQR', prompt('Ponga el nombre de su archivo'))">Export QR to PDF</button>
         </form>
 
-        <div class="contenedorQR" id="contenedorQR"></div>
+        <div class="contenedorQR" id="contenedorQR">
+
+        </div>
     </div>
+
+    <!-- Funcion para descargar el QR -->
+
+    <script>
+    //     function exportPDF(pdf, filename = '') {
+    //         var downloadLink;
+    //         var dataType = 'application/pdf';
+    //         var pdfSelect = document.getElementById(pdf);
+            
+    //         var pdfHTML = pdfSelect.outerHTML.replace(/ /g, '%20');
+            
+    //         // Specify file name
+    //         filename = filename ? filename + '.pdf' : 'miQR.pdf';
+
+    //         // Create download link element
+    //         downloadLink = document.createElement("a");
+
+    //         document.body.appendChild(downloadLink);
+
+    //         if (navigator.msSaveOrOpenBlob) {
+    //             var blob = new Blob(['ufeff', pdfHTML], {
+    //                 type: dataType
+    //             });
+    //             navigator.msSaveOrOpenBlob(blob, filename);
+    //         } else {
+    //             // Create a link to the file
+                
+    //             downloadLink.href = 'data:' + dataType + ', ' + pdfHTML;
+    //             console.log(downloadLink.href)
+
+    //             // Setting the file name
+    //             downloadLink.download = filename;
+
+    //             //triggering the function
+    //             downloadLink.click();
+    //         }
+    //     }
+    // 
+    </script>
 </body>
 
 </html>

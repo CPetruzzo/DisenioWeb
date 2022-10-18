@@ -26,6 +26,11 @@ form input {
     color: white;
 }
 
+.btn:hover{
+    background-color: tan;
+    color: slateblue;
+}
+
 .contenedorQR {
     margin-top: 20px;
 }
