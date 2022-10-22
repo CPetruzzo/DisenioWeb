@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Switch Light-Dark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;0,700;1,100;1,300&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+    <!-- Javascript -->
     <script>
         const mode = document.querySelector('#night');
         const body = document.querySelector('body');
 
-        mode.addEventListener('change', ()=> {
+        mode.addEventListener('change', () => {
             body.classList.toggle('nightmode')
         })
     </script>
-    
-    <style>
-        .nightmode{
-            transition: .4s all ease-in;
-            background: #252525;
-        }
 
-        .switch{
+    <!-- Estilos -->
+    <style>
+
+        .switch {
             position: relative;
         }
 
-        body{
+        body {
+            font-family: Montserrat;
             transition: .4s all ease-in;
             background: #d8b3a3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        body:has(input[type="checkbox"]:checked){
+        body:has(input[type="checkbox"]:checked) {
             transition: .4s all ease-in;
             background: #252525;
+            color:#d1d5da;
         }
 
-        input[type="checkbox"]{
-            width:90px;
-            height:50px;
+        input[type="checkbox"] {
+            width: 90px;
+            height: 50px;
             background: transparent;
             -webkit-appearance: none;
             outline: none;
@@ -46,13 +55,13 @@
             border: 5px solid #d1d5da;
         }
 
-        input[type="checkbox"]:checked{
+        input[type="checkbox"]:checked {
             transition: .4s all ease-in;
             border-color: #3a1d6d;
             background: #271052;
         }
 
-        input[type="checkbox"]::before{
+        input[type="checkbox"]::before {
             content: '\f186';
             font-family: 'Arial';
             font-weight: 900;
@@ -61,10 +70,10 @@
             justify-content: center;
             align-items: center;
             position: absolute;
-            top:2px;
-            left:0;
+            top: 2px;
+            left: 0;
             width: 50px;
-            height:50px;
+            height: 50px;
             background: #2f363d;
             border-radius: 50%;
             transform: scale(-1.05) rotate(60deg);
@@ -72,16 +81,48 @@
             transition: all .4s linear;
         }
 
-        input[type="checkbox"]:checked::before{
-            left:50px;
+        input[type="checkbox"]:checked::before {
+            left: 50px;
             background: #6e40c9;
         }
+        
+        .boxes{
+            max-width: 600px;
+            width:100%;
+            color:#252525;
+            border-radius: 30px;
+            border: 3px solid #252525;
+            background-color: #d1d5da;
+            padding: 20px;
+        }
 
+        p:has(input[type="checkbox"]:checked){
+            color:#d1d5d1;
+        }
 
+        h1{
+            text-align: center;
+        }
     </style>
+
     
-    <div class="switch">
-        <input type="checkbox" id="night">
+
+    <!-- Estructura -->
+    <div class="messages">
+        <div class="switch">
+            <input type="checkbox" id="night">
+        </div>
+
+        <div class="chat">
+            <h1>    Light-Dark Mode</h1>
+            <div class="boxes">
+                <h2>Apretá el switch</h2>
+                <span></span><br>
+                <p>Y probá cuál estilo te gusta más</p>
+            </div>
+        </div>
     </div>
+
 </body>
+
 </html>
