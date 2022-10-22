@@ -17,60 +17,65 @@
 
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
 
+
     <div class="contenedor">
-        <h1>Creador de QR</h1>
+        <h1>Generador de QR</h1>
         <form action="" id="formulario" class="formulario">
-            <input type="text" name="" id="link" placeholder="Escribe el texto o URL">
+            <input style="display: flex; justify-content: center;" type="text" name="" id="link" placeholder="Escribe el texto o URL">
+            <br>
             <button class="btn">Generar QR</button>
-            <button class="btn" id="btnToPDF" onclick="exportPDF('contenedorQR', prompt('Ponga el nombre de su archivo'))">Export QR to PDF</button>
+            <button class="btn" id="btnToPDF" onclick="downloadPNG('contenedorQR', prompt('Ponga el nombre de su archivo'))">Download QR as PNG</button>
         </form>
 
         <div class="contenedorQR" id="contenedorQR">
 
         </div>
+
+        <!-- <h2>I hope you enjoy this, feel free to share the link! or make a QR and share it!</h2> -->
     </div>
 
     <!-- Funcion para descargar el QR -->
 
     <script>
-    //     function exportPDF(pdf, filename = '') {
-    //         var downloadLink;
-    //         var dataType = 'application/pdf';
-    //         var pdfSelect = document.getElementById(pdf);
+        function downloadPNG(pdf, filename = '') {
+            var downloadLink;
+            var dataType = 'image/png';
+            var pdfSelect = document.getElementById(pdf);
             
-    //         var pdfHTML = pdfSelect.outerHTML.replace(/ /g, '%20');
+            var pdfHTML = pdfSelect.lastChild.src;
             
-    //         // Specify file name
-    //         filename = filename ? filename + '.pdf' : 'miQR.pdf';
+            // Specify file name
+            filename = filename ? filename + '.png' : 'miQR1.png';
 
-    //         // Create download link element
-    //         downloadLink = document.createElement("a");
+            // Create download link element
+            downloadLink = document.createElement("a");
 
-    //         document.body.appendChild(downloadLink);
+            document.body.appendChild(downloadLink);
 
-    //         if (navigator.msSaveOrOpenBlob) {
-    //             var blob = new Blob(['ufeff', pdfHTML], {
-    //                 type: dataType
-    //             });
-    //             navigator.msSaveOrOpenBlob(blob, filename);
-    //         } else {
-    //             // Create a link to the file
+            if (navigator.msSaveOrOpenBlob) {
+                var blob = new Blob(['ufeff', pdfHTML], {
+                    type: dataType
+                });
+                navigator.msSaveOrOpenBlob(blob, filename);
+            } else {
+                // Create a link to the file
                 
-    //             downloadLink.href = 'data:' + dataType + ', ' + pdfHTML;
-    //             console.log(downloadLink.href)
+                downloadLink.href = pdfHTML;
+                console.log(downloadLink.href)
 
-    //             // Setting the file name
-    //             downloadLink.download = filename;
+                // Setting the file name
+                downloadLink.download = filename;
 
-    //             //triggering the function
-    //             downloadLink.click();
-    //         }
-    //     }
-    // 
+                //triggering the function
+                downloadLink.click();
+            }
+        }
+    
     </script>
 </body>
 
