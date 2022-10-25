@@ -37,8 +37,8 @@
         </swal-title>
         <swal-icon type="warning" color="red"></swal-icon>
         <swal-button type="confirm">
-            <a id="btnToPDF"
-                onclick="downloadPNG('contenedorQR', prompt('Ponga el nombre de su archivo'))">Download QR as
+            <a id="btnToPDF" onclick="downloadPNG('contenedorQR', prompt('Ponga el nombre de su archivo'))">Download QR
+                as
                 PNG</a>
         </swal-button>
         <swal-button type="cancel">
@@ -67,13 +67,26 @@
 
 
         <button data-swal-toast-template="#my-template" class="btn">
-            Download        
+            Download
         </button>
 
         <div class="message">
             <h2>I hope you enjoy this, feel free to share the link! or make a QR and share it!</h2>
         </div>
+
+        <footer>
+            <!-- Firmita -->
+            <div padding-bottom: 20px;">
+                <address style="text-align: center;">
+                    <a href="https://cpetruzzo.github.io/DisenioWeb" style="text-decoration: none;">
+                        &#169CPetruzzo
+                    </a>
+                </address>
+            </div>
+        </footer>
     </div>
+
+
 
 
     <!-- Download as PNG function -->
