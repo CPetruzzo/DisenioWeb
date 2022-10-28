@@ -90,9 +90,9 @@ footer a {
 
 }
 
-/* #invisible{
+#invisible{
      display: none;
-} */
+}
 
 ul{
     margin-block-start: 0em;
@@ -169,10 +169,10 @@ p{
 .LogoPna {
 
     width: 270px;
-    height: 110px;
+    height: 95px;
     position: relative;
-    bottom: -70px;
-    left: 50px;
+    bottom: -60px;
+    left: 40px;
 }
 
 
@@ -180,7 +180,7 @@ p{
 .contenedorQR2{
     position: relative;
     top: -100px;
-    left: 50px;
+    left: 60px;
 }
 
 #fondo{
