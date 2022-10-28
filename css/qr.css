@@ -87,8 +87,9 @@ footer a {
 }
 
 #contentToPrint{
-    background-color: white;
+    /* background-color: white; */
     width: 730px;
+
 }
 
 /* #invisible{
@@ -130,14 +131,17 @@ li{
 }
 
 p{
-    font-family: Montserrat;
+    font-family: Montserrat, Arial, sans-serif;;
     padding-left: 50px;
+    
+    font-size: larger;
 }
 
 #legal{
     position: relative;
-    left: 385px;
+    left: 325px;
     bottom: -250px;
+    font-weight: bolder;
 }
 
 #direccion{
@@ -145,13 +149,15 @@ p{
     text-align: right;
     position: relative;
     left: 350px;
+    top: -60px;
 }
 
 #certificado{
+    font-size: x-large;
     font-weight: bold;
     position: relative;
-    bottom: -75px;
-    left:70px
+    bottom: -10px;
+    left:-12px
 }
 
 #cumpleReq{
@@ -162,15 +168,23 @@ p{
     bottom: -200px;
 }
 
-#invisible > #contentToPrint > img {
-    max-width: 600px;
-    max-height: 500px;
+#invisible > #contentToPrint img#LogoPna {
+
+    max-width: 200px;
+    width: 100%;
+    max-height: 100px;
+    height: 100%;
     position: relative;
+    bottom: -50px;
+    left: 25px;
 }
 
 .contenedorQR2{
     position: relative;
-    top: -25px;
+    top: -100px;
     left: 50px;
 }
 
+#fondo{
+    background-color: white;
+}
