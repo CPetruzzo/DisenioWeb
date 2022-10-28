@@ -68,13 +68,9 @@
             <div class="contenedorQR" id="contenedorQR">
             </div>
 
-
-
-
             <button data-swal-toast-template="#my-template" class="btn">
                 Download
             </button>
-
 
             <div class="message">
                 <h2>I hope you enjoy this, feel free to share the link! or make a QR and share it!</h2>
@@ -93,9 +89,29 @@
         </div>
     </div>
 
-    <div style="display: none;">
+    <div id="invisible">
         <div id="contentToPrint">
+            <img src="https://cpetruzzo.github.io/DisenioWeb/images/LogoPna.png" width="600px" height="500px" alt="LogoPna" srcset="">
+            <div>
+                <ul class="borde">
+                    <li class="b1"></li>
+                    <li class="b2"></li>
+                    <li class="b3"></li>
+                </ul>
+            
+            <p id="direccion">Dirección General de Habilitaciones, Concesiones, Uso de Espacios 
+                Públicos, Control Urbano, Control 
+                Nocturno y Bromatología</p>
+                <p id="certificado">Certificado de habilitación del vehículo gastronómico</p>
+                <p id="cumpleReq">Este vehículo reúne los requisitos mínimos necesarios para su habilitación según ordenanzas N°7382 y N°9714.</p>
+                <p id="legal">Secretaría Legal y Administrativa</p>
             <div class="contenedorQR2" id="contenedorQR2">
+            </div>
+                <ul class="borde">
+                    <li class="b1"></li>
+                    <li class="b2"></li>
+                    <li class="b3"></li>
+                </ul>
             </div>
         </div>
     </div>
@@ -156,11 +172,12 @@
                     // Save the PDF
                     doc.save('QRcode.pdf');
                 },
-                margin: [10, 10, 10, 10],
+                margin: [0, 10, 0, 0],
                 autoPaging: 'text',
                 x: 0,
                 y: 0,
                 width: 190, //target width in the PDF document
+                height: 150,
                 windowWidth: 675 //window width in CSS pixels
             });
         }

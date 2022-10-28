@@ -87,12 +87,90 @@ footer a {
 }
 
 #contentToPrint{
-    /* display: none; */
-    width: 800px;
-    height: 600px;
-    margin-top: 100px;
-    padding-top: 300px;
-    padding-left: 80px;
-    background-image: url('https://cpetruzzo.github.io/DisenioWeb/images/FoodTrucks.png');
-    background-size:contain;
+    background-color: white;
+    width: 730px;
 }
+
+/* #invisible{
+     display: none;
+} */
+
+ul{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    padding-inline-start: 0px;
+
+}
+
+li{
+    display: flex;
+    list-style: none;
+}
+
+.borde{
+    display: flex;
+}
+
+.borde .b3{
+    background-color: blue;
+    width: 33.3%;
+    height: 50px;
+}
+
+.borde .b1{
+    background-color: cyan;
+    width: 33.3%;
+    height: 50px;
+}
+
+.borde .b2{
+    background-color: steelblue;
+    width: 33.3%;
+    height: 50px;
+}
+
+p{
+    font-family: Montserrat;
+    padding-left: 50px;
+}
+
+#legal{
+    position: relative;
+    left: 385px;
+    bottom: -250px;
+}
+
+#direccion{
+    max-width: 300px;
+    text-align: right;
+    position: relative;
+    left: 350px;
+}
+
+#certificado{
+    font-weight: bold;
+    position: relative;
+    bottom: -75px;
+    left:70px
+}
+
+#cumpleReq{
+    max-width: 300px;
+    text-align: right;
+    position: relative;
+    left: 350px;
+    bottom: -200px;
+}
+
+#invisible > #contentToPrint > img {
+    max-width: 600px;
+    max-height: 500px;
+    position: relative;
+}
+
+.contenedorQR2{
+    position: relative;
+    top: -25px;
+    left: 50px;
+}
+
