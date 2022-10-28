@@ -15,13 +15,13 @@
     <script defer src="/js/qr.js"></script>
     <script defer src="/DisenioWeb/js/qr.js"></script>
 
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
         integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
         integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="sweetalert2.min.js"></script>
@@ -33,11 +33,11 @@
     <!-- Button's template -->
     <template id="my-template">
         <swal-title>
-            Deseas descargar el código QR como un PNG?
+            Deseas descargar el código QR?
         </swal-title>
         <swal-icon type="warning" color="red"></swal-icon>
         <swal-button type="confirm">
-            <a id="btnToPDF" onclick="downloadPNG('contenedorQR', prompt('Ponga el nombre de su archivo'))">Download QR
+            <a id="btnToPDF" onclick="downloadPNG('contenedorQR', prompt('Ponga el nombre de su archivo'))">Download
                 as
                 PNG</a>
         </swal-button>
@@ -45,58 +45,70 @@
             Cancelar
         </swal-button>
         <swal-button type="deny">
-            Close without Saving
+            <a onclick="Convert_HTML_To_PDF()">Download
+                as
+                PDF</a>
         </swal-button>
         <swal-param name="allowEscapeKey" value="false" />
         <swal-param name="customClass" value='{ "popup": "my-popup" }' />
         <swal-function-param name="didOpen" value="popup => console.log(popup)" />
     </template>
+    
+    <div class="body">
+        <div class="contenedor">
+            <h1>QR Generator</h1>
+            <form action="" id="formulario" class="formulario">
+                <input style="display: flex; justify-content: center;" type="text" name="" id="link"
+                    placeholder="Escribe el texto o URL">
+                <br>
+                <button class="btn">Generate QR</button>
 
-    <div class="contenedor">
-        <h1>QR Generator</h1>
-        <form action="" id="formulario" class="formulario">
-            <input style="display: flex; justify-content: center;" type="text" name="" id="link"
-                placeholder="Escribe el texto o URL">
-            <br>
-            <button class="btn">Generate QR</button>
+            </form>
 
-        </form>
-
-        <div class="contenedorQR" id="contenedorQR">
-        </div>
-
-
-        <button data-swal-toast-template="#my-template" class="btn">
-            Download
-        </button>
-
-        <div class="message">
-            <h2>I hope you enjoy this, feel free to share the link! or make a QR and share it!</h2>
-        </div>
-
-        <footer>
-            <!-- Firmita -->
-            <div padding-bottom: 20px;">
-                <address style="text-align: center;">
-                    <a href="https://cpetruzzo.github.io/DisenioWeb" style="text-decoration: none;">
-                        &#169CPetruzzo
-                    </a>
-                </address>
+            <div class="contenedorQR" id="contenedorQR">
             </div>
-        </footer>
+
+
+
+
+            <button data-swal-toast-template="#my-template" class="btn">
+                Download
+            </button>
+
+
+            <div class="message">
+                <h2>I hope you enjoy this, feel free to share the link! or make a QR and share it!</h2>
+            </div>
+
+            <footer>
+                <!-- Firmita -->
+                <div padding-bottom: 20px;">
+                    <address style="text-align: center;">
+                        <a href="https://cpetruzzo.github.io/DisenioWeb" style="text-decoration: none;">
+                            &#169CPetruzzo
+                        </a>
+                    </address>
+                </div>
+            </footer>
+        </div>
     </div>
 
-
+    <div style="display: none;">
+        <div id="contentToPrint">
+            <div class="contenedorQR2" id="contenedorQR2">
+            </div>
+        </div>
+    </div>
 
 
     <!-- Download as PNG function -->
     <script>
-        function downloadPNG(pdf, filename = '') {
+        function downloadPNG(png, filename = '') {
             var downloadLink;
             var dataType = 'image/png';
-            var pdfSelect = document.getElementById(pdf);
+            var pngSelect = document.getElementById(png);
 
-            var pdfHTML = pdfSelect.lastChild.src;
+            var pngHTML = pngSelect.lastChild.src;
 
             // Specify file name
             filename = filename ? filename + '.png' : 'miQR1.png';
@@ -107,14 +119,14 @@
             document.body.appendChild(downloadLink);
 
             if (navigator.msSaveOrOpenBlob) {
-                var blob = new Blob(['ufeff', pdfHTML], {
+                var blob = new Blob(['ufeff', pngHTML], {
                     type: dataType
                 });
                 navigator.msSaveOrOpenBlob(blob, filename);
             } else {
                 // Create a link to the file
 
-                downloadLink.href = pdfHTML;
+                downloadLink.href = pngHTML;
                 console.log(downloadLink.href)
 
                 // Setting the file name
@@ -125,6 +137,33 @@
             }
         }
 
+
+        //////////////////////////////////////////////////////////////////
+
+
+
+        window.jsPDF = window.jspdf.jsPDF;
+
+        // Convert HTML content to PDF
+        function Convert_HTML_To_PDF() {
+            var doc = new jsPDF();
+
+            // Source HTMLElement or a string containing HTML.
+            var elementHTML = document.querySelector("#contentToPrint");
+
+            doc.html(elementHTML, {
+                callback: function (doc) {
+                    // Save the PDF
+                    doc.save('QRcode.pdf');
+                },
+                margin: [10, 10, 10, 10],
+                autoPaging: 'text',
+                x: 0,
+                y: 0,
+                width: 190, //target width in the PDF document
+                windowWidth: 675 //window width in CSS pixels
+            });
+        }
     </script>
 
 

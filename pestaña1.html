@@ -1,374 +1,595 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+
+<html>
+
+<!-- INFORMACION IMPORTANTE PERO QUE NO SE VE -->
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Hugo 0.72.0">
-  <title>Carousel Template · Bootstrap</title>
+    <meta charset="utf-8"> <!-- esto le dice que es el formato de caracteres que vamos a usar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/carousel/">
+    <title>Facundo Wegher - Sitio Web</title> <!-- LO QUE SE VE EN EL BUSCADOR Y ARRIBA -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
-    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-52PQY15VKG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
+        gtag('config', 'G-52PQY15VKG');
+    </script> -->
     
-    
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
+    <!-- ESTA ES LA MISMA QUE LA DE PASA -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YP5GS8WBZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    /* GLOBAL STYLES
-    --------------------------------------------- */
-    /* Padding below the footer and lighter body text */
-html{
-  scroll-behavior: smooth;
-}
+        gtag('config', 'G-7YP5GS8WBZ');
+    </script>
 
-    body {
-      padding-top: 3rem;
-      padding-bottom: 3rem;
-      color: #5a5a5a;
-      
-    }
-
-
-    /* CUSTOMIZE THE CAROUSEL
-    -------------------------------------------- */
-
-    /* Carousel base class */
-    .carousel {
-      margin-bottom: 4rem;
-    }
-
-    /* Since positioning the image, we need to help out the caption */
-    .carousel-caption {
-      bottom: 3rem;
-      z-index: 10;
-    }
-
-    /* Declare heights because of positioning of img element */
-    .carousel-item {
-      height: 32rem;
-    }
-
-    .carousel-item>img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      height: 32rem;
-    }
-
-
-    /* MARKETING CONTENT
--------------------------------------------------- */
-
-    /* Center align the text within the three columns below the carousel */
-    .marketing .col-lg-4 {
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-
-    .marketing h2 {
-      font-weight: 400;
-    }
-
-    .marketing .col-lg-4 p {
-      margin-right: .75rem;
-      margin-left: .75rem;
-    }
-
-
-    /* Featurettes
-------------------------- */
-
-    .featurette-divider {
-      margin: 5rem 0;
-      /* Space out the Bootstrap <hr> more */
-    }
-
-    /* Thin out the marketing headings */
-    .featurette-heading {
-      font-weight: 300;
-      line-height: 1;
-      letter-spacing: -.05rem;
-    }
-
-
-    /* RESPONSIVE CSS
--------------------------------------------------- */
-
-    @media (min-width: 40em) {
-
-      /* Bump up size of carousel content */
-      .carousel-caption p {
-        margin-bottom: 1.25rem;
-        font-size: 1.25rem;
-        line-height: 1.4;
-      }
-
-      .featurette-heading {
-        font-size: 50px;
-      }
-    }
-
-    @media (min-width: 62em) {
-      .featurette-heading {
-        margin-top: 7rem;
-      }
-    }
-  </style>
-
-
-  <!-- Custom styles for this template -->
-  <link href="carousel.css" rel="stylesheet">
 </head>
 
-<body>
+<!-- LO QUE SE VE EN LA PAGINA -->
 
-  <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Carousel</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto mb-2 mb-md-0">
-            <li class="nav-item active">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
-      </div>
-    </nav>
-  </header>
+<body style="background-color: black;">
 
-  <main>
+    <!-- BARRA NAVEGADORA FLOTANTE -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Facundo W</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#aboutMe">Acerca de mi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#proyectos">Proyectos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Más
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="#experiencia">Curriculum Vitae</a></li>
+                                <li><a class="dropdown-item" href="#educacion">Educación</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#contact">Contactate</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">TiendaOnline</a>
+                        </li>
+                    </ul>
 
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
-            <rect width="100%" height="100%" fill="#777" /></svg>
+                    <div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
+                            data-bs-target="#modelId">
+                            Log in
+                        </button>
 
-          <div class="container">
-            <div class="carousel-caption text-left">
-              <h1>Example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
-                metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                        <!-- Modal -->
+                        <div id="modalbackdrop">
+                            <div class="modal fade" id="modelId" tabindex="-1" role="dialog"
+                                aria-labelledby="modelTitleId" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Log in</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <img class="mb-4"
+                                                    src="https://www.dropbox.com/s/zgbbayj1iqd9fjf/CF_Mark.jpg?raw=1"
+                                                    alt="" width="72">
+                                                <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+                                                <div class="form-floating">
+                                                    <input type="email" class="form-control" id="floatingInput"
+                                                        placeholder="name@example.com">
+                                                    <label for="floatingInput">Email address</label>
+                                                </div>
+                                                <div class="form-floating">
+                                                    <input type="password" class="form-control" id="floatingPassword"
+                                                        placeholder="Password">
+                                                    <label for="floatingPassword">Password</label>
+                                                </div>
+
+                                                <div class="checkbox mb-3">
+                                                    <label>
+                                                        <input type="checkbox" value="remember-me"> Remember me
+                                                    </label>
+                                                </div>
+                                                <button class="w-90 btn btn-lg btn-dark" type="submit">Sign in</button>
+                                                <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
-            <rect width="100%" height="100%" fill="#777" /></svg>
+        </nav>
+    </header>
 
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
-                metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
-            <rect width="100%" height="100%" fill="#777" /></svg>
+    <!-- FOTO PERFIL -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <br>
+                <img id="picture" src="images/FotoPerfil.jpg" class="img-fluid" alt="Foto de Perfil">
 
-          <div class="container">
-            <div class="carousel-caption text-right">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
-                metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                <h1>Hola, soy Facundo!</h1>
+
+                <p class="subtitle">Te doy la bienvenida a mi sitio web!</p>
+
             </div>
-          </div>
         </div>
-      </div>
-      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
     </div>
 
+    <main>
+        <!-- ACERCA DE MI -->
+        <div class="container">
+            <div id=aboutMe class="container-fluid" style="background-color: inherit;">
+                <br>
+                <br>
+                <br>
+                <h2>
+                    Acerca de mi
+                </h2>
+                <div class="bg-success p-2" style="--bs-bg-opacity: .5;">
+                    <div class="col-md-15" style="background-color: inherit; padding: 40px;">
 
-    <!-- Marketing messaging and featurettes
-  ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-            aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-          </svg>
-
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
-            vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus
-            magna.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-            aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-          </svg>
-
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
-            mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-            condimentum nibh.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg"
-            aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
-          </svg>
-
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
-            felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
-            massa justo sit amet risus.</p>
-          <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-
-
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span>
-          </h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-            semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-            commodo.</p>
+                        <p>
+                            Soy un <strong>Ingeniero en Alimentos</strong> y <strong>Técnico Químico</strong> oriundo de
+                            Santa Fe, Argentina. En el último año me volqué al mundo de la programación.
+                            <br>
+                            Soy <strong>Fullstack Developer jr</strong>, trabajo en mis proyectos con Angular para el
+                            Frontend, con Springboot para el Backend y con bases de datos SQL. <br>
+                            Además soy <strong>Game Programmer jr</strong>, realizo mis juegos con PixiJS.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-5">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-            height="500" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: 500x500"
-            preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-          </svg>
 
+        <!-- EDUCACION -->
+        <div class="container">
+            <div id=educacion class="container-fluid" style="background-color: inherit;">
+                <br>
+                <br>
+                <br>
+                <h2>
+                    Educación
+                </h2>
+                <div class="bg-success p-2" style="--bs-bg-opacity: .5;">
+                    <div class="col-md-15" style="background-color: inherit; padding: 40px;">
+
+                        <p>
+                        <ul>
+                            <li>
+                                <strong>Fullstack Developer Jr </strong><br>
+                                Argentina Programa - INTI - CESSI <br>
+                                2021 - 2022
+                            </li>
+
+                            <li>
+                                <strong>Ingeniero en Alimentos </strong><br>
+                                Facultad de Ingeniería Química - Universidad Nacional del Litoral <br>
+                                2009 - 2017
+                            </li>
+
+                            <li>
+                                <strong>Técnico Químico </strong><br>
+                                Escuela Industrial Superior - Universidad Nacional del Litoral <br>
+                                2009 - 2017
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <hr class="featurette-divider">
+        <!-- PROYECTOS -->
+        <div class="container">
+            <div id=proyectos class="container-fluid">
+                <br>
+                <br>
+                <br>
 
-      <div class="row featurette">
-        <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-            semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-            commodo.</p>
+                <h2>Proyectos</h2>
+
+                <div class="bg-success p-2" style="--bs-bg-opacity: .5;">
+
+                    <div class="container" style="margin-bottom: 50px">
+
+                        <div class="box">
+                            <div class="imgBx">
+                                <img src="files\Johnny.jpg" alt="MySQL">
+                            </div>
+
+                            <div class="content">
+                                <div>
+                                    <h2>Juego</h2>
+                                    <p> Prototype: Juan y El dragon <a href=https://cpetruzzo.itch.io/juan-y-el-dragon
+                                            class="btn btn-primary">Ir</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="imgBx">
+                                <img src="images\angelinaNUT.png" alt="angelinaNUT">
+                            </div>
+
+                            <div class="content">
+                                <div>
+                                    <h2>Página Web</h2>
+                                    <p>Para nutricionista <a href=https://cpetruzzo.github.io/AngelinaNUT
+                                            class="btn btn-primary">Ir</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="imgBx">
+                                <img src="images\portfolioAngular.jpg" alt="linkedin">
+                            </div>
+
+                            <div class="content">
+                                <div>
+                                    <h2>Portfolio en Angular</h2>
+                                    <p>Funciones: Editar, eliminar y agregar. Para consultar por clave de ingreso desde
+                                        la
+                                        sección de contacto <a href=https://porfolio-cf060.web.app/
+                                            class="btn btn-primary">Ir</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="imgBx">
+                                <img src="images\PORTADA.png" alt="adventurer">
+                            </div>
+
+                            <div class="content">
+                                <div>
+                                    <h2>Juego</h2>
+                                    <p>An adventurer's fate <a href=https://cpetruzzo.itch.io/an-adventurers-fate
+                                            class="btn btn-primary">Ir</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="imgBx">
+                                <img src="images/QrMaker.png" alt="qr">
+                            </div>
+
+                            <div class="content">
+                                <div>
+                                    <h2>QR Maker</h2>
+                                    <p>Un generador de QR <a href=https://cpetruzzo.github.io/DisenioWeb/QRMaker.html
+                                            class="btn btn-primary">Ir</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="imgBx">
+                                <img src="images/lightdark.png" alt="adventurer">
+                            </div>
+
+                            <div class="content">
+                                <div>
+                                    <h2>Light-Dark mode</h2>
+                                    <p>Funcionalidad de modo oscuro y claro para apps-webs <a
+                                            href=https://cpetruzzo.github.io/DisenioWeb/lightDark.html
+                                            class="btn btn-primary">Ir</a></p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <div>
+                                    <h2>Cancionero </h2>
+                                    <p> Sin publicidad <a
+                                            href=https://cpetruzzo.github.io/DisenioWeb/cancionero.html
+                                            class="btn btn-primary">Ir</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-5 order-md-1">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-            height="500" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: 500x500"
-            preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-          </svg>
 
+        <!-- SKILLS -->
+        <div class="container">
+            <h2 style="margin-top: 20px;">Skills</h2>
+            <div class="container">
+
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH4AAAB+CAMAAADV/VW6AAAAxlBMVEX////akCM1X3UzYHX///319/i4w8norFvbjyD///r///bW3eHx9PUeVGvz1KPlpkvk6evZiADlp1LnsWjeggDJ0tZQcYAtWm7ahACwvcPy3MLbjBXBy9ATTmYASWJ4j5pmgZGjsrlDaHmVp6767+EAP1n89+2DmaTaki/syZH35MHtvHoTTWptiZQ+ZnL26NXkuobfm0fdoVXcmDvnyJzv0rTku39ce4Xirm/r0qrhp2LWeAAQS10APF/56s7injHpx3jqzo1h49n1AAAI+ElEQVRoge1aa3PauhYVNjYmthIJsGUjBH7FJglcQ3gFTi5p//+fOluyTZKe3unc1PR88ZppI6CT5f1eWxShFi1atGjRokWLFi1atKhhEEIc418hniShF8eaFsdemEzIn3wIkhy0xQJjzBiDv/ErjsOI/CHySThdLISXRxMbnG+7ZrLUhRDTpXt97q75nylmS9ORLwynftsODlhMvcmV2e1wIXTpZ8eOZnEu7c2Kokj78FHCBF5eNQQJw3riIMOdxXACW9PV85xz3lk/jbuQEgxrwdXIjZnABxsh08NYY7GNspVFudUBWNx/HoMHYoFnV2InMcYRQq4uNF1nnoEKPvIVueTvWP4GHiDC2HN+/bv+f9gxZgSR5ULTmK5rBD366+N2TeEBLEvxc/8lQ66GvSskAIkF/Fo3xprEdIIKy093RbabjyiV7BLSAeCk5vkNHR8IihiT5OB6lK25nz77z0Va7PZzWsWA8x0iHg6bboJLHBNkTiHqOtBjFx1ph64Kyvl+u7vJTr6yHyJAd8hmeNkseyIg2NFU1xW9FqNsA3R0t+MQcZ+uumeLlylo+ZJ/2mj92UxM0ITpFT1O0Fil3Dx95s/juUXvxhCMkt7yxyha6E2G/7CYIaKruEvgCXpSZHy7o3z7bHU43fWfqwSw5hlaigbLPxAQ+BDX7Bqz0Z1KdT7IKNgrHeHvsrVf8tOXrjNlzfV/HUIZvLNr4FmrbHY0HfDKZloUtKw/y39EuQibYg+mB4Sm7+Q60FeFzl8KXvc9Kzv6Ff88c2LRlPmeCKCZ6p/o51W3pcVDze+vupvSKR26hVppqPjIfew4sa6/Ox/K/lSR8tXF/A4vjn41ADgiGmsm+RORIxN/pBcmWtHSUH+8utD7+26VEvA2momoCXbDm9oo1D5Zn6MxL8NM041Vx75D4akqR7wgU3hN0Ns4RoTV9GXXY85NmfFWJ4NJV9vPH9Jy/MN7GdHvm+j8AXSQgLHaevUTB2Xbk32vo/pOFfNubT4do3DahPaUMczjCMuep1/+GP2hMpSn8zna1QOP7lKrPNMV5EwTwT8IFzpeboeimjcq+RI5ceXUSU8vcv5UPt9kxYvPy+AHTTReI14QJ2aLXMqd9/yD5M/kkKOr8arYVuZDwW12WdqD8rPWffs1/H16mDQq87Bnoxn+kAEu6vco7/hntPOLk1/3PkqH6RH8Ms8I9n4/9yS9Df0ehLWL4vfOq2km6u/WnM5f5mBz3QVl2Du7HYyh1GHx74tOmzHkYs2DjcqwQ1ZZH4LcFLmDuuMThRLg816n5uebl1V6pkCvN0evG4EXM8WuNEcUAz9LoK+O72So57X5fIuy8XZPOdDrv08PvVs5XycuLkMv2Vlo6zgHUb+0UXdPlcqp+k0Prf6CnJD0WgP0OjaIbHTMdJJYVr+yHic2RmQiGE4MtKXvkYeS6xeg/q20kdRzYkyMmKlOT5yJVwk+Xbdz5JGQaXKr2vMP/HQ9Tk90k9nTJvS2bDueanlMzAgUQqk3YewgHEgNBPzdAX+nh+JbnwfPoFKa0HszEBt5ZTP24FhVHiOuyG0hW1AEK8+7+VL50eEeJYukAfoIjAhwLbEnRFT0OPcg8YRsAZigld/5BFD7y/smRo4auHqZcJDxaMaqvsM0Nivp2Qyln+lhEDtaIwPX8YSNDvW8x669qEYPxCIKVC3qzOluPrHzIZrAYzeBHMZbIGr6EHlaTc/sZakDQNXWg76kB7GVNyO2kD0FqVnPWobJBFf0LIRRWMoP2Lr8T9Z3icyIRhDDdE0qoa2zvN53wPrJpPQKBL/4QG/RPWRs2Aw7eN4zjFrn68Iml6Grk3IIQUamH5wPqqPBNcNgYH50WbI8x1R1CH5nkakeiy0/0cOOHzXRcSsE09goO58q+CV4VlMJzzxDvQsR+RB7fuob97i5FdPwYNOwce1z4DelADETjMlSjYMIHS/0MG2gVTZ5v+EyaPwm1i/VZ9ieYGEQwxgCIaYJgob1pmuBxg5EU2lfAhKfyDWzyj8cu07gYZAfwoakgMzr1zPXokd5GdLs5aajbquSesuWA88wbBfUf+wsNWxWUh9EB32QV1uHRtlV9h+MS/VLB7yGkWk4s/8m7v0BRH9lvH8EhSCay/oaBPgdNNEvCQgNEMdm1zES2KS31W4zL+Afyju4xgHiLpaXqqIW2moAe/lSs9FZjXtOT5m897zGpaq61AVtj0wl+GrFy6awfqRzLi8U18cuitiV2JFMKcg45ERMsGrXxQt4I9uAsKV8e4OcJb5C3C/IMVZj1F3GAqCFEUjpo08pP+2gPJJ7jK/3dQLAPojXWC4XBrFdImV88bw5rcYZ+CaKFyK0r8kOtIEHVufmJb6p/B4HFP9MXwjPvC65hBN5eIH1MA9cQhyHENtMQg0LHJpX+Rrjn3Dz13sZe9h6ofrl6Z7ldvfPkCvYZh7GsvNg3QuTP2X3Jxjg+Wt/h2wYPzu+o9vt9/td5Xh56qtT9eO34Sy9SzoHnvfj1pQ99AaDwfpuDd32vD/BeXB6ekT9l/VjI/TmlGFWHu1XxsTnsu4PfN7rDQFP/cL3KRx7m5H/2B2Mbpuhf83DqpHNRBL+QH+mtKjPT6O3TB0eRsObxuinyaS8myVMh5ZnIzMvH8HJE0mfXuj9uxt1uG2UPgedKTdVea8tt73wvnQGmWIjexvtHwFF/3r0KHiV1wSC2Yp+JspUJFhHaDzw/dGI+ndn9ESvRG+8gpwJFiEq6auv6IBeFleWZWnxNLq7uRo9Sl4TiMBEyn1Jf7H+Uts7/y2Tzu8/3J5/pO/fPmZfp5fXwgR7gdyZjH9Y3y3xAFm/H72l3SOlx4fRqdsb7fvlR+j227eve8JU10MzgaVwV99rTBibzfI8nzEdFT2FgT96QOfR6K03tEB6gNA/+v5d+VFx+/371+ndUIobZxnn8lUewpgnQZ4reg2d7xQGT2f4sNgPNpu7IfeH6sWw/Oycfvt+/jL9/wYR7Kd9PXv7q/c52I0OYjMpIbfOn+Lmcfz1XPslEq9EGP0b/1mrRYsWLVq0aNGiRYsWLX6NvwHKad9W2yAyeAAAAABJRU5ErkJggg=="
+                            alt="MySQL">
+                    </div>
+
+                    <div class="content">
+                        <div>
+                            <h2>MySQL</h2>
+                            <p>Bases de datos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJIAAACSCAMAAACZpWO8AAAAb1BMVEUnKjTpHmPxHWXsHmQAKy4aKjJvJ0IAKzDVIF0JKjEkKjSaJE0gKjMVKjKEJkcQKjFJKTowKTbdH2DJIVp8JkW4IlU1KjZ1J0SkJFBCKTizI1RRKTvCIViqI1GVJUz5HGhbKD5lJ0AALCqNJUo6KTcb6gYNAAAEKklEQVR4nO2Y25aiOhBAyQWTQAIIIiAC0u3/f+PJDUTEWasbz6x5qP3QrQmGbVKpCgYBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAeyIp5buO6G8ISBmGShNOGvJ4G9tw496mIwuXgnKWl6lgjAm1/V1+QkjpvR0PlWZsKFVaRDYFHkgtXo0yjgfUp5PROTM05mVK26S+XLr41FCxbyLDEeEFRXJPA1ZghBBOwvXFkhPdMYy+Q8SD+QwPAnXv9TBEo9+j+rzLKTyYu8wQzCtKjRHCl7WSbHPb0bFJyVxIeMDaHJPFGO2uxVsp6QGHnhJ35xelzCnFKyWR4OUgpDh+ZJbMnPtxydjplwQfXhYuvZqOYZoEr1QEZB5Dg0iXrj/4GyXSxX1cIrtiBLE6R/zEXi6OVJmjYlTBs1LphkDXy6Uscowr9fLJXygNX0IIlRVuyQ6syY5b40bhssMpodwuJ+GZZCwNmqrYF92zErVvJCI2sKnJMA6/esq/NR1T8HolB86sahSFdGcyfVIK6MUFbB/PuGWSp0dLfHuKpYmdc/NOKe1dNC0yFXLJc9E0fKcbSjjZOzvbSqx73IQU7l+tBWhp27lLAsmWEkL9WewvJmuliOaPBIMT54FaGd7cRaPN3islwrn7EObxmW5Vxh1KSnV+O9s79EcrSAoaXq1KLTaVioOfLL24xRjsywALpS9K2Xj1c2RzAe5p5SrLmPnCcdyeJbcpvBW/veazXym52utfnrySciFEru59o94oRSx+VBSCO/WRvLQAl5R7JdnkaFpJXLPonVIkDou6i+uPZO/HPjN5clIK0nGY2q8qeKtkTl3VFU1WQ7KryC3Krj3ucJ0aH0rT7tf9jfyTkt4bso39xiD56+nv50qk4JwXZZ9RXUAWSjLzRlwH7R+V9LWM1d5pfDlE/FwJi/v9rAuZzXVPs+QXA/fiRYnVLgnMCdLEuVVK9kTTnJcijW9bxNJhiiWTMddKzpcUj2WKhL2e9HuC6bmgrJSmHeeWdr3jIulOJRc673ophw/O0paSz0u120cnNispGUWSfrs1T5JEUaUf8GRIfdX7RCxtKtGTC98vF1B5E3glmbRN0/rbD0f9QFMmrX58ul3x53bcplJgaxyuROsKS+k7kmbAKCfYL+hZX2ZOMWhKTEPyfyl9+3Iig9SVY1y5ynI6LA8lt/HpiGLU951R3iv585I53Mu7+/rulI1P34+Mrx+xnk9NCBfBbiXDSsk9uNo/helh35jMDKduerzCecJEnOP5eQublr1n75Eb8uWJQlz5g9F85ei8aMqr3h978zjT+UA1VZf7hrK674oj50QtT210gdvO0bJJCSrb8daG1GX7KGR6gCY7638fOFX+Ep2Dwudfmt7+JAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPBv8R9xmD0ksqz69wAAAABJRU5ErkJggg=="
+                            alt="PixiJS">
+                    </div>
+
+                    <div class="content">
+                        <div>
+                            <h2>PixiJS</h2>
+                            <p>Javascript Engine</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH0AAAB9CAMAAAC4XpwXAAAAclBMVEX33x4AAAD/6R/lzhxyZg4mIgX85B//5x+CdRD64R7u1x3/6yD/7yAYFgM9NwhfVgspJQVNRQndyBvPuxnWwho3MgdoXg3CsRjIthiPghEeGwS9qxe1pBajkxQwKwYTEQOsmxWaixNEPQh6bQ5VTgqJfBEdrUiUAAADoklEQVRoge2Za3PqIBCGuSgIiTdytcY20fb//8UmVg0QwETJmTkzvB+cMRIeFnZhWQEICgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgp6UexPM/RM0UPUSEaUizRJkhQDRD2PgNaX1V0/fPgzSA/7bA07Lc/bWjDik44W8KE11kwjrN5DVXni036ZvtToKFnCoXLuz3wHnR4M7E4Fmp/OFhY4hJUvvJWOVlZ4a70xPPzRaeWAQ8j9uJ6NzpxwuPdjvIVOftx02HhxfJvtXyosu+04d+0KL1NvppNCRi1PmHOeSm64An5i3kynssNvMGLdSYPEzf6snDnithId3+0k/Pr94MlwK51n/dNt/GhMUgjP2NtOZ6Ez/NE/baTgQocT8XnITqMDf5NupwO+658uIq/AMfSN5HUe13kcnck+n6M5MjoHXYn3Np/wdKSNpJOjTIdZBebh2/Z5qOpcAa+h5qaTi4aHHw2PvPMtdMZ1erf+SeQ33K0zj4wp5b6YL59X8jp2NuFbvs/1t9Plk0aZf/Ev8nmCd2Y8bLxtP47bBFF2PFkbX9cZ100KoJMFDz3NvpMOqMgt+HTWnPYmRhP9Fntr6+U+8YTe8qPEaH/uY+d/Su/4vPka4isPcz+C3vINZQT46cH4UXTQlVDKbw1fvr/yY+lt+JNSLWX8vG/8eHrHVwoKu9jZ2jcdgEjJuN5PN1304VgY/5ToTwdrkvKOq2qEh+8q6WY6nc6IwoikrWQn/0LYqT3MBnR5508mRzzi+U7+Hkv3hqyvVbK46I53rPf/Fp2Qpn3rIN+NpBvbuR+j+AvutX6UUtnrxaSZZ7TItEGTUurt+zbRlD+qNmes3iGF7PNT2K0X3Qf+dTeJRfIGurrRa8mxs1KqyxKu7HcT4p0xacl2KbkKKPF7vI5Ju8fAC28bMsbaz1K+XMLFhHjn6jGR10lyPKiZ283lIz2f2zZFKtJjox00xwlOZ6359gO6L4d41vKq9bRoN5W7ZZV3W1Azhn6adMgo7m3Qvp/I4S3O0HyS5e16uqufUvQyYMule01OK9HC0Vsjb0GMPMMfpx/u1F5zX2m1obhxwstXMgtSW3obuhBN9Uyq1168ltZQYerznBh6I6DaGNq26eTp5aodI4W+pJvKcimnrNgOUumsfquGRCJcLR4nW16njoIEiXjR9LP1eanE2+ULRlAcAYwxRzF6VgxgJIoRx0JgED9vPX4ME/7XnetP4KCgoP9Pv/ZMKoHMulrqAAAAAElFTkSuQmCC"
+                            alt="Javascript">
+                    </div>
+
+                    <div class="content">
+                        <div>
+                            <h2>Javascript</h2>
+                            <p>Funcionality</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="data:image/png;base64,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"
+                            alt="Angular">
+                    </div>
+
+                    <div class="content">
+                        <div>
+                            <h2>Angular</h2>
+                            <p>Frontend framework</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ13qOkMyuQEjSXdlrlCVN38b973-RcQadqw&usqp=CAU"
+                            alt="Springboot">
+                    </div>
+
+                    <div class="content">
+                        <div>
+                            <h2>SpringBoot</h2>
+                            <p>Backend</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP8hXWSPy1MrPzWGGAhUs0m6J7QNhElxDokw&usqp=CAU"
+                            alt="HTML">
+                    </div>
+
+                    <div class="content">
+                        <div>
+                            <h2>HTML5</h2>
+                            <p>Maquetado de páginas web</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="data:image/jpeg;base64,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"
+                            alt="CSS">
+                    </div>
+
+                    <div class="content">
+                        <div>
+                            <h2>CSS</h2>
+                            <p>Diseño web</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="imgBx">
+                        <img src="data:image/png;base64,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"
+                            alt="Typescript">
+                    </div>
+
+                    <div class="content">
+                        <div>
+                            <h2>TypeScript</h2>
+                            <p> <a href="">Lenguaje de programación</a> </p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
 
-      <hr class="featurette-divider">
+        <!-- ACA PUSE UN PDF QUE SE VE EN LA PAGINA -->
+        <div class="container">
+            <div id=experiencia class="container-fluid">
+                <br>
+                <br>
+                <br>
+                <div class="col-md-15">
+                    <h2>Experiencia</h2>
+                    <div class="card mb-10" style="text-align: center; background-color: inherit; border: inherit;">
+                        <div style="height: 300px">
+                            <iframe src="files/CV_FACUNDO_WEGHEROSCI.pdf">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
 
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod
-            semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-            commodo.</p>
+                <!-- LINK A OTRA PAGINA -->
+                <div class="col-md-15">
+                    <a href="files/CV_FACUNDO_WEGHEROSCI.pdf">
+                        <br>
+                        <button type="submit" class="btn btn-primary">Descargar PDF</button>
+                    </a><br>
+                </div>
+            </div>
         </div>
-        <div class="col-md-5">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-            height="500" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: 500x500"
-            preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-          </svg>
 
+        <!-- INGLES -->
+        <div class="container" >
+
+            <h2>Idioma</h2>
+            <div class="container-fluid" style="background-color: inherit;">
+                <div class="accordion-body">
+                    <div class="card" id="ingles">
+                        <div class="card-body" id="ingles-body">
+                            <div class="col-md-10">
+                                <div class="row g-0">
+                                    <div class="col-md-9" style="margin:auto">
+                                        <h5 class="card-title">Ingles</h5>
+                                        <div>
+                                            <p><strong>Lectura</strong></p>
+                                            <div class="progress">
+                                                <div role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                                    aria-valuemax="100"
+                                                    class="progress-bar progress-bar-striped progress-bar-animated"
+                                                    style="width: 100%;"></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p><strong>Escritura</strong></p>
+                                            <div class="progress">
+                                                <div role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                                    aria-valuemax="100"
+                                                    class="progress-bar progress-bar-striped progress-bar-animated"
+                                                    style="width: 90%;"></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p><strong>Conversación</strong></p>
+                                            <div class="progress">
+                                                <div role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                                                    aria-valuemax="100"
+                                                    class="progress-bar progress-bar-striped progress-bar-animated"
+                                                    style="width: 87%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!---->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+                </div>
+            </div>
         </div>
-      </div>
 
-      <hr class="featurette-divider">
+        <!-- BOX DE CONTACTO -->
+        <div class="container">
+            <div class="container-fluid" style="background-color: inherit;">
+                <br>
+                <br>
+                <br>
+                <br>
+                <h2>Contactate conmigo</h2>
+                <div class="bg-success p-2" style="--bs-bg-opacity: .5;">
+                    <div class="col-md-15" style="background-color: inherit;">
+                        <div id="contact" class="card mb-10"
+                            style="padding: 40px; background-color: inherit; border: 10px;">
 
-      <!-- /END THE FEATURETTES -->
+                            <!-- CONTACTO que manda msj posta a formspree-->
 
-    </div><!-- /.container -->
+                            <!-- modify this form HTML and place wherever you want your form -->
+                            <form action="https://formspree.io/f/mrgjkldq" method="POST">
+                                <div>
+                                    <label class="col">
+                                        Su correo:
+                                        <br>
+                                        <input type="email" placeholder="correo@correo.com" name="email">
+                                    </label>
+                                </div>
+                                <div style="margin-left:10px">
+                                    <label class="row mensaje">
+                                        Su mensaje:
+                                        <br>
+                                        <textarea rows="4" name="message"
+                                            placeholder="Contenido del mensaje que desea enviar"></textarea>
+                                    </label>
+                                </div>
+                                <div style="margin-top:15px">
+                                    <!-- your other form fields go here -->
+                                    <button type="submit" class="btn btn-primary">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
 
-    <!-- FOOTER -->
-    <footer class="container">
-      <p class="float-right"><a href="#">Back to top</a></p>
-      <p>&copy; 2017-2020 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    <!-- PIE DE PAGINA -->
+    <footer>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- Firmita -->
+        <div style="background-color: azure; padding-bottom: 20px;">
+            <address style="text-align: center;"> &#169CPetruzzo2022 </address>
+        </div>
     </footer>
-  </main>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
 </body>
+
+
+
 
 </html>

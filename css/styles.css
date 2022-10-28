@@ -1,5 +1,6 @@
 :root {
     --bg-color: black;
+    --log-color: #d2d6d8;
     --typewriterSpeed: 6s;
     --typewriterCharacters: 24;
 }
@@ -298,3 +299,12 @@ h2{
         transform: translateY(50%);
     }
 } */
+
+#ingles{
+    background-color: #fff5;
+}
+
+#ingles-body{
+    display:flex;
+    justify-content: center;
+}
