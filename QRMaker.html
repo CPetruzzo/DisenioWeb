@@ -53,7 +53,7 @@
         <swal-param name="customClass" value='{ "popup": "my-popup" }' />
         <swal-function-param name="didOpen" value="popup => console.log(popup)" />
     </template>
-    
+
     <div class="body">
         <div class="contenedor">
             <h1>QR Generator</h1>
@@ -89,11 +89,18 @@
                 </div>
             </footer>
         </div>
+
+        <div id="invisible" style="display: none;">
+            <div id="contentToPrint">
+                <div class="contenedorQR2" id="contenedorQR2"></div>
+            </div>
+        </div>
     </div>
 
-    <div id="invisible" style="display: none;">
-        <div id="contentToPrint" >
-            <!-- <div id="fondo">
+    <!-- Para la Municipalidad de Paraná -->
+    <!-- <div id="invisible" style="display: none;">
+        <div id="contentToPrint"> 
+            <div id="fondo">
                 <ul class="borde">
                     <li class="b1"></li>
                     <li class="b2"></li>
@@ -105,18 +112,20 @@
                 Nocturno y Bromatología</p>
                 <p id="certificado">Certificado de habilitación del vehículo gastronómico</p>
                 <p id="cumpleReq">Este vehículo reúne los requisitos mínimos necesarios para su habilitación según ordenanzas N°7382 y N°9714.</p>
-                <p id="legal">Secretaría Legal y Administrativa</p> -->
-            <img class="LogoPna" src="https://cpetruzzo.github.io/DisenioWeb/images/FoodTrucks.png" alt="LogoPna" srcset="">
-            <div class="contenedorQR2" id="contenedorQR2">
-            <!-- </div>
-                <ul class="borde">
-                    <li class="b1"></li>
-                    <li class="b2"></li>
-                    <li class="b3"></li>
-                </ul>
-            </div> -->
-        </div>
-    </div>
+                <p id="legal">Secretaría Legal y Administrativa</p> 
+            <img class="LogoPna" src="https://cpetruzzo.github.io/DisenioWeb/images/FoodTrucks.png" alt="LogoPna"
+                srcset="">
+            <div class="contenedorQR2" id="contenedorQR2"> 
+                </div>
+                    <ul class="borde">
+                        <li class="b1"></li>
+                        <li class="b2"></li>
+                        <li class="b3"></li>
+                    </ul>
+                </div> 
+            </div>
+        </div> 
+    </div>  -->
 
 
     <!-- Download as PNG function -->
@@ -196,6 +205,7 @@
         }).bindClickHandler('data-swal-toast-template')
 
     </script>
+
 </body>
 
 </html>
