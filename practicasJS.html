@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,81 @@
     <title>Prácticas JS</title>
     <!-- <script src="./js/practicasJS.js"></script> -->
 </head>
-<body>
-    
-    <script src="./js/practicasJS.js"></script>
 
-    <p onclick="alert('Hola loco');" style="cursor: pointer;">Clickeame</p>
+<body>
+
+    <button onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='white'" onclick="change()">canChange?</button>
+    <p id="cambiar" onclick="cambiarTexto()" style="cursor: pointer; color: red">Clickeame</p>
+
+    <script src="./js/practicasJS.js"></script>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        let x, y, z;  // Statement 1
+        x = 5;        // Statement 2
+        y = 6;        // Statement 3
+        z = x + y;    // Statement 4
+
+        let demo = document.getElementById("demo").innerHTML = "The value of z is " + z + ".";  
+    </script>
+
+    <script>
+        let a, b, c;
+        a = 5;
+        b = 6;
+        c = a + b;
+        document.getElementById("demo1").innerHTML = c;
+    </script>
+
+    <script>
+
+        switch (canChange = false) {
+            default: canChange = true;
+        }
+
+        function cambiarTexto() {
+            let p = document.getElementById('cambiar').innerHTML
+            console.log(p)
+
+            if (canChange) {
+                let p = document.getElementById('cambiar').innerHTML = 'Ahora es otra cosa';
+                alert('Apa, te cambié el texto');
+                console.log(p);
+                switch (canChange = true) {
+                    default: canChange = false;
+                }
+                console.log(canChange);
+                
+            } else if (canChange != true) {
+                let p = document.getElementById('cambiar').innerHTML = 'Clickeame';
+                alert('Ya no puedo hacer nada, no se volver al texto anterior');
+                switch (canChange = false) {
+                    default: canChange = true;
+                }
+            }
+        }
+
+        function change() {
+            if (canChange) {
+                console.log("El estado del canChange pasó de: " + canChange);
+                switch (canChange = true) {
+                    default: canChange = false;
+                }
+                console.log("a valer: " + canChange);
+                console.log("//////////////////////");
+            } else if (!canChange) {
+                console.log("El estado del canChange pasó de: " + canChange);
+                switch (canChange = false) {
+                    default: canChange = true;
+                }
+                console.log("a valer: " + canChange);
+                console.log("//////////////////////");
+            }
+        }
+
+
+    </script>
 </body>
+
 </html>

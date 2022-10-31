@@ -1,0 +1,65 @@
+
+        body {
+            font-family: Montserrat;
+            transition: .4s all ease-in;
+            background: #252525;
+            color: #d1d5da;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .title {
+            font-family: Montserrat, sans-serif;
+            font-size: x-large;
+            font-weight: bold;
+            text-align: justify;
+        }
+
+        p {
+            text-align: justify;
+            letter-spacing: 2px;
+            font-family: Montserrat, sans-serif;
+            font-size: medium;
+            font-weight: bold;
+            margin-left: 35px;
+            margin-block-end: 0em;
+            margin-block-start: 0em;
+
+        }
+
+        pre {
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        .cancion {
+            display: flex;
+            justify-content: center;
+        }
+
+        .marco {
+            display: flex;
+        }
+
+        @media (max-width: 910px) {
+            .marco {
+                display: block;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            .title {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 361px) {
+            pre {
+                font-size: 14px;
+            }
+
+        }
