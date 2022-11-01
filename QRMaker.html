@@ -89,126 +89,109 @@
                 </div>
             </footer>
         </div>
-        
+
         <!-- <div>
             <button onclick="window.print()">Print this page</button>
         </div> -->
 
-        <div id="invisible" style="display: none;">
+        <!-- <div id="invisible" style="display: none;">
             <div id="contentToPrint">
                 <div class="contenedorQR2" id="contenedorQR2"></div>
             </div>
         </div>
+    </div> -->
+
+        <!-- Para la Municipalidad de Paraná -->
+        <div id="invisible" style="display: none;">
+            <div id="contentToPrint">
+
+                <img class="LogoPna" src="https://cpetruzzo.github.io/DisenioWeb/images/FoodTrucks.png" alt="LogoPna"
+                    srcset="">
+                <div class="contenedorQR2" id="contenedorQR2">
+
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Para la Municipalidad de Paraná -->
-    <!-- <div id="invisible" style="display: none;">
-        <div id="contentToPrint"> 
-            <div id="fondo">
-                <ul class="borde">
-                    <li class="b1"></li>
-                    <li class="b2"></li>
-                    <li class="b3"></li>
-                </ul>
-            <img class="LogoPna" src="https://cpetruzzo.github.io/DisenioWeb/images/LogoPna.png" alt="LogoPna" srcset="">
-            <p id="direccion">Dirección General de Habilitaciones, Concesiones, Uso de Espacios 
-                Públicos, Control Urbano, Control 
-                Nocturno y Bromatología</p>
-                <p id="certificado">Certificado de habilitación del vehículo gastronómico</p>
-                <p id="cumpleReq">Este vehículo reúne los requisitos mínimos necesarios para su habilitación según ordenanzas N°7382 y N°9714.</p>
-                <p id="legal">Secretaría Legal y Administrativa</p> 
-            <img class="LogoPna" src="https://cpetruzzo.github.io/DisenioWeb/images/FoodTrucks.png" alt="LogoPna"
-                srcset="">
-            <div class="contenedorQR2" id="contenedorQR2"> 
-                </div>
-                    <ul class="borde">
-                        <li class="b1"></li>
-                        <li class="b2"></li>
-                        <li class="b3"></li>
-                    </ul>
-                </div> 
-            </div>
-        </div> 
-    </div>  -->
 
+        <!-- Download as PNG function -->
+        <script>
+            function downloadPNG(png, filename = '') {
+                var downloadLink;
+                var dataType = 'image/png';
+                var pngSelect = document.getElementById(png);
 
-    <!-- Download as PNG function -->
-    <script>
-        function downloadPNG(png, filename = '') {
-            var downloadLink;
-            var dataType = 'image/png';
-            var pngSelect = document.getElementById(png);
+                var pngHTML = pngSelect.lastChild.src;
 
-            var pngHTML = pngSelect.lastChild.src;
+                // Specify file name
+                filename = filename ? filename + '.png' : 'miQR1.png';
 
-            // Specify file name
-            filename = filename ? filename + '.png' : 'miQR1.png';
+                // Create download link element
+                downloadLink = document.createElement("a");
 
-            // Create download link element
-            downloadLink = document.createElement("a");
+                document.body.appendChild(downloadLink);
 
-            document.body.appendChild(downloadLink);
+                if (navigator.msSaveOrOpenBlob) {
+                    var blob = new Blob(['ufeff', pngHTML], {
+                        type: dataType
+                    });
+                    navigator.msSaveOrOpenBlob(blob, filename);
+                } else {
+                    // Create a link to the file
 
-            if (navigator.msSaveOrOpenBlob) {
-                var blob = new Blob(['ufeff', pngHTML], {
-                    type: dataType
-                });
-                navigator.msSaveOrOpenBlob(blob, filename);
-            } else {
-                // Create a link to the file
+                    downloadLink.href = pngHTML;
+                    console.log(downloadLink.href)
 
-                downloadLink.href = pngHTML;
-                console.log(downloadLink.href)
+                    // Setting the file name
+                    downloadLink.download = filename;
 
-                // Setting the file name
-                downloadLink.download = filename;
-
-                //triggering the function
-                downloadLink.click();
+                    //triggering the function
+                    downloadLink.click();
+                }
             }
-        }
 
 
-        //////////////////////////////////////////////////////////////////
+            //////////////////////////////////////////////////////////////////
 
 
 
-        window.jsPDF = window.jspdf.jsPDF;
+            window.jsPDF = window.jspdf.jsPDF;
 
-        // Convert HTML content to PDF
-        function Convert_HTML_To_PDF() {
-            var doc = new jsPDF();
+            // Convert HTML content to PDF
+            function Convert_HTML_To_PDF() {
+                var doc = new jsPDF();
 
-            // Source HTMLElement or a string containing HTML.
-            var elementHTML = document.querySelector("#contentToPrint");
+                // Source HTMLElement or a string containing HTML.
+                var elementHTML = document.querySelector("#contentToPrint");
 
-            doc.html(elementHTML, {
-                callback: function (doc) {
-                    // Save the PDF
-                    doc.save('QRcode.pdf');
-                },
-                margin: [0, 0, 0, 0],
-                autoPaging: 'text',
-                x: 0,
-                y: 0,
-                width: 190, //target width in the PDF document
-                height: 150,
-                windowWidth: 675 //window width in CSS pixels
-            });
-        }
-    </script>
+                doc.html(elementHTML, {
+                    callback: function (doc) {
+                        // Save the PDF
+                        doc.save('QRcode.pdf');
+                    },
+                    margin: [0, 0, 0, 0],
+                    autoPaging: 'text',
+                    x: 0,
+                    y: 0,
+                    width: 190, //target width in the PDF document
+                    height: 150,
+                    windowWidth: 675 //window width in CSS pixels
+                });
+            }
+        </script>
 
 
-    <!-- Fancy button modals -->
-    <script>
+        <!-- Fancy button modals -->
+        <script>
 
-        Swal.bindClickHandler()
+            Swal.bindClickHandler()
 
-        Swal.mixin({
-            toast: true,
-        }).bindClickHandler('data-swal-toast-template')
+            Swal.mixin({
+                toast: true,
+            }).bindClickHandler('data-swal-toast-template')
 
-    </script>
+        </script>
 
 </body>
 
