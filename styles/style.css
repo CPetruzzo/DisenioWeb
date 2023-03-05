@@ -138,6 +138,7 @@
   }
   
   .nav-social__icon-soundcloud {
+    scale: 0.82;
     background-image: url("../images/github.png");
   }
   
