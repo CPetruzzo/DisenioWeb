@@ -30,6 +30,14 @@
           "iframe[allow]"
         ]
       }
+    ],
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "scroll-behavior"
+        ]
+      }
     ]
   }
 }
