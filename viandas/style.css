@@ -1,0 +1,113 @@
+/* Estilos básicos */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+
+  nav li {
+    margin-right: 10px;
+  }
+  
+  nav li:last-child {
+    margin-right: 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+  }
+  
+  nav a:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .destacados, .menu {
+    padding: 20px;
+  }
+  
+  .destacados ul, .menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+  }
+  
+  .destacados li, .menu li {
+    width: 30%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .destacados li img, .menu li img {
+    width: 100%;
+  }
+  
+  .destacados li h3, .menu li h3 {
+    margin-top: 10px;
+  }
+  
+  .destacados li a, .menu li a {
+    display: block;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+  }
+  
+  .destacados li a:hover, .menu li a:hover {
+    background-color: #666;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+  }
+  

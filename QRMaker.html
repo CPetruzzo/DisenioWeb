@@ -44,11 +44,11 @@
         <swal-button type="cancel">
             Cancelar
         </swal-button>
-        <swal-button type="deny">
+        <!-- <swal-button type="deny">
             <a onclick="Convert_HTML_To_PDF()">Download
                 as
                 PDF</a>
-        </swal-button>
+        </swal-button> -->
         <swal-param name="allowEscapeKey" value="false" />
         <swal-param name="customClass" value='{ "popup": "my-popup" }' />
         <swal-function-param name="didOpen" value="popup => console.log(popup)" />
@@ -156,30 +156,30 @@
 
 
 
-            window.jsPDF = window.jspdf.jsPDF;
+        //     window.jsPDF = window.jspdf.jsPDF;
 
-            // Convert HTML content to PDF
-            function Convert_HTML_To_PDF() {
-                var doc = new jsPDF();
+        //     // Convert HTML content to PDF
+        //     function Convert_HTML_To_PDF() {
+        //         var doc = new jsPDF();
 
-                // Source HTMLElement or a string containing HTML.
-                var elementHTML = document.querySelector("#contentToPrint");
+        //         // Source HTMLElement or a string containing HTML.
+        //         var elementHTML = document.querySelector("#contentToPrint");
 
-                doc.html(elementHTML, {
-                    callback: function (doc) {
-                        // Save the PDF
-                        doc.save('QRcode.pdf');
-                    },
-                    margin: [0, 0, 0, 0],
-                    autoPaging: 'text',
-                    x: 0,
-                    y: 0,
-                    width: 190, //target width in the PDF document
-                    height: 150,
-                    windowWidth: 675 //window width in CSS pixels
-                });
-            }
-        </script>
+        //         doc.html(elementHTML, {
+        //             callback: function (doc) {
+        //                 // Save the PDF
+        //                 doc.save('QRcode.pdf');
+        //             },
+        //             margin: [0, 0, 0, 0],
+        //             autoPaging: 'text',
+        //             x: 0,
+        //             y: 0,
+        //             width: 190, //target width in the PDF document
+        //             height: 150,
+        //             windowWidth: 675 //window width in CSS pixels
+        //         });
+        //     }
+        // </script>
 
 
         <!-- Fancy button modals -->

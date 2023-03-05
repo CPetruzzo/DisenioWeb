@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Viandas a Domicilio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Viandas a Domicilio</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Menú</a></li>
+                <li><a href="#">Acerca de nosotros</a></li>
+                <li><a href="#">Cómo hacer tu pedido</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="destacados">
+            <h2>Platos destacados</h2>
+            <ul>
+                <li>
+                    <img src="plato1.jpg" alt="Plato 1">
+                    <h3>Nombre del plato</h3>
+                    <p>Descripción del plato</p>
+                    <a href="#">Comprar</a>
+                </li>
+                <li>
+                    <img src="plato2.jpg" alt="Plato 2">
+                    <h3>Nombre del plato</h3>
+                    <p>Descripción del plato</p>
+                    <a href="#">Comprar</a>
+                </li>
+                <li>
+                    <img src="plato3.jpg" alt="Plato 3">
+                    <h3>Nombre del plato</h3>
+                    <p>Descripción del plato</p>
+                    <a href="#">Comprar</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="menu">
+            <h2>Nuestro menú</h2>
+            <ul>
+                <li>
+                    <img src="plato4.jpg" alt="Plato 4">
+                    <h3>Nombre del plato</h3>
+                    <p>Descripción del plato</p>
+                    <a href="#">Comprar</a>
+                </li>
+                <li>
+                    <img src="plato5.jpg" alt="Plato 5">
+                    <h3>Nombre del plato</h3>
+                    <p>Descripción del plato</p>
+                    <a href="#">Comprar</a>
+                </li>
+                <li>
+                    <img src="plato6.jpg" alt="Plato 6">
+                    <h3>Nombre del plato</h3>
+                    <p>Descripción del plato</p>
+                    <a href="#">Comprar</a>
+                </li>
+                <li>
+                    <img src="plato7.jpg" alt="Plato 7">
+                    <h3>Nombre del plato</h3>
+                    <p>Descripción del plato</p>
+                    <a href="#">Comprar</a>
+                </li>
+                <li>
+                    <img src="plato8.jpg" alt="Plato 8">
+                    <h3>Nombre del plato</h3>
+                    <p>Descripción del plato</p>
+                    <a href="#">Comprar</a>
+                </li>
+                <li>
+                    <img src="plato9.jpg" alt="Plato 9">
+                    <h3>Nombre del plato</h3>
+                    <p>Descripción del plato</p>
+                    <a href="#">Comprar</a>
+                </li>
+                <li>
+                    <img src="plato10.jpg" alt="Plato 10">
+                    <h3>Nombre del plato</h3>
+                    <p>Descripción del plato</p>
+                    <a href="#">Comprar</a>
+                </li>
+            </ul>
+        </section>
+        <section class="acerca-de">
+            <h2>Acerca de nosotros</h2>
+            <p>Somos una empresa dedicada a la elaboración y entrega de viandas a domicilio. Todos nuestros platos son
+                preparados con ingredientes frescos y de primera calidad, y nuestro objetivo es ofrecer una opción
+                saludable y deliciosa para quienes buscan una alternativa a la comida rápida.</p>
+        </section>
+
+        <section class="como-pedir">
+            <h2>Cómo hacer tu pedido</h2>
+            <p>Para hacer tu pedido, simplemente selecciona los platos que te gustaría recibir y completa tus datos de
+                contacto en el formulario que aparece a continuación. Nos pondremos en contacto contigo para confirmar
+                tu pedido y coordinar la entrega.</p>
+            <form action="procesar.php" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                <label for="platos">Platos:</label>
+                <select id="platos" name="platos[]" multiple>
+                    <option value="plato1">Plato 1</option>
+                    <option value="plato2">Plato 2</option>
+                    <option value="plato3">Plato 3</option>
+                    <option value="plato4">Plato 4</option>
+                    <option value="plato5">Plato 5</option>
+                    <option value="plato6">Plato 6</option>
+                    <option value="plato7">Plato 7</option>
+                    <option value="plato8">Plato 8</option>
+                    <option value="plato9">Plato 9</option>
+                    <option value="plato10">Plato 10</option>
+                </select>
+                <button type="submit">Enviar pedido</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Viandas a Domicilio - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="validar_formulario.js"></script>
+    sc
+</body>
+
+</html>
