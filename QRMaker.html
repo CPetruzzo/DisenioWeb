@@ -115,44 +115,42 @@
     </div>
 
 
-        <!-- Download as PNG function -->
-        <script>
-            function downloadPNG(png, filename = '') {
-                var downloadLink;
-                var dataType = 'image/png';
-                var pngSelect = document.getElementById(png);
+    <!-- Download as PNG function -->
+    <script>
+        function downloadPNG(png, filename = '') {
+            var downloadLink;
+            var dataType = 'image/png';
+            var pngSelect = document.getElementById(png);
+            var pngHTML = pngSelect.lastChild.src;
 
-                var pngHTML = pngSelect.lastChild.src;
+            // Specify file name
+            filename = filename ? filename + '.png' : 'miQR1.png';
 
-                // Specify file name
-                filename = filename ? filename + '.png' : 'miQR1.png';
+            // Create download link element
+            downloadLink = document.createElement("a");
 
-                // Create download link element
-                downloadLink = document.createElement("a");
+            document.body.appendChild(downloadLink);
 
-                document.body.appendChild(downloadLink);
+            if (navigator.msSaveOrOpenBlob) {
+                var blob = new Blob(['ufeff', pngHTML], {
+                    type: dataType
+                });
+                navigator.msSaveOrOpenBlob(blob, filename);
+            } else {
+                // Create a link to the file
+                downloadLink.href = pngHTML;
+                console.log(downloadLink.href)
 
-                if (navigator.msSaveOrOpenBlob) {
-                    var blob = new Blob(['ufeff', pngHTML], {
-                        type: dataType
-                    });
-                    navigator.msSaveOrOpenBlob(blob, filename);
-                } else {
-                    // Create a link to the file
+                // Setting the file name
+                downloadLink.download = filename;
 
-                    downloadLink.href = pngHTML;
-                    console.log(downloadLink.href)
-
-                    // Setting the file name
-                    downloadLink.download = filename;
-
-                    //triggering the function
-                    downloadLink.click();
-                }
+                //triggering the function
+                downloadLink.click();
             }
+        }
 
 
-            //////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////
 
 
 
@@ -182,16 +180,16 @@
         // </script>
 
 
-        <!-- Fancy button modals -->
-        <script>
+    <!-- Fancy button modals -->
+    <script>
 
-            Swal.bindClickHandler()
+        Swal.bindClickHandler()
 
-            Swal.mixin({
-                toast: true,
-            }).bindClickHandler('data-swal-toast-template')
+        Swal.mixin({
+            toast: true,
+        }).bindClickHandler('data-swal-toast-template')
 
-        </script>
+    </script>
 
 </body>
 

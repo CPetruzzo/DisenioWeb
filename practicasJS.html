@@ -11,12 +11,33 @@
 
 <body>
 
-    <button onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='white'" onclick="change()">canChange?</button>
+    <button onmouseover="this.style.backgroundColor='red'" onmouseout="this.style.backgroundColor='white'"
+        onclick="change()">canChange?</button>
     <p id="cambiar" onclick="cambiarTexto()" style="cursor: pointer; color: red">Clickeame</p>
 
     <script src="./js/practicasJS.js"></script>
     <p id="demo"></p>
     <p id="demo1"></p>
+
+
+    <!-- <section class="section footer__wrapper">
+        <h4 class="footer__name">Gabi 👽 Berbetoros | Composer | Sound Designer</h4>
+        <small class="footer__author"> Web made with love by 🦉 <a href="https://feralonsomaccari.github.io/my-portfolio/" target="_blank" rel="noopener">Fer Alonso Maccari</a>. </small>
+        <nav class="nav nav-social nav-social--footer">
+          <a class="nav-social-link" href="https://soundcloud.com/gabriel-berbetoros" target="_blank" rel="noopener noreferrer" title="SoundCloud">
+            <div class="nav-social__icon nav-social__icon-soundcloud"></div>
+          </a>
+          <a class="nav-social-link" href="https://twitter.com/gabiberbetoros" target="_blank" rel="noopener noreferrer" title="Twitter">
+            <div class="nav-social__icon nav-social__icon-twitter"></div>
+          </a>
+          <a class="nav-social-link" href="https://www.instagram.com/gabiberbetoros/" target="_blank" rel="noopener noreferrer" title="Instagram">
+            <div class="nav-social__icon nav-social__icon-ig"></div>
+          </a>
+          <a class="nav-social-link" href="https://www.linkedin.com/in/gabriel-berbetoros-7a019b137/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+            <div class="nav-social__icon nav-social__icon-in"></div>
+          </a>
+        </nav>
+      </section> -->
 
     <script>
         let x, y, z;  // Statement 1
@@ -42,45 +63,31 @@
         }
 
         function cambiarTexto() {
-            let p = document.getElementById('cambiar').innerHTML
-            console.log(p)
-
+            let p = document.getElementById('cambiar');
             if (canChange) {
-                let p = document.getElementById('cambiar').innerHTML = 'Ahora es otra cosa';
+                p.innerHTML = 'Ahora es otra cosa';
                 alert('Apa, te cambié el texto');
-                console.log(p);
-                switch (canChange = true) {
-                    default: canChange = false;
-                }
-                console.log(canChange);
-                
+                console.log(p.innerHTML);
+                canChange = false;
             } else if (canChange != true) {
-                let p = document.getElementById('cambiar').innerHTML = 'Clickeame';
-                alert('Ya no puedo hacer nada, no se volver al texto anterior');
-                switch (canChange = false) {
-                    default: canChange = true;
-                }
+                p.innerHTML = 'Clickeame';
+                alert('Lo único que se hacer es volver al texto anterior');
+                console.log(p.innerHTML);
+                canChange = true;
             }
         }
 
         function change() {
             if (canChange) {
                 console.log("El estado del canChange pasó de: " + canChange);
-                switch (canChange = true) {
-                    default: canChange = false;
-                }
+                canChange = false;
                 console.log("a valer: " + canChange);
-                console.log("//////////////////////");
             } else if (!canChange) {
                 console.log("El estado del canChange pasó de: " + canChange);
-                switch (canChange = false) {
-                    default: canChange = true;
-                }
+                canChange = true;
                 console.log("a valer: " + canChange);
-                console.log("//////////////////////");
             }
         }
-
 
     </script>
 </body>
