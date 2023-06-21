@@ -35,7 +35,12 @@
       "default",
       {
         "ignore": [
-          "scroll-behavior"
+          "scroll-behavior",
+          "backdrop-filter",
+          "min-width: fit-content",
+          "width: fit-content",
+          "height: fit-content",
+          "min-height: fit-content"
         ]
       }
     ],
@@ -50,6 +55,13 @@
       {
         "label": "off"
       }
-    ]
-  }
+    ],
+    "disown-opener": "off"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not ios_saf <= 16.3",
+    "not safari <= 16.3"
+  ]
 }
