@@ -2,6 +2,9 @@
     "liveServer.settings.port": 5501,
     "conventionalCommits.scopes": [
         "index",
-        "proyects"
-    ]
+        "proyects",
+        "update"
+    ],
+    "aws.telemetry": false,
+    "aws.codeWhisperer.shareCodeWhispererContentWithAWS": false
 }
