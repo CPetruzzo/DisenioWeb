@@ -431,21 +431,8 @@
       font-size: 2em;
       text-align: left;
     }
-  
-    /* footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      z-index: 10;
-    } */
+
     .footer__name {
       margin: 0;
     }
-  
-    /* footer{
-      position: fixed;
-      width: 100%;
-      z-index: 10;
-      bottom: 0;
-    } */
   }

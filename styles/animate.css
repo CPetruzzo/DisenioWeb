@@ -1,13 +1,5 @@
 @charset "UTF-8";
 
-/*!
- * animate.css -https://daneden.github.io/animate.css/
- * Version - 3.7.2
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
- *
- * Copyright (c) 2019 Daniel Eden
- */
-
 @-webkit-keyframes bounce {
   from,
   20%,
@@ -3622,4 +3614,28 @@
     -webkit-animation-iteration-count: 1 !important;
     animation-iteration-count: 1 !important;
   }
+}
+
+.mate {
+  animation: pendulum 2s ease-in-out infinite;
+}
+
+.mate:hover {
+  animation: none; /* Detiene la animación al hacer hover */
+}
+
+.mate:active {
+  animation: none; /* Detiene la animación al hacer clic */
+}
+
+@keyframes pendulum {
+0% {
+  transform: rotate(20deg);
+}
+50% {
+  transform: rotate(-20deg);
+}
+100% {
+  transform: rotate(20deg);
+}
 }
