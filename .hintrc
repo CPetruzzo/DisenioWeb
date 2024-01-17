@@ -40,7 +40,8 @@
           "min-width: fit-content",
           "width: fit-content",
           "height: fit-content",
-          "min-height: fit-content"
+          "min-height: fit-content",
+          "-webkit-text-size-adjust"
         ]
       }
     ],
