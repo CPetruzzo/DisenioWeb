@@ -41,7 +41,8 @@
           "width: fit-content",
           "height: fit-content",
           "min-height: fit-content",
-          "-webkit-text-size-adjust"
+          "-webkit-text-size-adjust",
+          "scale"
         ]
       }
     ],
@@ -57,7 +58,13 @@
         "label": "off"
       }
     ],
-    "disown-opener": "off"
+    "disown-opener": "off",
+    "axe/structure": [
+      "default",
+      {
+        "list": "off"
+      }
+    ]
   },
   "browserslist": [
     "defaults",

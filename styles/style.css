@@ -24,15 +24,16 @@ body {
 header {
   grid-area: header;
   background-color: rgb(25, 25, 25);
-  background-image: url("../images/background.webp");
-  -webkit-mask-image: linear-gradient(to bottom, black transparent);
-  mask-image: linear-gradient(to bottom, black, transparent);
+  background-image: url("https://cdn.discordapp.com/attachments/1195795661141057646/1200130838990430299/image2.png?ex=65c50ff1&is=65b29af1&hm=6d6759b2783d9d8f831d45a494565dc2223ba0a76affebdadeb97a8d8ee4c1ae&");
+  /* -webkit-mask-image: radial-gradient( rgb(25, 25, 25), transparent); 
+  mask-image: radial-gradient( rgb(25, 25, 25), transparent); */
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 75% 90%;
+  background-position: 50% 100%;
   color: #fff;
   position: relative;
   padding: 5rem 0;
+  height: 100vh;
 }
 
 main {
@@ -455,7 +456,7 @@ footer {
 
 /* Estilos para el contenedor principal */
 .skillscontainer {
-  max-width: 1000px;
+  /* max-width: 1000px; */
   margin: auto;
   overflow-x: auto;
   flex-wrap: wrap; /* Envolver elementos si no caben en una sola fila */
@@ -495,6 +496,10 @@ footer {
   object-fit: cover;
 }
 
+.imgBx:hover {
+  scale: 1.1;
+}
+
 /* Estilos para el contenido del box */
 .content {
   flex: 1;
@@ -517,13 +522,86 @@ footer {
   display: none;
 }
 
+/* por cada cosa que quiera agregar en skill tengo que agregar 150 px y en el html agregarlo doble */
 @keyframes scroll {
   0% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(calc(-1050px));
-    transform: translateX(calc(-1050px));
+    -webkit-transform: translateX(calc(-1350Px));
+    transform: translateX(calc(-1350px));
   }
+}
+
+/* por cada cosa que quiera agregar en skill tengo que agregar 150 px y en el html agregarlo doble */
+@keyframes scaleanimation {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.1;  
+  }
+}
+
+/* Estilo para la sección de las tarjetas en forma de lista */
+.examples__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espaciado entre las tarjetas */
+  list-style: none; /* Quita los puntos de la lista */
+}
+
+/* Estilo para cada tarjeta individual en la lista */
+.examples__list li {
+  position: relative; /* Necesario para posicionar el contenido adicional */
+  width: 300px; /* Tamaño fijo para todas las tarjetas */
+  height: 400px; /* Puedes ajustar la altura según tus necesidades */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: filter 0.3s ease-in-out; /* Agrega transición para el filtro */
+}
+
+/* Estilo para la imagen dentro de la tarjeta en la lista */
+.examples__list li iframe,
+.examples__list li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Efecto de cover para la imagen */
+  border-radius: 8px; /* Ajusta según el borde de la tarjeta */
+}
+
+/* Contenedor para el texto encima de la imagen en la lista */
+.examples__list li .text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Estilo para el contenido de la tarjeta en la lista */
+.examples__list li .text-overlay .card-content {
+  background: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out; /* Transición para el contenido */
+  transform: translateY(100%); /* Inicialmente oculto fuera de la tarjeta */
+}
+
+/* Efecto de desenfoque al hacer hover en la lista */
+.examples__list li:hover {
+  filter: blur(5px); /* Ajusta el valor según lo desees */
+}
+
+/* Muestra el contenido al hacer hover en la lista */
+.examples__list li:hover .text-overlay .card-content {
+  transform: translateY(0);
 }
