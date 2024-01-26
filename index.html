@@ -4,13 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="keywords" content="diseño web, portfolio, facundo, wegher, desarrollo web, programación, seo, videojuegos, páginas, ingeniero en alimentos">
-  <meta name="keywords" content="precios paginas web, cuanto cuesta una pagina web, diseño de paginas web, posicionamiento, ingeniero, alimentos">
+  <meta name="keywords"
+    content="diseño web, portfolio, facundo, wegher, desarrollo web, programación, seo, videojuegos, páginas, ingeniero en alimentos">
+  <meta name="keywords"
+    content="precios paginas web, cuanto cuesta una pagina web, diseño de paginas web, posicionamiento, ingeniero, alimentos">
   <meta name="description" content="Facundo Wegher Osci | Full Stack Developer | Game Programmer">
   <meta name="author" content="Facundo Wegher Osci">
   <meta name="copyright" content="Facundo Wegher Osci" />
-  <link rel="canonical" href="https://www.wegher.com.ar"/>
-  <meta name="robots" content="index"/>
+  <link rel="canonical" href="https://www.wegher.com.ar" />
+  <meta name="robots" content="index" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant:ital,wght@0,100;0,400;0,600;1,400&display=swap"
+    rel="stylesheet">
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -26,42 +33,66 @@
     import atropos from 'https://cdn.jsdelivr.net/npm/atropos@2.0.2/+esm'
   </script>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-52PQY15VKG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-52PQY15VKG');
+  </script>
+
 </head>
 
 <body class="body-wrapper">
 
   <header>
     <section class="section header__wrapper">
-
       <article class="header__title">
-        <h1 class="title__name">
-          Facundo Wegher
-        </h1>
-        <small class="title__icon"> <img height="30px" src="images/mate.png" alt="mate"></small> 
+        <div style="display: flex;">
+          <h1 class="title__name">
+            FACUNDO WEGHER
+          </h1>
+          <small class="title__icon"> <img height="30px" src="images/mate.png" alt="mate"></small>
+        </div>
 
-        <h2 class="title__subtitle" style="font-weight: bolder;">Food Engineer | Fullstack Developer | Game Programmer
-        </h2>
+        <h2 class="title__subtitle" style="font-weight: bolder;">Food Engineer</h2>
+        <h2 class="title__subtitle" style="font-weight: bolder;">Fullstack Developer</h2>
+        <h2 class="title__subtitle" style="font-weight: bolder;">Game Programmer</h2>
+        <nav class="nav header__nav">
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" href="#examples">Proyects</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+
       </article>
-      <nav class="nav header__nav">
-        <a class="nav-link" href="#skills">Skills</a>
-        <a class="nav-link" href="#experience">Experience</a>
-        <a class="nav-link" href="#examples">Examples</a>
-        <a class="nav-link" href="#contact">Contact</a>
-      </nav>
     </section>
   </header>
+
 
   <main>
     <section class="wow fadeInUp section cover-letter" id="about" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
       data-aos-duration="1200
           " data-aos-offset="0">
-      <h2 class="section__title">Hello!</h2>
+      <h2 class="section__title">
+        <svg class="size-7" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+          <path d="M6 21v-2a4 4 0 0 1 4 -4h4"></path>
+          <path d="M15 19l2 2l4 -4"></path>
+        </svg> Hello!
+      </h2>
       <a class="nav-link" href="index2.html">Ver en Español</a>
 
       <article class="cover-letter__article">
         <div class="cover-letter__desc">
           <p class="desc">
-            I'm Facundo Wegher Osci, an Argentine-Italian Food Engineer, Fullstack Developer, and Video Game Programmer.
+            I'm <b>Facundo Wegher Osci</b>, <b style="color: #79db75;">Food Engineer</b>, <b
+              style="color: #79db75;">Fullstack Developer</b> and <b style="color: #79db75;">Game Programmer</b>. <b
+              style="color:slateblue;">Argentinian. Italian Passport.</b><br>
             My interests span technology, including the metaverse, artificial intelligence, video game development,
             sports, and music. With a strong professional background and a constant pursuit of the latest trends and
             technologies.
@@ -93,7 +124,7 @@
             </a>
           </nav>
         </div>
-        
+
         <div class="cover-letter__photo"></div>
       </article>
     </section>
@@ -164,9 +195,7 @@
 
         <div class="box" data-aos="fade-right" data-aos-duration="2000">
           <div class="imgBx">
-            <img
-              src="images\react.png"
-              alt="React">
+            <img src="images\react.png" alt="React">
           </div>
         </div>
 
@@ -186,7 +215,7 @@
           </div>
         </div>
 
-        
+
         <div class="box" data-aos="fade-right" data-aos-duration="2000">
           <div class="imgBx">
             <img
@@ -235,9 +264,7 @@
 
         <div class="box" data-aos="fade-right" data-aos-duration="2000">
           <div class="imgBx">
-            <img
-              src="images\react.png"
-              alt="React">
+            <img src="images\react.png" alt="React">
           </div>
         </div>
 
@@ -262,22 +289,39 @@
 
     <section data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-duration="1200
           " data-aos-offset="0" class="wow fadeInUp section experience" id="experience">
-      <h2 class="section__title">Experience</h2>
+      <h2 class="section__title">
+        <svg class="size-7" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+          fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
+          <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2"></path>
+          <path d="M12 12l0 .01"></path>
+          <path d="M3 13a20 20 0 0 0 18 0"></path>
+        </svg>
+        Experience
+      </h2>
       <div class="experience__item">
         <span class="experience__date">2022 - Present</span>
         <div class="experience__desc">
           <h4 class="experience__desc__title">Game Programmer Jr</h4>
           <a class="link link" href="https://killabunnies.com.ar/" target="_blank"
             rel="noopener noreferrer">Killabunnies</a>
-          <span>Using PixiJS as framework for developing games.</span>
+          <span>Using Unreal Engine 5, Pixi 3d and PixiJS for developing games.</span>
         </div>
       </div>
       <div class="experience__item">
-        <span class="experience__date">2020 - Present</span>
+        <span class="experience__date">2024 - Present</span>
+        <div class="experience__desc">
+          <h4 class="experience__desc__title">Bromatology Director</h4>
+          <a class="link link" href="https://www.parana.gob.ar/" target="_blank" rel="noopener noreferrer">Municipal
+            Government of Paraná - Entre Ríos - Argentina</a>
+          <span>In charge of Bromatology area.</span>
+        </div>
+        <span class="experience__date">2020 - 2023</span>
         <div class="experience__desc">
           <h4 class="experience__desc__title">Lab Cordinator</h4>
-          <a class="link link" href="https://www.parana.gob.ar/" target="_blank" rel="noopener noreferrer">Municipalidad
-            de Paraná - Entre Ríos - Argentina</a>
+          <a class="link link" href="https://www.parana.gob.ar/" target="_blank" rel="noopener noreferrer">Municipal
+            Government of Paraná - Entre Ríos - Argentina</a>
           <span>In charge of Bromatology Lab.</span>
         </div>
       </div>
@@ -304,137 +348,70 @@
     </section>
 
     <section class="section examples" id="examples" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
-    data-aos-duration="1200" data-aos-offset="0">
-    <h2 class="section__title">Examples</h2>
-
-    <iframe width="100%" height="600" scrolling="no" frameborder="no" allow="autoplay"
-      src="https://sparkly-crisp-736a93.netlify.app/"></iframe>
-    <a href="https://sparkly-crisp-736a93.netlify.app/" class="nav-link"> React App - Shopping Cart</a>
-
-    <iframe width="100%" height="600" scrolling="no" frameborder="no" allow="autoplay"
-      src="https://eclectic-mousse-c82d5b.netlify.app/"></iframe>
-    <a href="https://eclectic-mousse-c82d5b.netlify.app/" class="nav-link"> React App - Tic Tac Toe </a>
-
-    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
-      src="https://resonant-beignet-661bf0.netlify.app/"></iframe>
-    <a href="https://resonant-beignet-661bf0.netlify.app/" class="nav-link"> Twitter Cards with React </a>
-
-    <iframe width="100%" height="700" scrolling="no" frameborder="no" allow="autoplay"
-      src="https://porfolio-cf060.web.app">
-    </iframe>
-    <a href="http://porfolio-cf060.web.app" class="nav-link"> Go to my portfolio web app!</a>
-
-    <iframe width="100%" height="700" scrolling="no" frameborder="no" allow="autoplay"
-      src="https://pasapp-117cc.web.app/">
-    </iframe>
-    <a href="https://pasapp-117cc.web.app/" class="nav-link"> This is an Angular work in progress template app that
-      uses Firebase auth and storage!</a>
-
-    <!-- <iframe width="100%" height="600" scrolling="no" frameborder="no" allow="autoplay"
-      src="https://cpetruzzo.github.io/game-page/"></iframe> -->
-    <br>
-    <a href="https://cpetruzzo.github.io/game-page/" class="nav-link"> Go to this 3d-demo made with Pixi3D! (Available
-      in PC Browsers)</a>
-
-    <div class="examples__wrapper">
-      <iframe width="100%" height="500" scrolling="no" frameborder="no" allow="autoplay"
-        src="https://cpetruzzo.github.io/AnAdventurersFate/"></iframe>
-    </div>
-    <a href="https://cpetruzzo.github.io/AnAdventurersFate/" class="nav-link"> Go to the game!</a><br>
-    <a href="https://cpetruzzo.github.io/DisenioWeb/files/app-debug-2.apk" class="nav-link"> Download it's android
-      version!</a>
-
-    <iframe width="100%" height="500" scrolling="no" frameborder="no" allow="autoplay"
-      src="https://angelinanut.github.io/nutricion/"></iframe>
-    <a href="https://angelinanut.github.io/nutricion/" class="nav-link"> Go to the website!</a>
-
-    <iframe width="100%" height="700" scrolling="no" frameborder="no" allow="autoplay"
-      src="https://cpetruzzo.github.io/DisenioWeb/QRMaker.html"></iframe>
-
-    <iframe width="100%" height="600" scrolling="no" frameborder="no" allow="autoplay"
-      src="https://tasklist-748a4.web.app/"></iframe>
-    <a href="https://tasklist-748a4.web.app/" class="nav-link"> Go to this public task list app!</a>
-
-    <!-- <iframe width="100%" height="700" scrolling="no" frameborder="no" allow="autoplay"
-    src="https://cpetruzzo.github.io/DisenioWeb/alojamiento.html"></iframe>
-    <a href="https://cpetruzzo.github.io/DisenioWeb/alojamiento.html" class="nav-link"> Vacation resort - work in progress </a> -->
-  </section>
-
-    <!-- <section class="section examples" id="examples" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
       data-aos-duration="1200" data-aos-offset="0">
-      <h2 class="section__title">Examples</h2>
+      <h2 class="section__title">
+        <svg class="size-7" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+          stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M7 8l-4 4l4 4"></path>
+          <path d="M17 8l4 4l-4 4"></path>
+          <path d="M14 4l-4 16"></path>
+        </svg>
+        Proyects
+      </h2>
 
       <ul class="examples__list">
-        <li>
-          <iframe width="100%" height="600" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://sparkly-crisp-736a93.netlify.app/"></iframe>
-          <a href="https://sparkly-crisp-736a93.netlify.app/" class="nav-link"> React App - Shopping Cart</a>
-        </li> 
-        <li>
-          <iframe width="100%" height="600" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://eclectic-mousse-c82d5b.netlify.app/"></iframe>
-          <a href="https://eclectic-mousse-c82d5b.netlify.app/" class="nav-link"> React App - Tic Tac Toe </a>
-        </li>
-        <li>
-          <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://resonant-beignet-661bf0.netlify.app/"></iframe>
-          <a href="https://resonant-beignet-661bf0.netlify.app/" class="nav-link"> Twitter Cards with React </a>
-        </li>
-        <li>
-          <iframe width="100%" height="700" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://porfolio-cf060.web.app">
-          </iframe>
-          <a href="http://porfolio-cf060.web.app" class="nav-link"> Go to my portfolio web app!</a>
-        </li>
-        <li>
-          <iframe width="100%" height="700" scrolling="no" frameborder="no" allow="autoplay"
-          src="https://pasapp-117cc.web.app/">
-          </iframe>
-        <a href="https://pasapp-117cc.web.app/" class="nav-link"> This is an Angular work in progress template app that
-          uses Firebase auth and storage!</a>
-        </li>
-        <li>
-          <iframe width="100%" height="600" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://cpetruzzo.github.io/game-page/"></iframe>
-          <a href="https://cpetruzzo.github.io/game-page/" class="nav-link"> Go to this 3d-demo made with Pixi3D! (Available
-            in PC Browsers)</a>
-        </li>
-        <li>
-          <div class="examples__wrapper">
-            <iframe width="100%" height="500" scrolling="no" frameborder="no" allow="autoplay"
-              src="https://cpetruzzo.github.io/AnAdventurersFate/"></iframe>
-          </div>
-          <a href="https://cpetruzzo.github.io/AnAdventurersFate/" class="nav-link"> Go to the game!</a><br>
-          <a href="https://cpetruzzo.github.io/DisenioWeb/files/app-debug-2.apk" class="nav-link"> Download it's android
-            version!</a>
-        </li>
+        <!-- ANGELINANUT -->
         <li>
           <iframe width="100%" height="500" scrolling="no" frameborder="no" allow="autoplay"
             src="https://angelinanut.github.io/nutricion/"></iframe>
-          <a href="https://angelinanut.github.io/nutricion/" class="nav-link"> Go to the website!</a>          
         </li>
+        <a href="https://angelinanut.github.io/nutricion/" class="nav-link"> Go to the website!</a>
+        <!-- 3D GAME -->
         <li>
-          <iframe width="100%" height="700" scrolling="no" frameborder="no" allow="autoplay"
-          src="https://cpetruzzo.github.io/DisenioWeb/QRMaker.html"></iframe>
+          <img src="./images/3d-demo.webp" alt="3d-demo" srcset="">
         </li>
+        <a href="https://cpetruzzo.github.io/game-page/" class="nav-link"> Go to this 3d-demo made with Pixi3D!
+          (Available
+          in PC Browsers)</a>
+        <!-- ADVENTURERS -->
         <li>
-          <iframe width="100%" height="600" scrolling="no" frameborder="no" allow="autoplay"
-          src="https://tasklist-748a4.web.app/"></iframe>
-          <a href="https://tasklist-748a4.web.app/" class="nav-link"> Go to this public task list app!</a>
+          <img src="./images/adventurer.png" alt="adventurers-fate" srcset="">
         </li>
+        <a href="https://cpetruzzo.github.io/AnAdventurersFate/" class="nav-link"> Go to the game!</a><br>
+        <a href="https://cpetruzzo.github.io/DisenioWeb/files/app-debug-2.apk" class="nav-link"> Download it's android
+          version!</a>
+
+        <!-- PORTFOLIO ANGULAR -->
+        <li>
+          <img src="./images/portfolioArgProg.webp" alt="argprograma" srcset="">
+        </li>
+        <a href="http://porfolio-cf060.web.app" class="nav-link"> Go to my portfolio web app!</a>
+        <!-- PASAPP -->
+        <li>
+          <img src="./images/image.webp" alt="pasapp" srcset="">
+        </li>
+        <a href="https://pasapp-117cc.web.app/" class="nav-link"> This is an Angular work in progress template app
+          that
+          uses Firebase auth and storage!</a>
+        <!-- LIBRERIACIVICA REACT -->
+        <li>
+          <img src="./images/tienda-libreria-civica.webp" alt="libreriacivica" srcset="">
+        </li>
+        <a href="https://sparkly-crisp-736a93.netlify.app/" class="nav-link"> React App - Shopping Cart</a>
+        <!-- TICTACTOE -->
+        <li>
+          <img src="./images/tictactoe.webp" alt="tictactoe" srcset="">
+        </li>
+        <a href="https://eclectic-mousse-c82d5b.netlify.app/" class="nav-link"> React App - Tic Tac Toe </a>
+        <!-- TWITTERCARDS -->
+        <li>
+          <img src="./images/twitterclone.webp" alt="twittercards" srcset="">
+        </li>
+        <a href="https://resonant-beignet-661bf0.netlify.app/" class="nav-link"> Twitter Cards with React </a>
       </ul>
-
-
-
-
-
       <br>
-
-
-      <!-- <iframe width="100%" height="700" scrolling="no" frameborder="no" allow="autoplay"
-      src="https://cpetruzzo.github.io/DisenioWeb/alojamiento.html"></iframe>
-      <a href="https://cpetruzzo.github.io/DisenioWeb/alojamiento.html" class="nav-link"> Vacation resort - work in progress </a> -->
-    </section> -->
+    </section>
 
     <section class="section contact" id="contact">
       <h2 class="section__title">Contact Me</h2>
