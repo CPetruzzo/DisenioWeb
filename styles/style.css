@@ -39,6 +39,7 @@ header {
   position: relative;
   padding: 5rem 0;
   height: 100vh;
+  height: 100svh;
 }
 
 main {
@@ -389,6 +390,7 @@ footer {
 @media (max-width: 30rem)  {
   .header__wrapper {
     bottom: -50vh;
+    bottom: -50vh;
   }
 }
 
@@ -404,7 +406,9 @@ footer {
   .header__wrapper {
     flex-direction: row;
     bottom: -50vh;
+    bottom: -50svh;
     left: -30vh;
+    left: -30svh;
   }
 
   .header__title {
