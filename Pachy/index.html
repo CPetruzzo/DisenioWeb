@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Abogado MPV</title>
+
+    <meta name="author" content="Facundo Wegher Osci">
+    <meta name="description" content="Maximiliano Pérez Viecenz">
+    <link rel="canonical" href="https://estudiompv.netlify.app" />
+    <meta name="robots" content="index" />
+    <meta name="keywords"
+        content="abogacía, abogado, lawyer, maximilianoperezviecenz, maximiliano, perez, pérez, parana, Paraná, estudio, estudio de abogacía, estudio de abogados, viecenz">
+    <meta name="keywords"
+        content="ambiente, ambiental, medioambiente, derecho ambiental, derecho, medio ambiente, medio, casos, soluciones, consulta, consultas, maría grande, María, Grande">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero {
+            transition: background-image 1s ease-in-out;
+        }
+
+        .hero-temp {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: 65%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .hero-temp.fade-in {
+            opacity: 1;
+        }
+
+        .service-title {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .service-content {
+            display: none;
+        }
+
+        .service-title::after {
+            content: '▶';
+            transition: transform 0.3s;
+        }
+
+        .service-title.expanded::after {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">MPV</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="cita.html">Agenda una Cita</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+    <section id="inicio" class="hero">
+        <section id="perfil">
+            <h1>Maximiliano Pérez Viecenz</h1>
+            <p>Abogado con Máster en Derecho Ambiental y Urbanístico.
+                <br>Formo parte del Estudio Jurídico Integral
+                Romero Halle con más de 30 años en el ejercicio de la abogacía, donde la calidad profesional y
+                personal es su principal característica.
+            </p>
+        </section>
+    </section>
+
+    <section id="servicios">
+        <h2>¿Qué es el Derecho Ambiental?</h2>
+        <p>El Derecho Ambiental se encarga de regular la interacción entre los ciudadanos y el ambiente. Su objetivo
+            principal es proteger y preservar los recursos naturales, ecosistemas, bienes y valores colectivos, en pos
+            de vivir en un ambiente sano, equilibrado y apto para el desarrollo humano, con la finalidad de que las
+            actividades productivas satisfagan las necesidades presentes y se preserven el derecho de las generaciones
+            futuras. Esto último es lo que se conoce como Desarrollo Sustentable.</p>
+    </section>
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <ul class="services-list">
+            <li>
+                <div class="service-title">Asesoramiento legal ambiental</div>
+                <div class="service-content">
+                    <p>Personalizado a personas físicas y jurídicas, informando y guiando en toda la normativa ambiental
+                        aplicable para cada actividad o proyecto, evaluando e identificando cada requisito legal
+                        ajustable según la actividad.</p>
+                </div>
+            </li>
+            <li>
+                <div class="service-title">Resolución de conflictos legales</div>
+                <div class="service-content">
+                    <p>En el ámbito judicial: penal, administrativo, civil, comercial y tributario en todas las
+                        jurisdicciones del país.</p>
+                </div>
+            </li>
+            <li>
+                <div class="service-title">Participación en la elaboración de EIA</div>
+                <div class="service-content">
+                    <p>Con el apoyo de otras disciplinas (ingenierías y licenciaturas relacionadas al ambiente),
+                        participación en la elaboración de evaluaciones de impacto ambiental (EIA).</p>
+                </div>
+            </li>
+            <li>
+                <div class="service-title">Asesoramiento respecto al cumplimiento</div>
+                <div class="service-content">
+                    <p>Aplicable en las distintas jurisdicciones (nacional, provincial, municipal), evaluando el
+                        cumplimiento efectivo de la organización con el mismo.</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section id="contacto">
+        <h2 class="section__title">Tu consulta:</h2>
+        <p class="desc">Envíame tu consulta y te responderé a la brevedad.</p>
+        <form class="contact__form" action="https://formspree.io/f/mrbzzbaa" method="POST">
+            <label for=""></label>
+            <input class="field" type="text" name="Name" placeholder="Nombre" id="name" required>
+            <input class="field" type="email" name="_replyto" placeholder="Correo electrónico" id="email" required>
+            <input type="hidden" name="_next" value="//site.io/thanks.html" required>
+            <textarea class="field field--textarea" cols="30" rows="10" placeholder="Mensaje" id="message"
+                name="message" required></textarea>
+            <p class="fields-requirements">Todos los campos son requeridos.</p>
+            <input class="btn" type="submit" value="Enviar">
+        </form>
+        <p class="desc">25 de junio 300 - Paraná CP 3100 - Teléfono (0343) 4225333 <br>
+            Batalla de Cepeda 427 - María Grande CP 3133</p>
+        <p class="desc">
+            <a style="text-decoration: none;" href="https://www.instagram.com/maximilianoperezviecenz">
+                <img src="https://www.wegher.com.ar/images/ig.webp" alt="instagram-logo" width="20px" height="20px">
+                @maximilianoperezviecenz
+            </a>
+            <br> <br>
+            <a style="text-decoration: none; color:#252525" href="https://x.com/PerezViecenz">
+                <svg width="20px" height="20px">
+                    <path
+                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                    </path>
+                </svg>
+                @PerezViecenz
+            </a>
+        </p>
+        <p class="desc">Sitio Web realizado y diseñado por <a style="text-decoration: none; color: #252525;"
+                href="https://www.wegher.com.ar">
+                Facundo Wegher </a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Maximiliano Pérez Viecenz. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        var images = [
+            "DSC_6466.webp",
+            "DSC_6482.webp",
+            "DSC_6489.webp",
+            "DSC_6499.webp",
+            "DSC_6508.webp"
+        ];
+
+        var currentIndex = 0;
+        var hero = document.querySelector('.hero');
+
+        function preloadImages() {
+            for (var i = 0; i < images.length; i++) {
+                var img = new Image();
+                img.src = images[i];
+            }
+        }
+
+        preloadImages();
+
+        function changeBackgroundWithFade() {
+            var nextIndex = (currentIndex + 1) % images.length;
+
+            var tempDiv = document.createElement('div');
+            tempDiv.classList.add('hero-temp');
+            tempDiv.style.backgroundImage = `radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(${images[nextIndex]})`;
+
+            hero.appendChild(tempDiv);
+
+            setTimeout(function () {
+                tempDiv.classList.add('fade-in');
+            }, 50);
+
+            setTimeout(function () {
+                tempDiv.remove();
+                hero.style.backgroundImage = `radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(${images[nextIndex]})`;
+            }, 1000);
+
+            currentIndex = nextIndex;
+        }
+
+        setInterval(changeBackgroundWithFade, 5000);
+
+    </script>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('expanded');
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var serviceTitles = document.querySelectorAll('.service-title');
+
+            serviceTitles.forEach(function (title) {
+                title.addEventListener('click', function () {
+                    var content = this.nextElementSibling;
+                    this.classList.toggle('expanded');
+
+                    // Toggle the display of the service content
+                    if (content.style.display === 'block') {
+                        content.style.display = 'none';
+                    } else {
+                        content.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -42,7 +42,9 @@
           "height: fit-content",
           "min-height: fit-content",
           "-webkit-text-size-adjust",
-          "scale"
+          "scale",
+          "text-justify",
+          "scrollbar-width"
         ]
       }
     ],

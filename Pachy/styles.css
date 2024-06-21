@@ -1,0 +1,262 @@
+@font-face {
+    font-family: 'High Spirited';
+    src: url('High Spirited.ttf') format('truetype');
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin-bottom: 100px;
+}
+
+header {
+    background-color: #264E36;
+    color: #FFF;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+    height: 12svh;
+}
+
+.logo {
+    font-family: 'High Spirited', cursive;
+    font-size: 2em;
+    color: #F0C987;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 15px;
+    display: flex;
+    gap: 20px;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.nav-links li {
+    margin: 0;
+
+    margin-bottom: 20px;
+}
+
+.nav-links li a {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(DSC_6466.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 65%;
+    color: #264E36;
+    height: 65vh;
+}
+
+.hero h1 {
+    font-family: 'High Spirited', cursive;
+    font-size: 3em;
+    margin-bottom: 100px;
+    color: #F0C987;
+    position: relative;
+    z-index: 2;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    width: 100%;
+    margin-bottom: 100px;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+}
+
+section {
+    padding: 50px 20px;
+    margin: 0 auto;
+}
+
+#servicios {
+    max-width: 800px;
+    margin-bottom: 0px;
+    padding: 0px 20px;
+}
+
+section h2 {
+    font-family: 'High Spirited', cursive;
+    font-size: 2.5em;
+    color: #E37222;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #F0C987;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #264E36;
+    /* Verde oscuro */
+    color: #FFF;
+    text-align: center;
+    /* padding: 20px; */
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    height: 10svh;
+    bottom: 0;
+}
+
+/* Estilos para la sección de contacto */
+.section__title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.desc {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact__form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.field {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.field--textarea {
+    resize: vertical;
+}
+
+.fields-requirements {
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+}
+
+.btn {
+    padding: 10px;
+    font-size: 1.1em;
+    color: #FFF;
+    background-color: #264E36;
+    /* Verde oscuro */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #1d3a2b;
+    /* Verde más oscuro */
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #264E36;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        z-index: 3;
+        max-height: 0;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .nav-links.expanded {
+        max-height: 300px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hero p {
+        font-size: 0.7rem;
+    }
+}
+
+li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    padding-inline-start: 0px;
+}
+
+.services-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.service-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #F0C987;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.service-content {
+    display: none;
+    padding: 10px;
+    background-color: #FFF;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0;
+    color: #333;
+}
+
+.service-title::after {
+    content: '▶';
+    transition: transform 0.3s;
+}
+
+.service-title.expanded::after {
+    transform: rotate(90deg);
+}

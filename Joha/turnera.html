@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Lic. Johana Dabin - Kinesiología</title>
+
+    <meta name="author" content="Facundo Wegher Osci">
+    <meta name="description" content="Licenciada en Kinesiología Johana Dabin">
+    <link rel="canonical" href="https://kinesiologa-dabin.netlify.app/" />
+    <meta name="robots" content="index" />
+    <meta name="keywords"
+        content="kinesiologa, kinesiología, licenciada, licenciada en kinesiología, johana, dabin, parana, Paraná, sesión, sesiones de kinesiología">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="logojoha.png">
+    <style>
+        .service-title {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .service-content {
+            display: none;
+        }
+
+        .service-title::after {
+            content: '▶';
+            transition: transform 0.3s;
+        }
+
+        .service-title.expanded::after {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logojoha.png" alt="logojoha" width="35px">
+            Johana Dabin
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="turnera.html">Turnos</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+    <!-- Calendly inline widget begin -->
+    <div class="calendly-inline-widget"
+        data-url="https://calendly.com/dabinjohana/45min?hide_gdpr_banner=1&text_color=00e4d4&primary_color=c5c5c5"
+        style="min-width:320px;height:700px; margin-top: 0;"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <!-- Calendly inline widget end -->
+    <footer>
+        <p>&copy; 2024 Lic. Johana Dabin. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('expanded');
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var serviceTitles = document.querySelectorAll('.service-title');
+
+            serviceTitles.forEach(function (title) {
+                title.addEventListener('click', function () {
+                    var content = this.nextElementSibling;
+                    this.classList.toggle('expanded');
+
+                    // Toggle the display of the service content
+                    if (content.style.display === 'block') {
+                        content.style.display = 'none';
+                    } else {
+                        content.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

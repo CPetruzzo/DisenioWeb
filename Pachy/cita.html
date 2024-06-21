@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Agenda una Cita - Abogado MPV</title>
+
+    <meta name="author" content="Facundo Wegher Osci">
+    <meta name="description" content="Maximiliano Pérez Viecenz">
+    <link rel="canonical" href="https://estudiompv.netlify.app" />
+    <meta name="robots" content="index" />
+    <meta name="keywords"
+        content="abogacía, abogado, lawyer, maximilianoperezviecenz, maximiliano, perez, pérez, parana, Paraná, estudio, estudio de abogacía, estudio de abogados, viecenz">
+    <meta name="keywords"
+        content="ambiente, ambiental, medioambiente, derecho ambiental, derecho, medio ambiente, medio, casos, soluciones, consulta, consultas, maría grande, María, Grande">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero {
+            transition: background-image 1s ease-in-out;
+        }
+
+        .hero-temp {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: 65%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .hero-temp.fade-in {
+            opacity: 1;
+        }
+
+        .service-title {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .service-content {
+            display: none;
+        }
+
+        .service-title::after {
+            content: '▶';
+            transition: transform 0.3s;
+        }
+
+        .service-title.expanded::after {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">MPV</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="cita.html">Agenda una Cita</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+    <!-- <section id="calendly" class="hero" style="background-size: cover;"> -->
+    <!-- <h2>Agenda una Cita</h2> -->
+    <div class="calendly-inline-widget"
+        data-url="https://calendly.com/maximilianoperezviecenz/30min?hide_gdpr_banner=1&background_color=f0c987&text_color=264e36&primary_color=ffffff"
+        style="min-width:320px;height:700px;"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <!-- </section> -->
+
+    <footer>
+        <p>&copy; 2024 Maximiliano Pérez Viecenz. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('expanded');
+        }
+    </script>
+</body>
+
+</html>
