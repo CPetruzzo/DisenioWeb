@@ -1,0 +1,28 @@
+.video-container {
+    position: absolute;
+    top: 45%; /* Ajusta la posición según sea necesario */
+    left: 45%; /* Ajusta la posición según sea necesario */
+    transform: translate(-35%, -45%); /* Centra el video-container */
+    width: 300px; /* Ajusta el tamaño del contenedor según sea necesario */
+    height: 300px; /* Ajusta el tamaño del contenedor según sea necesario */
+    -webkit-mask-image: -webkit-radial-gradient(closest-side, black 70%, transparent);
+    mask-image: radial-gradient(closest-side, black 70%, transparent);
+}
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    mask-image: url('shape.png');
+    -webkit-mask-image: url('shape.png');
+    -webkit-mask-image: -webkit-radial-gradient(closest-side, black 60%, transparent);
+    mask-image: radial-gradient(closest-side, black 60%, transparent);
+    -webkit-mask-size: cover;
+    mask-size: cover;
+}
+
+.shape {
+    display: none;
+}

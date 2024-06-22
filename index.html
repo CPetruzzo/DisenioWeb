@@ -21,6 +21,7 @@
   <link rel="icon" type="image/png" href="images/mate.png">
   <link rel="stylesheet" href="styles/animate.css">
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="masktest/mask.css">
 
   <title>Portfolio: Facundo Wegher Osci</title>
 
@@ -39,6 +40,13 @@
 
   <!-- Header Section -->
   <header>
+    <div class="video-container">
+      <video id="video" loop muted autoplay>
+        <source src="masktest/video.mp4" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+      </video>
+      <img src="masktest/shape.png" alt="Forma" class="shape">
+    </div>
     <section class="section header__wrapper">
       <article class="header__title">
         <div style="display: flex;">
@@ -48,6 +56,9 @@
         <h2 class="title__subtitle" style="font-weight: bolder;">Food Engineer</h2>
         <h2 class="title__subtitle" style="font-weight: bolder;">Fullstack Developer</h2>
         <h2 class="title__subtitle" style="font-weight: bolder;">Game Programmer</h2>
+
+
+
         <nav class="nav header__nav">
           <a class="nav-link" href="#skills">Skills</a>
           <a class="nav-link" href="#experience">Experience</a>
@@ -381,6 +392,13 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const video = document.getElementById("video");
+      video.play();
+    });
   </script>
 </body>
 

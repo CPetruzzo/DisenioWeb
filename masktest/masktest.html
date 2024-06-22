@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video en Forma</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+        }
+
+        .video-container {
+            position: relative;
+            width: 500px;
+            /* Ajusta el tamaño según sea necesario */
+            height: 500px;
+            /* Ajusta el tamaño según sea necesario */
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80%;
+            height: 80%;
+            object-fit: cover;
+            -webkit-mask-image: url('shape.png');
+            mask-image: url('shape.png');
+            -webkit-mask-size: cover;
+            mask-size: cover;
+        }
+
+        .shape {
+            display: none;
+            /* Esconde la imagen de forma */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="video-container">
+        <video id="video" loop muted autoplay>
+            <source src="video.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+        <img src="shape.png" alt="Forma" class="shape">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const video = document.getElementById("video");
+            video.play();
+        });
+    </script>
+</body>
+
+</html>
