@@ -83,7 +83,7 @@ input[type="checkbox"]:checked::before {
 } */
 
 /* p:has(input[type="checkbox"]:checked){ */
-  /* color:#d1d5d1; */
+/* color:#d1d5d1; */
 /* } */
 
 * {
@@ -188,7 +188,7 @@ footer {
   text-align: center;
   color: #fff;
   cursor: pointer;
-  
+
 }
 
 .nav-link:not(:first-child) {
@@ -308,7 +308,7 @@ footer {
 
 .header__nav {
   padding-top: 0rem;
-  
+
 }
 
 .section__title {
@@ -317,6 +317,7 @@ footer {
   font-size: 2em;
   font-weight: lighter;
 }
+
 .section__subtitle {
   color: #79db75;
   text-transform: uppercase;
@@ -478,7 +479,7 @@ footer {
   justify-content: space-between;
 }
 
-@media (max-width: 30rem)  {
+@media (max-width: 30rem) {
   .header__wrapper {
     bottom: -50vh;
     bottom: -50svh;
@@ -580,16 +581,20 @@ footer {
   max-width: 1350px;
   margin: auto;
   overflow-x: auto;
-  flex-wrap: wrap; /* Envolver elementos si no caben en una sola fila */
-  justify-content: space-between; /* Espacio uniforme entre elementos */
-  align-items: stretch; /* Igualar la altura de todos los elementos */
+  flex-wrap: wrap;
+  /* Envolver elementos si no caben en una sola fila */
+  justify-content: space-between;
+  /* Espacio uniforme entre elementos */
+  align-items: stretch;
+  /* Igualar la altura de todos los elementos */
 }
 
 .eachskillcontainer {
   -webkit-animation: scroll 20s linear infinite;
   animation: scroll 20s linear infinite;
   /* display: block; Usar display: flex para igualar la altura de las columnas */
-  flex: 0 0 calc(100px); /* Ajustar el ancho de los elementos */
+  flex: 0 0 calc(100px);
+  /* Ajustar el ancho de los elementos */
   /* El 33.33% asegura que haya tres elementos por fila en una pantalla ancha */
   margin: 20px 0;
   transition: transform 0.3s ease-in-out;
@@ -605,7 +610,8 @@ footer {
 .imgBx {
   width: 100px;
   height: 100px;
-  margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+  margin-bottom: 10px;
+  /* Espacio entre la imagen y el texto */
   border: 2px solid #333;
   border-radius: 50%;
   overflow: hidden;
@@ -625,7 +631,8 @@ footer {
 .content {
   flex: 1;
   display: flex;
-  flex-direction: column; /* Alinear el contenido verticalmente */
+  flex-direction: column;
+  /* Alinear el contenido verticalmente */
 }
 
 .content h2 {
@@ -636,7 +643,8 @@ footer {
 .content p {
   font-size: 16px;
   margin: 0;
-  flex-grow: 1; /* Hace que el texto ocupe todo el espacio vertical disponible */
+  flex-grow: 1;
+  /* Hace que el texto ocupe todo el espacio vertical disponible */
 }
 
 ::-webkit-scrollbar {
@@ -649,6 +657,7 @@ footer {
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+
   100% {
     -webkit-transform: translateX(calc(-1350Px));
     transform: translateX(calc(-1350px));
@@ -660,8 +669,9 @@ footer {
   0% {
     scale: 1;
   }
+
   100% {
-    scale: 1.1;  
+    scale: 1.1;
   }
 }
 
@@ -669,21 +679,20 @@ footer {
 .examples__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Espaciado entre las tarjetas */
-  list-style: none; /* Quita los puntos de la lista */
+  gap: 20px;
+  list-style: none;
 }
 
 /* Estilo para cada tarjeta individual en la lista */
 .examples__list li {
-  position: relative; /* Necesario para posicionar el contenido adicional */
-  max-width: 700px; /* Tamaño fijo para todas las tarjetas */
+  position: relative;
+  max-width: 700px;
   width: 100%;
-  height: 400px; /* Puedes ajustar la altura según tus necesidades */
+  height: 400px;
   overflow: hidden;
-  /* margin: 25px; */
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: filter 0.3s ease-in-out; /* Agrega transición para el filtro */
+  transition: filter 0.3s ease-in-out;
 }
 
 /* Estilo para la imagen dentro de la tarjeta en la lista */
@@ -691,8 +700,8 @@ footer {
 .examples__list li img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Efecto de cover para la imagen */
-  border-radius: 15px; /* Ajusta según el borde de la tarjeta */
+  object-fit: cover;
+  border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -700,8 +709,10 @@ footer {
 .examples__list li iframe {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Efecto de cover para la imagen */
-  border-radius: 15px; /* Ajusta según el borde de la tarjeta */
+  object-fit: cover;
+  /* Efecto de cover para la imagen */
+  border-radius: 15px;
+  /* Ajusta según el borde de la tarjeta */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -723,17 +734,21 @@ footer {
 
 /* Estilo para el contenido de la tarjeta en la lista */
 .examples__list li .text-overlay .card-content {
-  background: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+  background: rgba(255, 255, 255, 0.8);
+  /* Fondo semitransparente */
   border-radius: 8px;
   padding: 10px;
   box-sizing: border-box;
-  transition: transform 0.3s ease-in-out; /* Transición para el contenido */
-  transform: translateY(100%); /* Inicialmente oculto fuera de la tarjeta */
+  transition: transform 0.3s ease-in-out;
+  /* Transición para el contenido */
+  transform: translateY(100%);
+  /* Inicialmente oculto fuera de la tarjeta */
 }
 
 /* Efecto de desenfoque al hacer hover en la lista */
 .examples__list li:hover {
-  filter: blur(0px); /* Ajusta el valor según lo desees */
+  filter: blur(0px);
+  /* Ajusta el valor según lo desees */
 }
 
 /* Muestra el contenido al hacer hover en la lista */
@@ -741,7 +756,20 @@ footer {
   transform: translateY(0);
 }
 
-ul { 
+ul {
   margin-block-start: 0px !important;
   padding-inline-start: 0px !important;
+}
+
+.card .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 0px;
+  background-color: #79db75;
+  transition: all 0.1s ease-in;
+}
+
+.card .nav-link:not(:first-child) {
+  margin-left: 0;
 }
