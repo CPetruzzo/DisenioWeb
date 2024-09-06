@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Request</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="founds.html">Founds</a></li>
+            <li><a href="losts.html">Losts</a></li>
+            <li><a href="new_request.html">New Request</a></li>
+            <li><a href="item_info.html">Item Info</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h2>New Request</h2>
+            <form>
+                <div>
+                    <label><input type="radio" name="type" value="lost"> Lost</label>
+                    <label><input type="radio" name="type" value="found"> Found</label>
+                </div>
+                <div>
+                    <label>What kind of pet is it? <input type="text" name="item-name"></label>
+                </div>
+                <div>
+                    <label>Where did you lose/found it? <input type="text" id="location" name="location"></label>
+                </div>
+                <div id="map"></div>
+                <div>
+                    <label>When did you lose/found it? <input type="date" name="date"></label>
+                </div>
+                <div id="image-input-container">
+                    <label>Picture/Img: <input type="file" name="picture" id="image-input"></label>
+                </div>
+                <div id="image-preview-container">
+                    <button type="button" id="remove-image" style="position: absolute; right: 10px; top: 10px; background: #f00; color: #fff; border: none; border-radius: 50%; width: 30px; height: 30px; cursor: pointer;">X</button>
+                    <img id="image-preview" src="" alt="Image Preview">
+                </div>
+                <div id="reload-image-container" style="display: none;">
+                    <button type="button" id="reload-image" style="margin-top: 10px;">Upload Another Image</button>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder@1.13.0/dist/Control.Geocoder.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const initialLocation = [-31.73, -60.53]; // Initial location, you can change this
+            const map = L.map('map').setView(initialLocation, 14); // scale
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            const marker = L.marker(initialLocation, { draggable: true }).addTo(map);
+
+            const input = document.getElementById('location');
+            const geocoder = L.Control.Geocoder.nominatim();
+
+            function geocode(query) {
+                geocoder.geocode(query, (results) => {
+                    const bbox = results[0].bbox;
+                    map.fitBounds([[bbox[0], bbox[1]], [bbox[2], bbox[3]]]);
+                    marker.setLatLng(results[0].center);
+                    input.value = `${results[0].center.lat}, ${results[0].center.lng}`;
+                });
+            }
+
+            input.addEventListener('input', function () {
+                if (this.value.length > 2) {
+                    geocode(this.value);
+                }
+            });
+
+            marker.on('dragend', function () {
+                const pos = marker.getLatLng();
+                input.value = `${pos.lat}, ${pos.lng}`;
+            });
+
+            map.on('click', function (e) {
+                marker.setLatLng(e.latlng);
+                input.value = `${e.latlng.lat}, ${e.latlng.lng}`;
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const imageInput = document.getElementById('image-input');
+            const imageInputContainer = document.getElementById('image-input-container');
+            const imagePreviewContainer = document.getElementById('image-preview-container');
+            const imagePreview = document.getElementById('image-preview');
+            const removeImageButton = document.getElementById('remove-image');
+            const reloadImageContainer = document.getElementById('reload-image-container');
+            const reloadImageButton = document.getElementById('reload-image');
+
+            imageInput.addEventListener('change', function (event) {
+                const file = event.target.files[0];
+
+                if (file) {
+                    const reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        imagePreview.src = e.target.result;
+                        imagePreviewContainer.style.display = 'flex'; // Mostrar imagen
+                        imageInputContainer.style.display = 'none'; // Ocultar input de imagen
+                        reloadImageContainer.style.display = 'block'; // Mostrar botón de recarga de imagen
+                    };
+
+                    reader.readAsDataURL(file);
+                } else {
+                    imagePreview.src = '';
+                    imagePreviewContainer.style.display = 'none'; // Ocultar imagen si no hay archivo
+                }
+            });
+
+            removeImageButton.addEventListener('click', function () {
+                imagePreview.src = '';
+                imagePreviewContainer.style.display = 'none'; // Ocultar contenedor de previsualización
+                imageInputContainer.style.display = 'block'; // Mostrar input de imagen
+                imageInput.value = ''; // Limpiar input de imagen
+                reloadImageContainer.style.display = 'none'; // Ocultar botón de recarga de imagen
+            });
+
+            reloadImageButton.addEventListener('click', function () {
+                imagePreview.src = '';
+                imagePreviewContainer.style.display = 'none'; // Ocultar contenedor de previsualización
+                imageInputContainer.style.display = 'block'; // Mostrar input de imagen
+                imageInput.value = ''; // Limpiar input de imagen
+                reloadImageContainer.style.display = 'none'; // Ocultar botón de recarga de imagen
+            });
+        });
+    </script>
+
+</body>
+
+</html>
