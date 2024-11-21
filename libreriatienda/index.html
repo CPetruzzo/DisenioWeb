@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Editorial Librería Cívica</title>
+
+    <meta name="author" content="Facundo Wegher Osci">
+    <meta name="description" content="Editorial Librería Cívica">
+    <link rel="canonical" href="https://libreriacivica.com" />
+    <meta name="robots" content="index" />
+    <meta name="keywords"
+        content="librería, libros, ventas, Editorial Librería Cívica, Paraná, consultas, asesoramiento, tienda virtual">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ribbon.css">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/png" href="librerialogo.png">
+
+    <link rel="stylesheet" href="tienda.css">
+    <link rel="stylesheet" href="newstyles.css">
+
+    <style>
+        /* Estilos generales */
+        .product-content {
+            position: relative;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Checkboxes personalizados */
+        .custom-checkbox {
+            display: none;
+        }
+
+        .custom-checkbox+label::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border: 2px solid #374f68;
+            border-radius: 4px;
+            transition: background-color 0.3s, border-color 0.3s;
+            vertical-align: middle;
+        }
+
+        .custom-checkbox:checked+label::before {
+            background-color: #374f68;
+            border-color: #374f68;
+        }
+
+        .custom-checkbox:checked+label::after {
+            content: '✔';
+            display: inline-block;
+            position: absolute;
+            left: 5px;
+            top: 0;
+            font-size: 14px;
+            color: white;
+            transition: transform 0.3s;
+        }
+
+        /* Animación de transición */
+        .product-content label:hover::before {
+            border-color: #425b72;
+        }
+
+        .custom-checkbox:checked+label::before {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="navbar-brand" href="#"> Editorial Librería Cívica <img height="30px" src="iconLibreriaCivica.png"
+                alt="logo">
+        </h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <h2 class="text-center">
+            Tienda Virtual
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="24" height="24">
+                <defs>
+                    <style>
+                        .cls-1 {
+                            fill: #c6c3d8
+                        }
+
+                        .cls-4 {
+                            fill: #425b72
+                        }
+
+                        .cls-5 {
+                            fill: #374f68
+                        }
+                    </style>
+                </defs>
+                <g id="Shopping_cart" data-name="Shopping cart">
+                    <path class="cls-1"
+                        d="M39 41H10.16a4.17 4.17 0 0 1-3.61-6.23C11 27.06 9.41 28 21 28a1 1 0 0 1 0 2c-10.91 0-8.76-1.14-12.72 5.77A2.17 2.17 0 0 0 10.16 39H39a1 1 0 0 1 0 2z" />
+                    <path
+                        d="M45 8a1.61 1.61 0 0 1 1.55 2c0 .1-4.22 18.54-4.2 18.44a2 2 0 0 1-2 1.56H13c-.47-2.17-3.6-16.85-4.71-22z"
+                        style="fill:#dad7e5" />
+                    <path d="M45 8a1.61 1.61 0 0 1 1.55 2c-.73 3.23-2.95 13-3.87 17h-7.25a24 24 0 0 1-23.5-19z"
+                        style="fill:#edebf2" />
+                    <path class="cls-4" d="M22 44a3 3 0 1 1-5.56-1.56A3 3 0 0 1 22 44z" />
+                    <path class="cls-5" d="M20.56 46.56a3 3 0 0 1-4.12-4.12 3 3 0 0 1 4.12 4.12z" />
+                    <path class="cls-4" d="M36 44a3 3 0 1 1-5.56-1.56A3 3 0 0 1 36 44z" />
+                    <path class="cls-5" d="M34.56 46.56a3 3 0 0 1-4.12-4.12 3 3 0 0 1 4.12 4.12z" />
+                    <path class="cls-1"
+                        d="m45.18 16 .46-2H34V8h-2v6h-9V8h-2v6H9.57l.43 2h11v6h-9.71l.43 2H21v6h2v-6h9v6h2v-6h9.36l.46-2H34v-6zM32 22h-9v-6h9z" />
+                    <path class="cls-1"
+                        d="M46.56 10A1.61 1.61 0 0 0 45 8H9.31l-1-4.63A3 3 0 0 0 5.38 1H2a1 1 0 0 0 0 2h3.38a1 1 0 0 1 1 .79c6.09 28.45 5.62 26.4 5.75 26.47.92-.43 28.37-.26 28.27-.26a2 2 0 0 0 2-1.56c-.02-.11 4.39-19.51 4.16-18.44zm-6.11 18H13.6L9.74 10h34.81z" />
+                </g>
+            </svg>
+        </h2>
+
+        <!-- Barra de búsqueda -->
+        <div class="search-bar mb-4">
+            <label for="search">Buscar:</label>
+            <input type="text" id="search" placeholder="Buscar libros por título o autor...">
+        </div>
+
+        <form action="https://formspree.io/f/mrgjkldq" method="POST" id="shop-form">
+            <div class="row" id="product-list">
+                <!-- Productos -->
+                <div class="col-md-4 product"
+                    data-product-name="IX Congreso de Derecho Procesal Penal de la Provincia de Santa Fe"
+                    data-product-author="Martín, Leandro (Coordinador)">
+                    <div class="product-content">
+                        <label for="product1">
+                            <img src="https://libreriacivica.com/sistema/fotos/productos/00000045_foto_1697031954.jpg"
+                                alt="IX Congreso de Derecho Procesal Penal de la Provincia de Santa Fe"
+                                class="img-fluid">
+                            <h3>IX Congreso de Derecho Procesal Penal de la Provincia de Santa Fe</h3>
+                            <p>Autor: Martín, Leandro (Coordinador)<br>Precio: $18000</p>
+                            <p>Descripción: ...</p>
+                        </label>
+                        <input type="checkbox" name="products"
+                            value="IX Congreso de Derecho Procesal Penal de la Provincia de Santa Fe - $18000"
+                            id="product1" class="custom-checkbox">
+
+                    </div>
+                </div>
+
+                <div class="col-md-4 product" data-product-name="Impacto del COVID en el derecho del trabajo"
+                    data-product-author="Lorenzo, Pablo A. (Director) - Agostini, José Ignacio (Coordinador)">
+                    <div class="product-content">
+                        <label for="product2">
+                            <img src="https://libreriacivica.com/sistema/fotos/productos/00000045_foto_1614372595.jpg"
+                                alt="Impacto del COVID en el derecho del trabajo" class="img-fluid">
+                            <h3>Impacto del COVID en el derecho del trabajo</h3>
+                            <p>Autor: Lorenzo, Pablo A. (Director) - Agostini, José Ignacio (Coordinador)<br>Precio:
+                                $3500</p>
+                            <p>Descripción: ...</p>
+                        </label>
+                        <input type="checkbox" name="products"
+                            value="Impacto del COVID en el derecho del trabajo - $3500" id="product2">
+                    </div>
+                </div>
+
+                <div class="col-md-4 product" data-product-name="En defensa de la vida, otros ensayos y entremeses"
+                    data-product-author="Damianovich, Adalberto">
+                    <div class="product-content">
+                        <label for="product3">
+                            <img src="https://libreriacivica.com/sistema/fotos/productos/00000045_foto_1557959100.jpg"
+                                alt="En defensa de la vida, otros ensayos y entremeses" class="img-fluid">
+                            <h3>En defensa de la vida, otros ensayos y entremeses</h3>
+                            <p>Autor: Damianovich, Adalberto<br>Precio: $3500</p>
+                            <p>Descripción: ...</p>
+                        </label>
+                        <input type="checkbox" name="products"
+                            value="En defensa de la vida, otros ensayos y entremeses - $3500" id="product3">
+                    </div>
+                </div>
+
+                <div class="col-md-4 product" data-product-name="Aspectos generales de Responsabilidad Civil"
+                    data-product-author="Fiorenza, Alejandro">
+                    <div class="product-content">
+                        <label for="product4">
+                            <img src="https://libreriacivica.com/sistema/fotos/productos/00000045_foto_1554459914.jpg"
+                                alt="Aspectos generales de Responsabilidad Civil" class="img-fluid">
+                            <h3>Aspectos generales de Responsabilidad Civil</h3>
+                            <p>Autor: Fiorenza, Alejandro<br>Precio: $17000</p>
+                            <p>Descripción: ...</p>
+                        </label>
+                        <input type="checkbox" name="products"
+                            value="Aspectos generales de Responsabilidad Civil - $17000" id="product4">
+                    </div>
+                </div>
+
+                <div class="col-md-4 product" data-product-name="Apuntaciones de Historia del Derecho"
+                    data-product-author="Fessia, Ricardo Miguel">
+                    <div class="product-content">
+                        <label for="product5">
+                            <img src="https://libreriacivica.com/sistema/fotos/productos/00000045_foto_1557176182.jpg"
+                                alt="Apuntaciones de Historia del Derecho" class="img-fluid">
+                            <h3>Apuntaciones de Historia del Derecho</h3>
+                            <p>Autor: Fessia, Ricardo Miguel<br>Precio: $6200</p>
+                            <p>Descripción: ...</p>
+                        </label>
+                        <input type="checkbox" name="products" value="Apuntaciones de Historia del Derecho - $6200"
+                            id="product5">
+                    </div>
+                </div>
+
+                <div class="col-md-4 product"
+                    data-product-name="Constitución de la Nación Argentina - Constitución de la Pcia. de Santa Fe"
+                    data-product-author="Librería Civica Legislación">
+                    <div class="product-content">
+                        <label for="product6">
+                            <img src="https://libreriacivica.com/sistema/skin_base_libreria/assets/img/sinimagen.jpg"
+                                alt="Constitución de la Nación Argentina - Constitución de la Pcia. de Santa Fe"
+                                class="img-fluid">
+                            <h3>Constitución de la Nación Argentina - Constitución de la Pcia. de Santa Fe</h3>
+                            <p>Autor: Librería Civica Legislación<br>Precio: $2500</p>
+                            <p>Descripción: ...</p>
+                        </label>
+                        <input type="checkbox" name="products"
+                            value="Constitución de la Nación Argentina - Constitución de la Pcia. de Santa Fe - $2500"
+                            id="product6">
+                    </div>
+                </div>
+
+                <div class="col-md-4 product" data-product-name="Litigación oral desde el lenguaje corporal"
+                    data-product-author="Micheletti, Pablo Alejandro">
+                    <div class="product-content">
+                        <label for="product7">
+                            <img src="https://libreriacivica.com/sistema/fotos/productos/00000045_foto_1554502836.jpg"
+                                alt="Litigación oral desde el lenguaje corporal" class="img-fluid">
+                            <h3>Litigación oral desde el lenguaje corporal</h3>
+                            <p>Autor: Micheletti, Pablo Alejandro<br>Precio: $3500</p>
+                            <p>Descripción: ...</p>
+                        </label>
+                        <input type="checkbox" name="products"
+                            value="Litigación oral desde el lenguaje corporal - $3500" id="product7">
+                    </div>
+                </div>
+
+                <div class="col-md-4 product"
+                    data-product-name="Derecho procesal penal. Teoría y práctica del sistema acusatorio de Santa Fe"
+                    data-product-author="Cococcioni, Pablo">
+                    <div class="product-content">
+                        <label for="product8">
+                            <img src="https://libreriacivica.com/sistema/fotos/productos/00000045_foto_1630006711.jpg"
+                                alt="Derecho procesal penal. Teoría y práctica del sistema acusatorio de Santa Fe"
+                                class="img-fluid">
+                            <h3>Derecho procesal penal. Teoría y práctica del sistema acusatorio de Santa Fe</h3>
+                            <p>Autor: Cococcioni, Pablo<br>Precio: $13500</p>
+                            <p>Descripción: ...</p>
+                        </label>
+                        <input type="checkbox" name="products"
+                            value="Derecho procesal penal. Teoría y práctica del sistema acusatorio de Santa Fe - $13500"
+                            id="product8">
+                    </div>
+                </div>
+
+                <div class="col-md-4 product"
+                    data-product-name="Elementos del derecho privado. Para general. Familia, Reales, Sucesiones. Comercial"
+                    data-product-author="Torres, Emanuel">
+                    <div class="product-content">
+                        <label for="product9">
+                            <img src="https://libreriacivica.com/sistema/fotos/productos/00000045_foto_1607526806.jpg"
+                                alt="Elementos del derecho privado. Para general. Familia, Reales, Sucesiones. Comercial"
+                                class="img-fluid">
+                            <h3>Elementos del derecho privado. Para general. Familia, Reales, Sucesiones. Comercial</h3>
+                            <p>Autor: Torres, Emanuel<br>Precio: $9900</p>
+                            <p>Descripción: ...</p>
+                        </label>
+                        <input type="checkbox" name="products"
+                            value="Elementos del derecho privado. Para general. Familia, Reales, Sucesiones. Comercial - $9900"
+                            id="product9">
+                    </div>
+                </div>
+
+                <div class="col-md-4 product" data-product-name="El proceso penal en Santa Fe - 3ª Edición actualizada"
+                    data-product-author="Büsser, Roberto">
+                    <div class="product-content">
+                        <label for="product10">
+                            <img src="https://libreriacivica.com/sistema/fotos/productos/00000045_foto_1557958322.jpg"
+                                alt="El proceso penal en Santa Fe - 3ª Edición actualizada" class="img-fluid">
+                            <h3>El proceso penal en Santa Fe - 3ª Edición actualizada</h3>
+                            <p>Autor: Büsser, Roberto<br>Precio: $10000</p>
+                            <p>Descripción: ...</p>
+                        </label>
+                        <input type="checkbox" name="products"
+                            value="El proceso penal en Santa Fe - 3ª Edición actualizada - $10000" id="product10">
+                    </div>
+                </div>
+
+                <div class="col-md-4 product" data-product-name="Derecho penal económico"
+                    data-product-author="Bacigalupo Saggese, Enrique">
+                    <div class="product-content">
+                        <label for="product11">
+                            <img src="https://libreriacivica.com/sistema/skin_base_libreria/assets/img/sinimagen.jpg"
+                                alt="Derecho penal económico" class="img-fluid">
+                            <h3>Derecho penal económico</h3>
+                            <p>Autor: Bacigalupo Saggese, Enrique<br>Precio: $10500</p>
+                            <p>Descripción: ...</p>
+                        </label>
+                        <input type="checkbox" name="products" value="Derecho penal económico - $10500" id="product11">
+                    </div>
+                </div>
+
+                <div class="col-md-4 product" data-product-name="Desafíos de la Justicia Federal y Nacional"
+                    data-product-author="Hugo A. Salvatelli">
+                    <div class="product-content">
+                        <label for="product12">
+                            <img src="https://libreriacivica.com/sistema/skin_base_libreria/assets/img/sinimagen.jpg"
+                                alt="Desafíos de la Justicia Federal y Nacional" class="img-fluid">
+                            <h3>Desafíos de la Justicia Federal y Nacional</h3>
+                            <p>Autor: Hugo A. Salvatelli<br>Precio: $8000</p>
+                            <p>Descripción: ...</p>
+                        </label>
+                        <input type="checkbox" name="products"
+                            value="Desafíos de la Justicia Federal y Nacional - $8000" id="product12">
+                    </div>
+                </div>
+
+                <div class="col-md-4 product" data-product-name="Anuario de derecho constitucional 2007"
+                    data-product-author="Aída Kemelmajer de Carlucci">
+                    <div class="product-content">
+                        <label for="product13">
+                            <img src="https://libreriacivica.com/sistema/skin_base_libreria/assets/img/sinimagen.jpg"
+                                alt="Anuario de derecho constitucional 2007" class="img-fluid">
+                            <h3>Anuario de derecho constitucional 2007</h3>
+                            <p>Autor: Aída Kemelmajer de Carlucci<br>Precio: $3500</p>
+                            <p>Descripción: ...</p>
+                        </label>
+                        <input type="checkbox" name="products" value="Anuario de derecho constitucional 2007 - $3500"
+                            id="product13">
+                    </div>
+                </div>
+
+                <div class="col-md-4 product" data-product-name="Compendio de Derecho penal"
+                    data-product-author="Bacigalupo, Enrique">
+                    <div class="product-content">
+                        <label for="product14">
+                            <img src="https://libreriacivica.com/sistema/skin_base_libreria/assets/img/sinimagen.jpg"
+                                alt="Compendio de Derecho penal" class="img-fluid">
+                            <h3>Compendio de Derecho penal</h3>
+                            <p>Autor: Bacigalupo, Enrique<br>Precio: $8000</p>
+                            <p>Descripción: ...</p>
+                        </label>
+                        <input type="checkbox" name="products" value="Compendio de Derecho penal - $8000"
+                            id="product14">
+                    </div>
+                </div>
+
+                <div class="col-md-4 product" data-product-name="Control de Convencionalidad"
+                    data-product-author="Luis Grassi">
+                    <div class="product-content">
+                        <label for="product15">
+                            <img src="https://libreriacivica.com/sistema/skin_base_libreria/assets/img/sinimagen.jpg"
+                                alt="Control de Convencionalidad" class="img-fluid">
+                            <h3>Control de Convencionalidad</h3>
+                            <p>Autor: Luis Grassi<br>Precio: $3500</p>
+                            <p>Descripción: ...</p>
+                        </label>
+                        <input type="checkbox" name="products" value="Control de Convencionalidad - $3500"
+                            id="product15">
+                    </div>
+                </div>
+
+                <div class="col-md-4 product"
+                    data-product-name="10 experiencias en psicología organizacional. Un collage de casos, ideas, sugerencias y caminos. Algunos para seguir, y otros que sería mejor no tomar"
+                    data-product-author="Gustavo Giorgi">
+                    <div class="product-content">
+                        <label for="product1">
+                            <!-- <img src="https://via.placeholder.com/300x200?text=Derecho+Penal" -->
+                            <img src="https://libreriacivica.com/sistema/skin_base_libreria/assets/img/sinimagen.jpg"
+                                alt="10 experiencias en psicología organizacional. Un collage de casos, ideas, sugerencias y caminos. Algunos para seguir, y otros que sería mejor no tomar"
+                                class="img-fluid">
+                            <h3>10 experiencias en psicología organizacional. Un collage de casos, ideas, sugerencias y
+                                caminos. Algunos para seguir, y otros que sería mejor no tomar</h3>
+                            <p>Autor: Gustavo Giorgi<br>Precio: $19200</p>
+                        </label>
+                        <input type="checkbox" name="products"
+                            value="10 experiencias en psicología organizacional. Un collage de casos, ideas, sugerencias y caminos. Algunos para seguir, y otros que sería mejor no tomar - Gustavo Giorgi - $19200"
+                            id="product16">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="cart-summary">
+                <h4>Carrito de Compras</h4>
+                <ul id="cart-items">
+                </ul>
+                <div class="total">
+                    Total: <span id="cart-total">$0</span>
+                </div>
+            </div>
+
+            <div class="my-4">
+                <h4>Datos de Envío</h4>
+                <input class="form-control" type="text" name="Nombre" placeholder="Nombre completo" required>
+                <input class="form-control my-2" type="email" name="Email" placeholder="Correo electrónico" required>
+                <input class="form-control my-2" type="text" name="Dirección" placeholder="Dirección de envío" required>
+                <input class="form-control my-2" type="text" name="Teléfono" placeholder="Número de teléfono" required>
+                <input type="hidden" name="_next" value="//site.io/thanks.html" required>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-primary" type="submit">
+                    Enviar Pedido
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="text-center py-3">
+        <p>&copy; 2024 Editorial Librería Cívica. Todos los derechos reservados.</p>
+    </footer>
+<!-- 
+    <script>
+        document.querySelectorAll('input[type="checkbox"]').forEach(function (checkbox) {
+            checkbox.addEventListener('change', function () {
+                const selectedProducts = [];
+                document.querySelectorAll('input[type="checkbox"]:checked').forEach(function (checkedBox) {
+                    selectedProducts.push(checkedBox.value);
+                });
+
+                const cartContent = document.getElementById('cart-content');
+                if (selectedProducts.length > 0) {
+                    cartContent.innerHTML = selectedProducts.map(product => `<li>${product}</li>`).join('');
+                    cartContent.style.display = 'block';
+                } else {
+                    cartContent.style.display = 'none';
+                }
+            });
+        });
+
+    </script> -->
+    <script src="script_tienda.js"></script>
+</body>
+
+</html>

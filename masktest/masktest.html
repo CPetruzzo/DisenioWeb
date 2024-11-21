@@ -4,60 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video en Forma</title>
+    <title>Galería 3D</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/atropos@2.0.2/atropos.css">
+
     <style>
-        body,
-        html {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #000;
         }
 
-        .video-container {
+        #carousel {
+            overflow: hidden;
+            width: 100%;
             position: relative;
-            width: 500px;
-            /* Ajusta el tamaño según sea necesario */
             height: 500px;
-            /* Ajusta el tamaño según sea necesario */
+            /* Adjust the height as necessary */
         }
 
-        video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 80%;
-            height: 80%;
-            object-fit: cover;
-            -webkit-mask-image: url('shape.png');
-            mask-image: url('shape.png');
-            -webkit-mask-size: cover;
-            mask-size: cover;
+        .carousel-inner {
+            display: flex;
+            animation: scroll 20s linear infinite;
         }
 
-        .shape {
-            display: none;
-            /* Esconde la imagen de forma */
+        .carousel-item {
+            /* min-width: 100%; */
+            height: 50svh;
+            width: 50svw;
+            background-size: cover;
+            background-position: center;
         }
     </style>
+
 </head>
 
 <body>
-    <div class="video-container">
-        <video id="video" loop muted autoplay>
-            <source src="video.mp4" type="video/mp4">
-            Tu navegador no soporta la etiqueta de video.
-        </video>
-        <img src="shape.png" alt="Forma" class="shape">
-    </div>
-
+    <section id="galeria">
+        <h2>Galería</h2>
+        <div id="carousel">
+            <div class="atropos my-atropos">
+                <div class="atropos-scale">
+                    <div class="atropos-rotate">
+                        <div class="atropos-inner carousel-inner">
+                            <div class="carousel-item" style="background-image: url('backgroundpetruzzo.webp');"></div>
+                            <div class="carousel-item" style="background-image: url('backgroundpetruzzo.webp');"></div>
+                            <div class="carousel-item" style="background-image: url('backgroundpetruzzo.webp');"></div>
+                            <!-- Add more photos here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/atropos@2.0.2/atropos.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const video = document.getElementById("video");
-            video.play();
+        document.addEventListener('DOMContentLoaded', function () {
+            const myAtropos = Atropos({
+                el: '.my-atropos',
+                activeOffset: 40,
+                shadow: true,
+                rotateTouch: true,
+            });
+
+            const carouselInner = document.querySelector('.carousel-inner');
+            const carouselItems = document.querySelectorAll('.carousel-item');
+            const totalItems = carouselItems.length;
+
+            function duplicateItems() {
+                for (let i = 0; i < totalItems; i++) {
+                    const clone = carouselItems[i].cloneNode(true);
+                    carouselInner.appendChild(clone);
+                }
+            }
+
+            duplicateItems();
         });
     </script>
 </body>

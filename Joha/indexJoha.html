@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Lic. Johana Dabin - Kinesiología</title>
+
+    <meta name="author" content="Facundo Wegher Osci">
+    <meta name="description" content="Licenciada en Kinesiología Johana Dabin">
+    <link rel="canonical" href="https://kinesiologa-dabin.netlify.app/" />
+    <meta name="robots" content="index" />
+    <meta name="keywords"
+        content="kinesiologa, kinesiología, licenciada, licenciada en kinesiología, johana, dabin, parana, Paraná, sesión, sesiones de kinesiología">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="logojoha.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .service-title {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .service-content {
+            display: none;
+        }
+
+        .service-title::after {
+            content: '▶';
+            transition: transform 0.3s;
+        }
+
+        .service-title.expanded::after {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logojoha.png" alt="logojoha" width="35px">
+            Johana Dabin
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="turnera.html">Turnos</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+    <section id="inicio" class="hero">
+        <div class="hero-content" style="justify-content: space-evenly;">
+            <!-- <svg width="0" height="0">
+                <defs>
+                    <clipPath id="peaShape" clipPathUnits="objectBoundingBox">
+                        <path d="M 0.5 0 C 0.35 0 0.2 0.1 0.15 0.25 C 0.1 0.4 0.2 0.55 0.35 0.65 C 0.5 0.75 0.65 0.9 0.75 0.75 C 0.85 0.6 0.65 0.35 0.5 0.25 C 0.35 0.15 0.65 0.35 0.5 0.25 C 0.35 0.15 0.65 0.35 0.5 0.25 Z" />
+                    </clipPath>
+                </defs>
+            </svg>   -->
+            <img src="joha_perfil.jpeg" alt="Johana Dabin" class="hero-image">
+            <div class="hero-text" style="text-align: right; max-width: 350px;">
+                <h1>Lic. Johana Dabin</h1>
+                <p>Especialista en Kinesiología y Rehabilitación</p>
+                <p>Hola! Soy Johana Dabin, Lic. en Kinesiología y Fisiatría, egresada de la Facultad de Ciencias de la
+                    Salud
+                    UNER.
+                    Desde hace 10 años acompaño a las personas a recuperarse a través del movimiento, actualmente
+                    gracias a la
+                    virtualidad puedo llegar a muchos de ustedes!
+                    Por cualquier consulta, no dudes en contactarte</p>
+                <div class="button-container">
+                    <a href="index.html#contacto" class="btn pastel-btn">Hacé tu consulta</a>
+                    <a href="turnera.html" class="btn pastel-btn">Turnos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <ul class="services-list">
+            <li>
+                <div class="service-title">Disfunciones Tempomandibulares</div>
+                <div class="service-content">
+                    <p>Síntomas frecuentes como dolor en la mandíbula, bruxismo, problemas en la masticación, así como
+                        cervicalgias y cefaleas pueden ser causadas por alguna patología en la articulación
+                        temporomandibular.
+                        A través de la consulta podemos diagnosticar la causa, tratarla, asesorarte en cambios de
+                        hábitos y además brindarte una guía de ejercicios personalizado en PDF.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="service-title">Terapias Manuales</div>
+                <div class="service-content">
+                    <p>Técnicas manuales para el alivio del dolor y la mejora de la movilidad.</p>
+                </div>
+            </li>
+            <li>
+                <div class="service-title">Gimnasia Kinésica</div>
+                <div class="service-content">
+                    <p>Practica recomendada para personas con patologías de columna, con elementos que todos tenemos en
+                        el hogar. Guia de ejercicios en PDF.</p>
+                </div>
+            </li>
+            <li>
+                <div class="service-title">Rehabilitación Pulmonar</div>
+                <div class="service-content">
+                    <p>Si te diagnosticaron alguna patología pulmonar crónica (Epoc, fibrosis pulmonar, entre otras), a
+                        traves de un plan de entrenamiento aerobico y de la fuerza podemos mejorar tu calidad de vida.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="service-title">Rehabilitación Metabólica</div>
+                <div class="service-content">
+                    <p>La inactividad física es la principal causa de enfermedades crónicas, tales como: la diabetes
+                        tipo II, la hipertensión, la esteatosis hepática, la presencia de valores elevados de colesterol
+                        y/o triglicéridos en sangre.
+                        Te ofrezco un un programa de entrenamiento de la fuerza guiado y personalizado.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="service-title">Telerehabilitación</div>
+                <div class="service-content">
+                    <p>Servicios de rehabilitación a distancia mediante videollamadas y herramientas digitales.</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+<!-- 
+    <section id="galeria">
+        <h2>Galería</h2>
+        <div id="photo-container"></div>
+    </section> -->
+
+    <section id="galeria">
+        <div id="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item" style="background-image: url('joha_1.jpeg');"></div>
+                <div class="carousel-item" style="background-image: url('joha_2.jpeg');"></div>
+                <div class="carousel-item" style="background-image: url('joha_3.jpeg');"></div>
+                <!-- Añade más fotos aquí solo recordar cambiar translation en css -->
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="contacto">
+        <h2 class="section__title">Tu consulta:</h2>
+        <div class="contact-container">
+            <div class="contact-form-wrapper">
+                <p class="desc">Atención a domicilio.</p>
+                <p class="desc">Ubicación: Petrona Rosede 2394</p>
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.9259112487343!2d-60.485281300000004!3d-31.745223199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b44e0b3bd009a1%3A0x1e57bd9f8a07e7a9!2sesquina%20Prov.%20de%2C%20Petrona%20Rosende%202394%2C%20E3100%20Paran%C3%A1%2C%20Entre%20R%C3%ADos!5e0!3m2!1ses-419!2sar!4v1719755189760!5m2!1ses-419!2sar"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contact-form-wrapper">
+                <p class="desc">
+                    Envíame tu consulta.
+                </p>
+                <p class="desc">Te responderé a la brevedad.</p>
+                <form class="contact__form" action="https://formspree.io/f/xanwwnbk" method="POST">
+                    <label for=""></label>
+                    <input class="field" type="text" name="Name" placeholder="Nombre" id="name" required>
+                    <input class="field" type="email" name="_replyto" placeholder="Correo electrónico" id="email"
+                        required>
+                    <input type="hidden" name="_next" value="//site.io/thanks.html" required>
+                    <textarea class="field field--textarea" cols="30" rows="10" placeholder="Mensaje" id="message"
+                        name="message" required></textarea>
+                    <p class="fields-requirements">Todos los campos son requeridos.</p>
+                    <input class="btn" type="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+        <p class="desc">Sitio Web realizado y diseñado por <br>
+            <a class="hover-effect" href="https://www.wegher.com.ar">
+                Facundo Wegher
+            </a>
+        </p>
+
+    </section>
+
+    <a href="https://wa.me/5493434667740?text=Hola%20Johana%20mi%20nombre%20es%20" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+
+    <footer>
+        <p>&copy; 2024 Lic. Johana Dabin. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('expanded');
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var serviceTitles = document.querySelectorAll('.service-title');
+
+            serviceTitles.forEach(function (title) {
+                title.addEventListener('click', function () {
+                    var content = this.nextElementSibling;
+                    this.classList.toggle('expanded');
+
+                    // Toggle the display of the service content
+                    if (content.style.display === 'block') {
+                        content.style.display = 'none';
+                    } else {
+                        content.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carouselInner = document.querySelector('.carousel-inner');
+            const carouselItems = document.querySelectorAll('.carousel-item');
+            const totalItems = carouselItems.length;
+            
+            function duplicateItems() {
+                for (let i = 0; i < totalItems; i++) {
+                    const clone = carouselItems[i].cloneNode(true);
+                    carouselInner.appendChild(clone);
+                }
+            }
+    
+            duplicateItems();
+        });
+    </script>
+    
+</body>
+
+</html>
