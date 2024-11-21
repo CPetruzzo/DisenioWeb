@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dot Dager Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="logodotdager.png" alt="Dot Dager Profile Picture" class="profile-pic">
+            <h1 class="name">Dot Dager</h1>
+            <p class="tagline">Content Creator | Programming Philanthropist | Movie Reviewer | Cat Lover | Guitarist |
+                Passionate for Pickles</p>
+        </header>
+
+        <div class="language-container">
+            <button class="change-language" onclick="window.location.href='index.html';">Llevame al castellano che
+                <img class="icon serious-language" src="right-arrow.svg" alt="arrow-right">
+            </button>
+        </div>
+
+        <section class="about">
+            <h2>About Me</h2>
+            <p>
+                Hi! My name's Mariano Villa. I’m a content creator who loves <strong>programming</strong>,
+                <strong>cats</strong>,
+                <strong>guitars</strong>,
+                <strong>cucumbers</strong>, and <strong>philosophy</strong>. This page is a small (not as much as yours)
+                window into my
+                personality.
+            </p>
+        </section>
+
+        <section class="books">
+            <h2>Some books I Recommend</h2>
+            <ul>
+                <li>
+                    <strong>Thinking, Fast and Slow</strong> by Daniel Kahneman
+                    <p>A fascinating exploration of how our minds work, focusing on the two systems of thinking: fast,
+                        intuitive thoughts and slow, deliberate reasoning.</p>
+                </li>
+                <li>
+                    <strong>Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets</strong> by
+                    Nassim Nicholas Taleb
+                    <p>A brilliant take on the unpredictable nature of life and how randomness shapes our world and
+                        perceptions.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="game">
+            <h2>Play a Game!</h2>
+            <p>
+                Take a break and enjoy this fun game, <strong>Lumberjack Bot</strong>. Chop some wood while you're
+                here!<br><br>
+
+                If you're on <strong>PC</strong>, you can use:<br>
+
+                <strong>Left Arrow Key</strong><br>
+                <strong>Right Arrow Key</strong><br><br>
+
+                So everything can be done with just the keyboard! 🔥 <br>(If not, well, it's not that hard anyway).
+            </p>
+
+            <iframe src="https://tbot.xyz/lumber/" width="100%" height="400" style="border: none;"
+                title="Lumberjack Bot">
+            </iframe>
+        </section>
+
+        <section class="community-stacks">
+            <h2>Community Stack Ideas</h2>
+            <p>
+                On my streams, I gather random letters proposed by the community and build tech stacks around them.
+                Sometimes, we even give these stacks meaningful names! Most of the time it's just b@$&%hit
+            </p>
+            <div class="stack-input">
+                <label for="stackLetters">Enter Your Letters:</label>
+                <input type="text" id="stackLetters" placeholder="e.g., ABC, XYZ">
+                <button id="generateStack">Generate Stack</button>
+            </div>
+            <div class="stack-results">
+                <h3>Proposed Stack:</h3>
+                <p id="stackOutput">Let the fun begin! 🤔</p>
+            </div>
+        </section>
+
+        <section class="social-networks">
+            <h2>Connect with Me!</h2>
+            <ul class="social-links">
+                <li>
+                    <a href="https://www.youtube.com/@DotDager" target="_blank">
+                        <img src="youtube.svg" alt="Ícono de YouTube" class="icon">
+                        <span>Dot Dager</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@DagerMusic" target="_blank">
+                        <img src="youtubemusic.svg" alt="Ícono de Música" class="icon">
+                        <span>Dager Music</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.twitch.tv/dagerxiv" target="_blank">
+                        <img src="twitch.png" alt="Ícono de Twitch" class="icon">
+                        <span>Dager XIV</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/dager.32" target="_blank">
+                        <img src="https://www.wegher.com.ar/images/ig.webp" alt="Ícono de Instagram" class="icon">
+                        <span>Instagram</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@ElAntroDeDager" target="_blank">
+                        <img src="youtube.svg" alt="Ícono de YouTube" class="icon">
+                        <span>El Antro de Dager</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://discord.com/invite/2NessfQFvY" target="_blank">
+                        <img src="discord-icon.svg" alt="Ícono de Discord" class="icon">
+                        <span>Join server</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.tiktok.com/@elantrodedager" target="_blank">
+                        <img src="tiktok.png" alt="Ícono de TikTok" class="icon">
+                        <span>@elantrodedager</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.reddit.com/user/DagerDotCSV" target="_blank">
+                        <img src="reddit.svg" alt="Ícono de Reddit" class="icon">
+                        <span>DagerDotCSV</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://linktr.ee/DotDager" target="_blank">
+                        <img src="linktree.svg" alt="Ícono de Linktree" class="icon">
+                        <span>Todos mis enlaces</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <footer class="footer">
+            <p>Made with
+                <img src="pickle.svg" alt="Pepino" class="icon">by <a style="text-decoration: none; color: #444;"
+                    href="http://www.wegher.com.ar">CachoPetruzzo</a>
+            </p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script src="lumberjack.js"></script>
+
+</body>
+
+</html>
