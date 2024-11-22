@@ -8,17 +8,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/side-bar.css">
+
 </head>
 
 <body>
     <div class="container">
 
         <!-- Banner -->
-        <div class="banner">
+        <div class="banner" id="home">
             <h1 class="name">Dot Dager</h1>
             <p class="tagline">Content Creator | Programming Philanthropist | Movie Reviewer | Cat Lover | Guitarist |
                 Passionate for Pickles</p>
-            <img src="images/dager5.jpg" alt="Banner de Dot Dager" class="banner-image">
+            <img style="border-radius: 15px;" src="images/dager5.jpg" alt="Banner de Dot Dager" class="banner-image">
         </div>
 
         <button id="toggle-music">
@@ -29,7 +31,7 @@
             </svg>
         </button>
 
-        <section class="about">
+        <section class="about" id="about">
             <h2>About Me</h2>
             <p style="max-width: 900px; align-items: center; text-align: center; margin: auto;">
                 Hi! My name is Mariano Villa, and even though my philosophical background makes me want to delve into
@@ -63,7 +65,7 @@
             </button>
         </div>
 
-        <section class="books">
+        <section class="books" id="books">
             <h2>Some books I Recommend</h2>
             <div class="book-cards">
                 <div class="card">
@@ -96,7 +98,7 @@
             </div>
         </section>
 
-        <section class="game">
+        <section class="game" id="game">
             <h2>Play a Game!</h2>
             <p>
                 Take a break and enjoy this fun game, <strong>Lumberjack Bot</strong>. Chop some wood while you're
@@ -115,7 +117,7 @@
             </iframe>
         </section>
 
-        <section class="community-stacks">
+        <section class="community-stacks" id="community">
             <h2>Community Stack Ideas</h2>
             <p style="max-width: 900px; align-items: center; text-align: center; margin: auto;">
                 On my streams, I gather random letters proposed by the community and build tech stacks around them.
@@ -191,6 +193,54 @@
                 </li>
             </ul>
         </section>
+
+        <div id="st-2" class=" st-sticky-share-buttons st-left st-toggleable st-has-labels ">
+            <div class="st-btn st-first" data-network="facebook" style="display: inline-block;">
+                <a href="#home" style="text-decoration: none;">
+                    <img src="images/logo-dotdager.png" alt="Ícono de facebook" class="icon">
+                </a>
+                <span class="st-label">Yo</span>
+            </div>
+
+            <div class="st-btn" data-network="twitter" style="display: inline-block;">
+                <a href="#about" style="text-decoration: none;">
+                    <img src="images/cucumber.webp" alt="Ícono de twitter" class="icon">
+                </a>
+                <span class="st-label">Quien</span>
+            </div>
+
+            <div class="st-btn" data-network="linkedin" style="display: inline-block;">
+                <a href="#books" style="text-decoration: none;">
+                    <img src="images/logo-dotdager.png" alt="Ícono de linkedin" class="icon">
+                </a>
+                <span class="st-label">Libro</span>
+            </div>
+            <div class="st-btn" data-network="messenger" style="display: inline-block;">
+                <a href="#game" style="text-decoration: none;">
+                    <img src="images/cucumber.webp" alt="Ícono de messenger" class="icon">
+                </a>
+                <span class="st-label">Juego</span>
+            </div>
+            <div class="st-btn st-last" data-network="whatsapp" style="display: inline-block;">
+                <a href="#community" style="text-decoration: none;">
+                    <img src="images/logo-dotdager.png" alt="Ícono de messenger" class="icon">
+                </a>
+                <span class="st-label">Raro</span>
+
+            </div>
+
+            <div class="st-toggle">
+                <div class="st-left">
+                    <a href="#home" style="text-decoration: none;">
+                        <img alt="arrow_left sharing button" src="https://platform-cdn.sharethis.com/img/arrow_left.svg">
+                    </a>
+                </div>
+                <div class="st-right">
+                    <img alt="arrow_right sharing button" src="https://platform-cdn.sharethis.com/img/arrow_right.svg">
+                </div>
+            </div>
+        </div>
+
         <footer class="footer">
             <p>Made with
                 <img src="images/pickle.svg" alt="Pepino" class="icon">by <a style="text-decoration: none; color: #ffffff;"

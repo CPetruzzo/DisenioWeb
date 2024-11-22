@@ -8,17 +8,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/side-bar.css">
+
 </head>
 
 <body>
     <div class="container">
 
         <!-- Banner -->
-        <div class="banner">
+        <div class="banner" id="home">
             <h1 class="name">Dot Dager</h1>
             <p class="tagline">Creador de Contenido | Filántropo de la Programación | Crítico de Cine | Amante de
                 los Gatos | Guitarrista | Apasionado por los Pepinos</p>
-            <img src="images/dager3.jpg" alt="Banner de Dot Dager" class="banner-image">
+            <img style="border-radius: 15px;" src="images/dager3.jpg" alt="Banner de Dot Dager" class="banner-image">
         </div>
 
         <button id="toggle-music">
@@ -29,13 +31,14 @@
             </svg>
         </button>
 
-        <section class="about">
+        <section class="about" id="about">
             <h2>Quién soy?</h2>
             <p style="max-width: 900px; align-items: center; text-align: center; margin: auto;">
                 ¡Hola! Mi nombre es Mariano Villa, y por más que mi background filosófico tenga unas ganas de ponerse a
                 divagar con esa pregunta voy a tratar de resumirles:
                 <br><br>Soy un creador de contenido con mucho interés en todo lo que te hace
-                pensar, apasionado por el <strong>dinero</strong>, digo... <strong>programación</strong>, con síndrome de impostor, con un gran gusto
+                pensar, apasionado por el <strong>dinero</strong>, digo... <strong>programación</strong>, autodidacta
+                con síndrome de impostor, con un gran gusto
                 por los
                 <strong>gatos</strong>,
                 las <strong>guitarras</strong>, los <strong>pepinos</strong> y la <strong>filosofía</strong>.
@@ -63,11 +66,11 @@
                     I don't understand but I like pickles
 
                 </p>
-                <img class="icon serious-language" src="images/right-arrow.svg" alt="arrow-right">
+                <!-- <img class="icon serious-language" src="images/right-arrow.svg" alt="arrow-right"> -->
             </button>
         </div>
 
-        <section class="books">
+        <section class="books" id="books">
             <h2>Algunos libros que Recomiendo</h2>
             <div class="book-cards">
                 <div class="card">
@@ -99,31 +102,21 @@
                             historia.</p>
                     </div>
                 </div>
-
-
-                <!-- Puedes agregar más tarjetas aquí -->
             </div>
         </section>
 
 
-        <section class="game">
+        <section class="game" id="game">
             <h2 style="font-size: 2rem;">¡Relajate un poco flaco!</h2>
             <p>
-                ¡Tómate un descanso y disfruta de este divertido juego, <strong>Lumberjack</strong>. Jugalo y mandame captura a este correo: <br><br>
-
-                Si estás en <strong>PC</strong>, puedes usar:<br>
-
-                <strong>Flecha Izquierda del Teclado</strong><br>
-                <strong>Flecha Derecha del Teclado</strong> <br><br>
-
-                ¡Así que todo se puede hacer con el teclado! 🔥 <br>(si no bueno, tampoco es tan dificil).
+                ¡Tómate un descanso y disfruta de este divertido juego, <strong>Lumberjack</strong>.
             </p>
 
             <iframe src="https://tbot.xyz/lumber/" width="100%" height="400" style="border: none;"
                 title="Lumberjack Bot"></iframe>
         </section>
 
-        <section class="community-stacks">
+        <section class="community-stacks" id="community">
             <h2>Programando Stacks Bizarros</h2>
             <p style="max-width: 900px; align-items: center; text-align: center; margin: auto;">
                 En mis streams, reunimos letras aleatorias propuestas por la comunidad y creamos stacks tecnológicos
@@ -217,6 +210,53 @@
             </ul>
         </section>
 
+
+        <div id="st-2" class=" st-sticky-share-buttons st-left st-toggleable st-has-labels ">
+            <div class="st-btn st-first" data-network="facebook" style="display: inline-block;">
+                <a href="#home" style="text-decoration: none;">
+                    <img src="images/logo-dotdager.png" alt="Ícono de facebook" class="icon">
+                </a>
+                <span class="st-label">Yo</span>
+            </div>
+
+            <div class="st-btn" data-network="twitter" style="display: inline-block;">
+                <a href="#about" style="text-decoration: none;">
+                    <img src="images/cucumber.webp" alt="Ícono de twitter" class="icon">
+                </a>
+                <span class="st-label">Quien</span>
+            </div>
+
+            <div class="st-btn" data-network="linkedin" style="display: inline-block;">
+                <a href="#books" style="text-decoration: none;">
+                    <img src="images/logo-dotdager.png" alt="Ícono de linkedin" class="icon">
+                </a>
+                <span class="st-label">Libro</span>
+            </div>
+            <div class="st-btn" data-network="messenger" style="display: inline-block;">
+                <a href="#game" style="text-decoration: none;">
+                    <img src="images/cucumber.webp" alt="Ícono de messenger" class="icon">
+                </a>
+                <span class="st-label">Juego</span>
+            </div>
+            <div class="st-btn st-last" data-network="whatsapp" style="display: inline-block;">
+                <a href="#community" style="text-decoration: none;">
+                    <img src="images/logo-dotdager.png" alt="Ícono de messenger" class="icon">
+                </a>
+                <span class="st-label">Raro</span>
+
+            </div>
+
+            <div class="st-toggle">
+                <div class="st-left">
+                    <a href="#home" style="text-decoration: none;">
+                        <img alt="arrow_left sharing button" src="https://platform-cdn.sharethis.com/img/arrow_left.svg">
+                    </a>
+                </div>
+                <div class="st-right">
+                    <img alt="arrow_right sharing button" src="https://platform-cdn.sharethis.com/img/arrow_right.svg">
+                </div>
+            </div>
+        </div>
         <footer class="footer">
             <p>Hecho con
                 <img src="images/pickle.svg" alt="Pepino" class="icon">por <a

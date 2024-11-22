@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -534,3 +535,4 @@ iframe {
 #toggleButton:hover {
   background-color: #36c9aa;
 }
+
