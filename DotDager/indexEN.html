@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dot Dager</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="js/lumberjack.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <header class="header">
-            <img src="images/logodotdager.png" alt="Dot Dager Profile Picture" class="profile-pic">
+
+        <!-- Banner -->
+        <div class="banner">
             <h1 class="name">Dot Dager</h1>
             <p class="tagline">Content Creator | Programming Philanthropist | Movie Reviewer | Cat Lover | Guitarist |
                 Passionate for Pickles</p>
-        </header>
+            <img src="images/dager5.jpg" alt="Banner de Dot Dager" class="banner-image">
+        </div>
 
         <button id="toggle-music">
             <svg id="speaker-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -28,40 +29,71 @@
             </svg>
         </button>
 
+        <section class="about">
+            <h2>About Me</h2>
+            <p style="max-width: 900px; align-items: center; text-align: center; margin: auto;">
+                Hi! My name is Mariano Villa, and even though my philosophical background makes me want to delve into
+                that question,
+                I'll try to keep it brief:
+                <br><br>I’m a content creator with a keen interest in everything that makes you think, passionate about
+                <strong>money</strong>, I mean... <strong>programming</strong>,
+                struggling with imposter syndrome, and with a great love for <strong>cats</strong>,
+                <strong>guitars</strong>, <strong>cucumbers</strong>, and <strong>philosophy</strong>.
+                <br><br>This page is a small (not as small as yours) window into my personality.
+            </p>
+        </section>
+
+        <br>
+        <div id="play-music-btn-container">
+
+            <button id="play-music-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 3v10.15a4 4 0 1 0 0 7.7V3h-2v14a2 2 0 1 1 0 4h2v-2h-1a1 1 0 0 0 0 2h3a1 1 0 0 0 0-2h-1v-2h2v14a4 4 0 1 0 0-7.7V3h-2z">
+                    </path>
+                </svg>
+                Activate stream music
+            </button>
+        </div>
+
         <div class="language-container">
             <button class="change-language" onclick="window.location.href='index.html';">
-                No entiendo nada pero me gustan los pepinos
+                No entiendo este idioma pero me gustan los pepinos
                 <img class="icon serious-language" src="images/right-arrow.svg" alt="arrow-right">
             </button>
         </div>
 
-        <section class="about">
-            <h2>About Me</h2>
-            <p>
-                Hi! My name's Mariano Villa. I’m a content creator who loves <strong>programming</strong>,
-                <strong>cats</strong>,
-                <strong>guitars</strong>,
-                <strong>cucumbers</strong>, and <strong>philosophy</strong>. This page is a small (not as much as yours)
-                window into my
-                personality.
-            </p>
-        </section>
-
         <section class="books">
             <h2>Some books I Recommend</h2>
-            <ul>
-                <li>
-                    <strong>Thinking, Fast and Slow</strong> by Daniel Kahneman
-                    <p>A fascinating exploration of how our minds work, focusing on the two systems of thinking: fast,
-                        intuitive thoughts and slow, deliberate reasoning.</p>
-                </li>
-                <li>
-                    <strong>Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets</strong> by
-                    Nassim Nicholas Taleb
-                    <p>A brilliant take on the unpredictable nature of life and how randomness shapes our world and
-                        perceptions.</p>
-                </li>
-            </ul>
+            <div class="book-cards">
+                <div class="card">
+                    <img src="images/thinking_fast_and_slow.jpg" alt="Thinking, Fast and Slow" class="book-cover">
+                    <div class="card-content">
+                        <strong>Thinking, Fast and Slow</strong> by Daniel Kahneman
+                        <p>A fascinating exploration of how our minds work, focusing on the two systems of thinking:
+                            fast,
+                            intuitive thoughts and slow, deliberate reasoning.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/fooled_by_randomness.jpg" alt="Fooled by Randomness" class="book-cover">
+                    <div class="card-content">
+                        <strong>Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets</strong> by
+                        Nassim Nicholas Taleb
+                        <p>A brilliant take on the unpredictable nature of life and how randomness shapes our world and
+                            perceptions.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/money.jpg" alt="El dinero" class="book-cover">
+                    <div class="card-content">
+                        <h3>El dinero</h3>
+                        <p><strong>Author:</strong> John Kenneth Galbraith</p>
+                        <p>In this work, translated into a dozen languages and considered by many a classic of economic
+                            literature, Galbraith examines the evolution of money and its use throughout history.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="game">
@@ -85,13 +117,13 @@
 
         <section class="community-stacks">
             <h2>Community Stack Ideas</h2>
-            <p>
+            <p style="max-width: 900px; align-items: center; text-align: center; margin: auto;">
                 On my streams, I gather random letters proposed by the community and build tech stacks around them.
                 Sometimes, we even give these stacks meaningful names! Most of the time it's just b@$&%hit
             </p>
             <div class="stack-input">
                 <label for="stackLetters">Enter Your Letters:</label>
-                <input type="text" id="stackLetters" placeholder="e.g., ABC, XYZ">
+                <input type="text" id="stackLetters" placeholder="Ej., ABCD, AAAA, PENE">
                 <button id="generateStack">Generate Stack</button>
             </div>
             <div class="stack-results">
@@ -135,7 +167,7 @@
                 </li>
                 <li>
                     <a href="https://discord.com/invite/2NessfQFvY" target="_blank">
-                        <img src="discord-icon.svg" alt="Ícono de Discord" class="icon">
+                        <img src="images/discord-icon.svg" alt="Ícono de Discord" class="icon">
                         <span>Join server</span>
                     </a>
                 </li>
@@ -161,20 +193,21 @@
         </section>
         <footer class="footer">
             <p>Made with
-                <img src="images/pickle.svg" alt="Pepino" class="icon">by <a style="text-decoration: none; color: #444;"
+                <img src="images/pickle.svg" alt="Pepino" class="icon">by <a style="text-decoration: none; color: #ffffff;"
                     href="http://www.wegher.com.ar">CachoPetruzzo</a>
             </p>
         </footer>
     </div>
 
     <audio id="background-music" autoplay loop>
-        <source src="output.mp3" type="audio/mpeg">
+        <source src="streamaudio.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
     <script src="js/script.js"></script>
     <script src="js/lumberjack.js"></script>
     <script src="js/toggleSound.js"></script>
+    <script src="js/contact.js"></script>
 
 </body>
 

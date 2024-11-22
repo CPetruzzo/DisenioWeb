@@ -8,26 +8,24 @@
 body {
   font-family: 'system-ui', sans-serif;
   line-height: 1.6;
-  color: #f9f9f9;
-  /* Texto blanco para visibilidad en fondo oscuro */
-  background-color: #121212;
-  /* Fondo oscuro */
+  color: #f9f9f9; /* Texto blanco para visibilidad en fondo oscuro */
+  background-color: #121212; /* Fondo oscuro */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 
   /* Fondo de la imagen */
-  background-image: url('../images/logo-dotdager.png');
-  /* Reemplaza con la ruta de tu imagen */
-  background-repeat: repeat;
-  /* La imagen se repetirá */
-  animation: moveBackground 10s ease-in-out infinite;
-  /* Animación para mover el fondo */
+  background-image: url('../images/logo-dotdager.png'); /* Reemplaza con la ruta de tu imagen */
+  background-repeat: repeat; /* La imagen se repetirá */
+  animation: moveBackground 10s ease-in-out infinite; /* Animación para mover el fondo */
+
+  /* Cursor personalizado */
+  cursor: url('../images/dager1.png') 16 16, auto !important; /* Coordenadas X, Y del punto activo */
 }
 
 .container {
-  width: 600px;
+  width: 1200px;
   max-width: 85%;
   text-align: center;
   background: #1f1f1f;
@@ -58,7 +56,7 @@ body {
 }
 
 .tagline {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #bbb;
   /* Texto en gris claro */
 }
@@ -67,12 +65,13 @@ body {
 .books h2 {
   margin: 20px 0 10px;
   color: #f9f9f9;
+  font-size: 2rem;
   /* Texto blanco para mejor contraste */
 }
 
 .about p,
 .books ul {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #bbb;
   /* Texto gris claro */
 }
@@ -119,7 +118,7 @@ body {
 
 .game p {
   margin-bottom: 10px;
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #bbb;
   /* Gris claro */
 }
@@ -130,6 +129,9 @@ body {
   text-align: center;
 }
 
+.community-stacks p {
+  font-size: 1.3rem;
+}
 .stack-input {
   margin-top: 15px;
 }
@@ -138,7 +140,7 @@ body {
   padding: 10px;
   width: 60%;
   max-width: 300px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   border: 2px solid #444;
   /* Bordes más oscuros */
   border-radius: 5px;
@@ -193,6 +195,19 @@ body {
   color: #f9f9f9;
   /* Texto blanco */
 }
+
+/* Estilo inicial (plegado) */
+.social-networks {
+  max-height: 0;          /* Oculta el contenido */
+  overflow: hidden;       /* Evita que el contenido sea visible */
+  transition: max-height 0.5s ease-out; /* Suaviza la animación */
+}
+
+/* Estilo desplegado */
+.social-networks.active {
+  max-height: 1000px; /* Ajusta según el tamaño de tu contenido */
+}
+
 
 .social-links {
   list-style: none;
@@ -366,26 +381,31 @@ iframe {
 
 .books {
   text-align: center;
-  margin: 50px 0;
+  margin: auto;
   padding: 20px;
-  background-image: url("../images/dager3.jpg");
-  background-size:auto;
-  background-repeat: no-repeat;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
 }
 
-.books h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #333;
-}
 
 .book-cards {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 20px;
+    max-width: 900px;
+  margin: auto;
+  overflow-x: auto; /* Habilita el desplazamiento horizontal */
+  padding: 10px;
+  scroll-snap-type: x mandatory; /* Mejora la experiencia de desplazamiento */
+}
+
+.book-cards::-webkit-scrollbar {
+  height: 8px; /* Tamaño del scroll */
+}
+
+.book-cards::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
 }
 
 .card {
@@ -394,8 +414,11 @@ iframe {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: 280px;
+  flex-shrink: 0; /* Evita que las tarjetas se reduzcan */
+  height: 370px;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start; /* Ajusta las tarjetas al contenedor */
 }
 
 .card:hover {
@@ -423,4 +446,91 @@ iframe {
   margin: 5px 0;
   color: #666;
   font-size: 0.9em;
+}
+
+
+.banner {
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media only screen and (max-width: 650px) {
+  .tagline {
+    font-size: 0.8rem;
+  }
+
+  .card {
+
+    width: 210px;
+    height: 280px;
+  }
+
+  p,
+  .game p,  
+  .about p,
+  .community-stacks p {
+    font-size: 1.1rem;
+
+  }
+}
+
+/* Botón de música */
+#play-music-btn {
+  background-color: #4CAF50; /* Verde suave */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#play-music-btn:hover {
+  background-color: #45a049; /* Más oscuro al pasar el mouse */
+  transform: scale(1.05);
+}
+
+#play-music-btn:active {
+  background-color: #3e8e41;
+  transform: scale(0.95);
+}
+
+/* Ícono de música dentro del botón */
+#play-music-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+/* Alineación */
+#play-music-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+
+#toggleButton {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #42f5d7;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#toggleButton:hover {
+  background-color: #36c9aa;
 }

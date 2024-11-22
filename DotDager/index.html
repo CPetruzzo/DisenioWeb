@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dot Dager</title>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
-
     <div class="container">
-        <header class="header">
-            <img src="images/logodotdager.png" alt="Foto de perfil de Dot Dager" class="profile-pic">
+
+        <!-- Banner -->
+        <div class="banner">
             <h1 class="name">Dot Dager</h1>
             <p class="tagline">Creador de Contenido | Filántropo de la Programación | Crítico de Cine | Amante de
                 los Gatos | Guitarrista | Apasionado por los Pepinos</p>
-        </header>
+            <img src="images/dager3.jpg" alt="Banner de Dot Dager" class="banner-image">
+        </div>
 
         <button id="toggle-music">
             <svg id="speaker-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -28,51 +29,87 @@
             </svg>
         </button>
 
-        <div class="language-container">
-            <button class="change-language" onclick="window.location.href='indexEN.html';">
-                I don't understand but I like pickles
-                <img class="icon serious-language" src="images/right-arrow.svg" alt="arrow-right">
-            </button>
-        </div>
-
         <section class="about">
-            <h2>Sobre Mí</h2>
-            <p>
-                ¡Hola! Mi nombre es Mariano Villa. Soy creador de contenido con mucho interés en todo lo que te hace
-                pensar, apasionado por la <strong>programación</strong>, los
+            <h2>Quién soy?</h2>
+            <p style="max-width: 900px; align-items: center; text-align: center; margin: auto;">
+                ¡Hola! Mi nombre es Mariano Villa, y por más que mi background filosófico tenga unas ganas de ponerse a
+                divagar con esa pregunta voy a tratar de resumirles:
+                <br><br>Soy un creador de contenido con mucho interés en todo lo que te hace
+                pensar, apasionado por el <strong>dinero</strong>, digo... <strong>programación</strong>, con síndrome de impostor, con un gran gusto
+                por los
                 <strong>gatos</strong>,
-                las <strong>guitarras</strong>, los <strong>pepinos</strong> y la <strong>filosofía</strong>. Esta
+                las <strong>guitarras</strong>, los <strong>pepinos</strong> y la <strong>filosofía</strong>.
+                <br><br>Esta
                 página es una pequeña (no tanto como la tuya) ventana a mi personalidad.
             </p>
         </section>
+
+        <br>
+        <div id="play-music-btn-container">
+
+            <button id="play-music-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 3v10.15a4 4 0 1 0 0 7.7V3h-2v14a2 2 0 1 1 0 4h2v-2h-1a1 1 0 0 0 0 2h3a1 1 0 0 0 0-2h-1v-2h2v14a4 4 0 1 0 0-7.7V3h-2z">
+                    </path>
+                </svg>
+                Activar Música de los streams
+            </button>
+        </div>
+
+        <div class="language-container">
+            <button class="change-language" onclick="window.location.href='indexEN.html';">
+                <p style="font-size: 2rem;">
+                    I don't understand but I like pickles
+
+                </p>
+                <img class="icon serious-language" src="images/right-arrow.svg" alt="arrow-right">
+            </button>
+        </div>
 
         <section class="books">
             <h2>Algunos libros que Recomiendo</h2>
             <div class="book-cards">
                 <div class="card">
-                    <img src="thinking_fast_and_slow.jpg" alt="Thinking, Fast and Slow" class="book-cover">
+                    <img src="images/thinking_fast_and_slow.jpg" alt="Thinking, Fast and Slow" class="book-cover">
                     <div class="card-content">
                         <h3>Thinking, Fast and Slow</h3>
                         <p><strong>Autor:</strong> Daniel Kahneman</p>
-                        <p>Una fascinante exploración sobre cómo funciona nuestra mente, enfocándose en los dos sistemas de pensamiento: rápido e intuitivo, y lento y deliberado.</p>
+                        <p>Una fascinante exploración sobre cómo funciona nuestra mente, enfocándose en los dos sistemas
+                            de pensamiento: rápido e intuitivo, y lento y deliberado.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="fooled_by_randomness.jpg" alt="Fooled by Randomness" class="book-cover">
+                    <img src="images/fooled_by_randomness.jpg" alt="Fooled by Randomness" class="book-cover">
                     <div class="card-content">
                         <h3>Fooled by Randomness</h3>
                         <p><strong>Autor:</strong> Nassim Nicholas Taleb</p>
-                        <p>Un enfoque brillante sobre la naturaleza impredecible de la vida y cómo la aleatoriedad da forma a nuestro mundo y percepciones.</p>
+                        <p>Un enfoque brillante sobre la naturaleza impredecible de la vida y cómo la aleatoriedad da
+                            forma a nuestro mundo y percepciones.</p>
                     </div>
                 </div>
+
+                <div class="card">
+                    <img src="images/money.jpg" alt="El dinero" class="book-cover">
+                    <div class="card-content">
+                        <h3>El dinero</h3>
+                        <p><strong>Autor:</strong> John Kenneth Galbraith</p>
+                        <p>En esta obra, traducida a una docena de lenguas y considerada por muchos un clásico de la
+                            literatura económica, Galbraith examina la evolución del dinero y su uso a lo largo de la
+                            historia.</p>
+                    </div>
+                </div>
+
+
+                <!-- Puedes agregar más tarjetas aquí -->
             </div>
         </section>
-        
+
+
         <section class="game">
-            <h2>¡Relajate un poco!</h2>
+            <h2 style="font-size: 2rem;">¡Relajate un poco flaco!</h2>
             <p>
-                ¡Tómate un descanso y disfruta de este divertido juego, <strong>Lumberjack</strong>. Corta algo de
-                madera mientras estás aquí!<br><br>
+                ¡Tómate un descanso y disfruta de este divertido juego, <strong>Lumberjack</strong>. Jugalo y mandame captura a este correo: <br><br>
 
                 Si estás en <strong>PC</strong>, puedes usar:<br>
 
@@ -88,14 +125,14 @@
 
         <section class="community-stacks">
             <h2>Programando Stacks Bizarros</h2>
-            <p>
+            <p style="max-width: 900px; align-items: center; text-align: center; margin: auto;">
                 En mis streams, reunimos letras aleatorias propuestas por la comunidad y creamos stacks tecnológicos
                 a
-                partir de ellas. ¡A veces incluso les damos nombres significativos! La mayoría de las veces no.
+                partir de ellas. ¡A veces incluso les damos nombres significativos! <br>La mayoría de las veces no.
             </p>
             <div class="stack-input">
                 <label for="stackLetters">Ingresa tus letras:</label>
-                <input type="text" id="stackLetters" placeholder="Ej., ABC, XYZ">
+                <input type="text" id="stackLetters" placeholder="Ej., ABCD, AAAA, PENE">
                 <button id="generateStack">Generar Stack</button>
             </div>
             <div class="stack-results">
@@ -104,7 +141,9 @@
             </div>
         </section>
 
-        <section class="social-networks">
+        <button id="toggleButton">¡Contáctate conmigo!</button>
+
+        <section class="social-networks" id="socialNetworks">
             <h2>¡Conéctate Conmigo!</h2>
             <ul class="social-links">
                 <li>
@@ -187,13 +226,14 @@
     </div>
 
     <audio id="background-music" autoplay loop>
-        <source src="output.mp3" type="audio/mpeg">
+        <source src="streamaudio2.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
     <script src="js/script.js"></script>
     <script src="js/lumberjack.js"></script>
     <script src="js/toggleSound.js"></script>
+    <script src="js/contact.js"></script>
 
 </body>
 

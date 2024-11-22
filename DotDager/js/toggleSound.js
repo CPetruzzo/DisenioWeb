@@ -15,3 +15,15 @@ button.addEventListener('click', () => {
       <path id="inactive-icon" d="M3 10v4h4l5 5V5L7 10H3zm11.54-1.42L13.12 12l1.42 1.42 2.83 2.83-1.42 1.42-2.83-2.83-2.83 2.83-1.42-1.42 2.83-2.83-2.83-2.83 1.42-1.42 2.83 2.83 2.83-2.83z"/>`;
   }
 });
+
+const audioBtn = document.getElementById('play-music-btn');
+audioBtn.addEventListener('click', function () {
+  const audio = document.getElementById('background-music');
+  if (audio.paused) {
+      audio.play();
+  } else {
+      this.textContent = "Musica activada";
+      audioBtn.style.opacity = 0.5;
+      audioBtn.style.pointerEvents = "none"
+  }
+});
