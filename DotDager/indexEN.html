@@ -13,18 +13,25 @@
 
 <body>
     <div class="container">
-        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/2-wKcIkElIc?autoplay=1&list=PL6ZpaevWeaf8J-0-ed71Mk0YW_7wh6n0u&index=3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
-
         <header class="header">
-            <img src="logodotdager.png" alt="Dot Dager Profile Picture" class="profile-pic">
+            <img src="images/logodotdager.png" alt="Dot Dager Profile Picture" class="profile-pic">
             <h1 class="name">Dot Dager</h1>
             <p class="tagline">Content Creator | Programming Philanthropist | Movie Reviewer | Cat Lover | Guitarist |
                 Passionate for Pickles</p>
         </header>
 
+        <button id="toggle-music">
+            <svg id="speaker-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <!-- Parlante Activo -->
+                <path id="active-icon"
+                    d="M3 10v4h4l5 5V5L7 10H3zm13.54 2c0-.82-.4-1.54-1-2l1.42-1.42c.93.93 1.58 2.22 1.58 3.42s-.65 2.49-1.58 3.42L15.54 14c.6-.46 1-1.18 1-2zm3.46 0c0-2.1-1.28-3.92-3.11-4.68L18.89 7c2.19 1.01 3.11 3.27 3.11 5 0 1.73-.92 3.99-3.11 5l-1-1.32C18.72 15.92 20 14.1 20 12z" />
+            </svg>
+        </button>
+
         <div class="language-container">
-            <button class="change-language" onclick="window.location.href='index.html';">Llevame al castellano che
-                <img class="icon serious-language" src="right-arrow.svg" alt="arrow-right">
+            <button class="change-language" onclick="window.location.href='index.html';">
+                No entiendo nada pero me gustan los pepinos
+                <img class="icon serious-language" src="images/right-arrow.svg" alt="arrow-right">
             </button>
         </div>
 
@@ -98,19 +105,19 @@
             <ul class="social-links">
                 <li>
                     <a href="https://www.youtube.com/@DotDager" target="_blank">
-                        <img src="youtube.svg" alt="Ícono de YouTube" class="icon">
+                        <img src="images/youtube.svg" alt="Ícono de YouTube" class="icon">
                         <span>Dot Dager</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.youtube.com/@DagerMusic" target="_blank">
-                        <img src="youtubemusic.svg" alt="Ícono de Música" class="icon">
+                        <img src="images/youtubemusic.svg" alt="Ícono de Música" class="icon">
                         <span>Dager Music</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.twitch.tv/dagerxiv" target="_blank">
-                        <img src="twitch.png" alt="Ícono de Twitch" class="icon">
+                        <img src="images/twitch.png" alt="Ícono de Twitch" class="icon">
                         <span>Dager XIV</span>
                     </a>
                 </li>
@@ -122,7 +129,7 @@
                 </li>
                 <li>
                     <a href="https://www.youtube.com/@ElAntroDeDager" target="_blank">
-                        <img src="youtube.svg" alt="Ícono de YouTube" class="icon">
+                        <img src="images/youtube.svg" alt="Ícono de YouTube" class="icon">
                         <span>El Antro de Dager</span>
                     </a>
                 </li>
@@ -134,19 +141,19 @@
                 </li>
                 <li>
                     <a href="https://www.tiktok.com/@elantrodedager" target="_blank">
-                        <img src="tiktok.png" alt="Ícono de TikTok" class="icon">
+                        <img src="images/tiktok.png" alt="Ícono de TikTok" class="icon">
                         <span>@elantrodedager</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.reddit.com/user/DagerDotCSV" target="_blank">
-                        <img src="reddit.svg" alt="Ícono de Reddit" class="icon">
+                        <img src="images/reddit.svg" alt="Ícono de Reddit" class="icon">
                         <span>DagerDotCSV</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://linktr.ee/DotDager" target="_blank">
-                        <img src="linktree.svg" alt="Ícono de Linktree" class="icon">
+                        <img src="images/linktree.svg" alt="Ícono de Linktree" class="icon">
                         <span>Todos mis enlaces</span>
                     </a>
                 </li>
@@ -154,13 +161,20 @@
         </section>
         <footer class="footer">
             <p>Made with
-                <img src="pickle.svg" alt="Pepino" class="icon">by <a style="text-decoration: none; color: #444;"
+                <img src="images/pickle.svg" alt="Pepino" class="icon">by <a style="text-decoration: none; color: #444;"
                     href="http://www.wegher.com.ar">CachoPetruzzo</a>
             </p>
         </footer>
     </div>
-    <script src="script.js"></script>
-    <script src="lumberjack.js"></script>
+
+    <audio id="background-music" autoplay loop>
+        <source src="output.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="js/script.js"></script>
+    <script src="js/lumberjack.js"></script>
+    <script src="js/toggleSound.js"></script>
 
 </body>
 

@@ -8,10 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="js/lumberjack.js"></script>
 </head>
 
 <body>
+
     <div class="container">
         <header class="header">
             <img src="images/logodotdager.png" alt="Foto de perfil de Dot Dager" class="profile-pic">
@@ -20,8 +20,17 @@
                 los Gatos | Guitarrista | Apasionado por los Pepinos</p>
         </header>
 
+        <button id="toggle-music">
+            <svg id="speaker-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <!-- Parlante Activo -->
+                <path id="active-icon"
+                    d="M3 10v4h4l5 5V5L7 10H3zm13.54 2c0-.82-.4-1.54-1-2l1.42-1.42c.93.93 1.58 2.22 1.58 3.42s-.65 2.49-1.58 3.42L15.54 14c.6-.46 1-1.18 1-2zm3.46 0c0-2.1-1.28-3.92-3.11-4.68L18.89 7c2.19 1.01 3.11 3.27 3.11 5 0 1.73-.92 3.99-3.11 5l-1-1.32C18.72 15.92 20 14.1 20 12z" />
+            </svg>
+        </button>
+
         <div class="language-container">
-            <button class="change-language" onclick="window.location.href='indexEN.html';">I don't get it
+            <button class="change-language" onclick="window.location.href='indexEN.html';">
+                I don't understand but I like pickles
                 <img class="icon serious-language" src="images/right-arrow.svg" alt="arrow-right">
             </button>
         </div>
@@ -39,23 +48,26 @@
 
         <section class="books">
             <h2>Algunos libros que Recomiendo</h2>
-            <ul>
-                <li>
-                    <strong>Thinking, Fast and Slow</strong> de Daniel Kahneman
-                    <p>Una fascinante exploración sobre cómo funciona nuestra mente, enfocándose en los dos sistemas
-                        de
-                        pensamiento: rápido e intuitivo, y lento y deliberado.</p>
-                </li>
-                <li>
-                    <strong>Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets</strong> de
-                    Nassim Nicholas Taleb
-                    <p>Un enfoque brillante sobre la naturaleza impredecible de la vida y cómo la aleatoriedad da
-                        forma
-                        a nuestro mundo y percepciones.</p>
-                </li>
-            </ul>
+            <div class="book-cards">
+                <div class="card">
+                    <img src="thinking_fast_and_slow.jpg" alt="Thinking, Fast and Slow" class="book-cover">
+                    <div class="card-content">
+                        <h3>Thinking, Fast and Slow</h3>
+                        <p><strong>Autor:</strong> Daniel Kahneman</p>
+                        <p>Una fascinante exploración sobre cómo funciona nuestra mente, enfocándose en los dos sistemas de pensamiento: rápido e intuitivo, y lento y deliberado.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="fooled_by_randomness.jpg" alt="Fooled by Randomness" class="book-cover">
+                    <div class="card-content">
+                        <h3>Fooled by Randomness</h3>
+                        <p><strong>Autor:</strong> Nassim Nicholas Taleb</p>
+                        <p>Un enfoque brillante sobre la naturaleza impredecible de la vida y cómo la aleatoriedad da forma a nuestro mundo y percepciones.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-
+        
         <section class="game">
             <h2>¡Relajate un poco!</h2>
             <p>
@@ -173,8 +185,15 @@
             </p>
         </footer>
     </div>
+
+    <audio id="background-music" autoplay loop>
+        <source src="output.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <script src="js/script.js"></script>
     <script src="js/lumberjack.js"></script>
+    <script src="js/toggleSound.js"></script>
 
 </body>
 

@@ -17,11 +17,14 @@ body {
   align-items: center;
   min-height: 100vh;
 
-   /* Fondo de la imagen */
-   background-image: url('logo-dotdager.png'); /* Reemplaza con la ruta de tu imagen */
-   background-repeat: repeat; /* La imagen se repetirá */
-   animation: moveBackground 10s ease-in-out infinite; /* Animación para mover el fondo */
-  }
+  /* Fondo de la imagen */
+  background-image: url('../images/logo-dotdager.png');
+  /* Reemplaza con la ruta de tu imagen */
+  background-repeat: repeat;
+  /* La imagen se repetirá */
+  animation: moveBackground 10s ease-in-out infinite;
+  /* Animación para mover el fondo */
+}
 
 .container {
   width: 600px;
@@ -249,32 +252,48 @@ body {
 }
 
 .change-language {
-  background-color: #ff4500;
+  background: none;
+  border: none;
+  cursor: pointer;
   color: white;
   padding: 20px 25px;
   font-size: 1.1em;
-  border: none;
-  cursor: pointer;
   border-radius: 5px;
   text-align: center;
   display: inline-block;
   margin-top: 20px;
   transition: background-color 0.4s;
+  background-image: url(../images/cucumber.png);
+  /* Imagen inicial */
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: moveCucumber 3s infinite linear;
 }
 
 .change-language:hover {
-  background-color: #e03e00;
+  animation: none;
+  /* Detiene la animación */
+  background-image: url(../images/cucumber.png);
 }
 
-.serious-language {
-  margin-bottom: -10px;
-  margin-left: 20px;
-  opacity: 0.5;
-  transition: opacity 0.4s ease-in;
-}
+@keyframes moveCucumber {
+  0% {
+    background-position: 0 0;
+  }
 
-.language-container:hover .serious-language {
-  opacity: 1;
+  25% {
+    background-position: 100px 0;
+    rotate: 5deg;
+  }
+
+  75% {
+    background-position: 0 0;
+    rotate: -5deg;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
 }
 
 /* Estilos generales */
@@ -294,16 +313,114 @@ iframe {
   0% {
     background-position: 0 0;
   }
+
   50% {
-    background-position: 100% 0; /* Movimiento horizontal normal */
+    background-position: 100% 0;
+    /* Movimiento horizontal normal */
   }
+
   60% {
-    background-position: 105% 0; /* Saltito (deslizamiento extra) */
+    background-position: 105% 0;
+    /* Saltito (deslizamiento extra) */
   }
+
   70% {
-    background-position: 100% 0; /* Vuelve a la posición original */
+    background-position: 100% 0;
+    /* Vuelve a la posición original */
   }
+
   100% {
-    background-position: 0 0; /* Vuelve al inicio al final del ciclo */
+    background-position: 0 0;
+    /* Vuelve al inicio al final del ciclo */
   }
+}
+
+#audio {
+  display: none;
+}
+
+#toggle-music {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  /* Fija el botón en la pantalla */
+  top: 10px;
+  /* Distancia desde la parte superior */
+  right: 10px;
+  /* Distancia desde la parte derecha */
+  z-index: 1000;
+  /* Asegura que esté encima de otros elementos */
+}
+
+#toggle-music svg {
+  fill: #ffffff;
+  width: 36px;
+  height: 36px;
+  transition: fill 0.3s;
+}
+
+#toggle-music:hover svg {
+  fill: #4CAF50;
+}
+
+.books {
+  text-align: center;
+  margin: 50px 0;
+  padding: 20px;
+  background-image: url("../images/dager3.jpg");
+  background-size:auto;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.books h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.book-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 280px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img.book-cover {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: #4CAF50;
+}
+
+.card-content p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 0.9em;
 }
