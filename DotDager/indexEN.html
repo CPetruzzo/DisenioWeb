@@ -9,6 +9,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/side-bar.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -17,8 +18,9 @@
 
         <!-- Banner -->
         <div class="banner" id="home">
-            <h1 class="name">Dot Dager</h1>
-            <p class="tagline">Content Creator | Programming Philanthropist | Movie Reviewer | Cat Lover | Guitarist |
+            <h1 class="name" data-aos="fade-up" data-aos-duration="2000">Dot Dager</h1>
+            <p class="tagline" data-aos="fade-up" data-aos-duration="3000">Content Creator | Programming Philanthropist
+                | Movie Reviewer | Cat Lover | Guitarist |
                 Passionate for Pickles</p>
             <img style="border-radius: 15px;" src="images/dager5.jpg" alt="Banner de Dot Dager" class="banner-image">
         </div>
@@ -32,22 +34,27 @@
         </button>
 
         <section class="about" id="about">
-            <h2>About Me</h2>
-            <p style="max-width: 900px; align-items: center; text-align: center; margin: auto;">
+            <h2 data-aos="fade-up" data-aos-duration="500">
+                Who am I?</h2>
+            <p data-aos="fade-up" data-aos-duration="2000"
+                style="max-width: 900px; align-items: center; text-align: center; margin: auto;">
                 Hi! My name is Mariano Villa, and even though my philosophical background makes me want to delve into
                 that question,
-                I'll try to keep it brief:
-                <br><br>I’m a content creator with a keen interest in everything that makes you think, passionate about
+                I'll try to give a short answer (<i>insert pickle joke here</i>):</p>
+            <p data-aos="fade-up" data-aos-duration="2000"><br>I’m a content creator with a keen interest in everything
+                that makes you think, passionate about
                 <strong>money</strong>, I mean... <strong>programming</strong>,
                 struggling with imposter syndrome, and with a great love for <strong>cats</strong>,
                 <strong>guitars</strong>, <strong>cucumbers</strong>, and <strong>philosophy</strong>.
-                <br><br>This page is a small (not as small as yours) window into my personality.
+            </p>
+            <br>
+            <p data-aos="fade-up" data-aos-duration="2000">
+                This page is a small (not as small as yours) window into my personality.
             </p>
         </section>
 
         <br>
-        <div id="play-music-btn-container">
-
+        <div id="play-music-btn-container" data-aos="fade-up" data-aos-duration="2000">
             <button id="play-music-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path
@@ -67,7 +74,7 @@
 
         <section class="books" id="books">
             <h2>Some books I Recommend</h2>
-            <div class="book-cards">
+            <div class="book-cards" data-aos="fade-up" data-aos-duration="2000">
                 <div class="card">
                     <img src="images/thinking_fast_and_slow.jpg" alt="Thinking, Fast and Slow" class="book-cover">
                     <div class="card-content">
@@ -98,18 +105,11 @@
             </div>
         </section>
 
-        <section class="game" id="game">
-            <h2>Play a Game!</h2>
+        <section class="game" id="game" data-aos="fade-up" data-aos-duration="2000">
+            <h2>Relax Dude!</h2>
             <p>
                 Take a break and enjoy this fun game, <strong>Lumberjack Bot</strong>. Chop some wood while you're
                 here!<br><br>
-
-                If you're on <strong>PC</strong>, you can use:<br>
-
-                <strong>Left Arrow Key</strong><br>
-                <strong>Right Arrow Key</strong><br><br>
-
-                So everything can be done with just the keyboard! 🔥 <br>(If not, well, it's not that hard anyway).
             </p>
 
             <iframe src="https://tbot.xyz/lumber/" width="100%" height="400" style="border: none;"
@@ -117,16 +117,16 @@
             </iframe>
         </section>
 
-        <section class="community-stacks" id="community">
+        <section class="community-stacks" id="community" data-aos="fade-up" data-aos-duration="2000">
             <h2>Community Stack Ideas</h2>
             <p style="max-width: 900px; align-items: center; text-align: center; margin: auto;">
                 On my streams, I gather random letters proposed by the community and build tech stacks around them.
                 Sometimes, we even give these stacks meaningful names! Most of the time it's just b@$&%hit
             </p>
             <div class="stack-input">
-                <label for="stackLetters">Enter Your Letters:</label>
+                <label for="stackLetters">Enter Your Letters:</label><br>
                 <input type="text" id="stackLetters" placeholder="Ej., ABCD, AAAA, PENE">
-                <button id="generateStack">Generate Stack</button>
+                <br><button id="generateStack">Generate Stack</button>
             </div>
             <div class="stack-results">
                 <h3>Proposed Stack:</h3>
@@ -134,7 +134,16 @@
             </div>
         </section>
 
-        <section class="social-networks">
+        <br>
+        <br>
+
+        <button data-aos="fade-up" data-aos-duration="2000" id="toggleButton">Gimme a follow!
+            <br><i>Click here</i>
+            <br>
+            <p>Don't be a Chupapija</p>
+        </button>
+
+        <section class="social-networks" id="socialNetworks">
             <h2>Connect with Me!</h2>
             <ul class="social-links">
                 <li>
@@ -153,6 +162,13 @@
                     <a href="https://www.twitch.tv/dagerxiv" target="_blank">
                         <img src="images/twitch.png" alt="Ícono de Twitch" class="icon">
                         <span>Dager XIV</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://open.spotify.com/intl-es/artist/6bkClBMJd4qKxJp0J5vHsz?si=GbLs3UPwQzCdJH-HU45lnA&utm_medium=share&utm_source=linktree&nd=1&dlsi=b8b8682c85c3460e"
+                        target="_blank">
+                        <img src="images/spotify-icon-2.png" alt="Ícono de Spotify" class="icon">
+                        <span>Spotify</span>
                     </a>
                 </li>
                 <li>
@@ -211,7 +227,7 @@
 
             <div class="st-btn" data-network="linkedin" style="display: inline-block;">
                 <a href="#books" style="text-decoration: none;">
-                    <img src="images/logo-dotdager.png" alt="Ícono de linkedin" class="icon">
+                    <img src="images/dager14.png" alt="Ícono de linkedin" class="icon">
                 </a>
                 <span class="st-label">Libro</span>
             </div>
@@ -231,8 +247,9 @@
 
             <div class="st-toggle">
                 <div class="st-left">
-                    <a href="#home" style="text-decoration: none;">
-                        <img alt="arrow_left sharing button" src="https://platform-cdn.sharethis.com/img/arrow_left.svg">
+                    <a href="#toggleButton" style="text-decoration: none;">
+                        <img alt="arrow_left sharing button"
+                            src="https://platform-cdn.sharethis.com/img/arrow_left.svg">
                     </a>
                 </div>
                 <div class="st-right">
@@ -243,8 +260,8 @@
 
         <footer class="footer">
             <p>Made with
-                <img src="images/pickle.svg" alt="Pepino" class="icon">by <a style="text-decoration: none; color: #ffffff;"
-                    href="http://www.wegher.com.ar">CachoPetruzzo</a>
+                <img src="images/pickle.svg" alt="Pepino" class="icon">by <a
+                    style="text-decoration: none; color: #ffffff;" href="http://www.wegher.com.ar">CachoPetruzzo</a>
             </p>
         </footer>
     </div>
@@ -258,7 +275,10 @@
     <script src="js/lumberjack.js"></script>
     <script src="js/toggleSound.js"></script>
     <script src="js/contact.js"></script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

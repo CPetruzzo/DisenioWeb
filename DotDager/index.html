@@ -9,6 +9,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/side-bar.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -17,12 +18,13 @@
 
         <!-- Banner -->
         <div class="banner" id="home">
-            <h1 class="name">Dot Dager</h1>
-            <p class="tagline">Creador de Contenido | Filántropo de la Programación | Crítico de Cine | Amante de
+            <h1 class="name" data-aos="fade-up" data-aos-duration="500" style="color: #e1e1e1; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Dot Dager</h1>
+            <p class="tagline" data-aos="fade-up" data-aos-duration="2000">Creador de Contenido | Filántropo de la Programación | Contador serial de chistes de mierda | Crítico de Cine | Amante de
                 los Gatos | Guitarrista | Apasionado por los Pepinos</p>
             <img style="border-radius: 15px;" src="images/dager3.jpg" alt="Banner de Dot Dager" class="banner-image">
         </div>
 
+        <!-- Togglemusic -->
         <button id="toggle-music">
             <svg id="speaker-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <!-- Parlante Activo -->
@@ -31,12 +33,13 @@
             </svg>
         </button>
 
+        <!-- About -->
         <section class="about" id="about">
-            <h2>Quién soy?</h2>
-            <p style="max-width: 900px; align-items: center; text-align: center; margin: auto;">
+            <h2 data-aos="fade-up" data-aos-duration="500">Quién soy?</h2>
+            <p data-aos="fade-up" data-aos-duration="2000" style="max-width: 900px; align-items: center; text-align: center; margin: auto;" >
                 ¡Hola! Mi nombre es Mariano Villa, y por más que mi background filosófico tenga unas ganas de ponerse a
-                divagar con esa pregunta voy a tratar de resumirles:
-                <br><br>Soy un creador de contenido con mucho interés en todo lo que te hace
+                divagar con esa pregunta voy a tratar de hacerla corta <i data-aos="fade-up" data-aos-duration="5000">(inserte chiste peneano aquí)</i>:</p>
+                <p data-aos="fade-up" data-aos-duration="2000"><br>Soy un creador de contenido con mucho interés en todo lo que te hace
                 pensar, apasionado por el <strong>dinero</strong>, digo... <strong>programación</strong>, autodidacta
                 con síndrome de impostor, con un gran gusto
                 por los
@@ -48,8 +51,9 @@
         </section>
 
         <br>
-        <div id="play-music-btn-container">
 
+        <!-- Play music -->
+        <div id="play-music-btn-container" data-aos="fade-up" data-aos-duration="2000">
             <button id="play-music-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path
@@ -60,6 +64,7 @@
             </button>
         </div>
 
+        <!-- Change Lang -->
         <div class="language-container">
             <button class="change-language" onclick="window.location.href='indexEN.html';">
                 <p style="font-size: 2rem;">
@@ -70,10 +75,11 @@
             </button>
         </div>
 
+        <!-- Books -->
         <section class="books" id="books">
             <h2>Algunos libros que Recomiendo</h2>
             <div class="book-cards">
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-duration="600">
                     <img src="images/thinking_fast_and_slow.jpg" alt="Thinking, Fast and Slow" class="book-cover">
                     <div class="card-content">
                         <h3>Thinking, Fast and Slow</h3>
@@ -82,7 +88,7 @@
                             de pensamiento: rápido e intuitivo, y lento y deliberado.</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-duration="600">
                     <img src="images/fooled_by_randomness.jpg" alt="Fooled by Randomness" class="book-cover">
                     <div class="card-content">
                         <h3>Fooled by Randomness</h3>
@@ -92,7 +98,7 @@
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-duration="1000">
                     <img src="images/money.jpg" alt="El dinero" class="book-cover">
                     <div class="card-content">
                         <h3>El dinero</h3>
@@ -105,8 +111,8 @@
             </div>
         </section>
 
-
-        <section class="game" id="game">
+        <!-- Lumberjack -->
+        <section class="game" id="game" data-aos="fade-up" data-aos-duration="2000">
             <h2 style="font-size: 2rem;">¡Relajate un poco flaco!</h2>
             <p>
                 ¡Tómate un descanso y disfruta de este divertido juego, <strong>Lumberjack</strong>.
@@ -116,7 +122,8 @@
                 title="Lumberjack Bot"></iframe>
         </section>
 
-        <section class="community-stacks" id="community">
+        <!-- Community -->
+        <section class="community-stacks" id="community" data-aos="fade-up" data-aos-duration="2000">
             <h2>Programando Stacks Bizarros</h2>
             <p style="max-width: 900px; align-items: center; text-align: center; margin: auto;">
                 En mis streams, reunimos letras aleatorias propuestas por la comunidad y creamos stacks tecnológicos
@@ -124,8 +131,9 @@
                 partir de ellas. ¡A veces incluso les damos nombres significativos! <br>La mayoría de las veces no.
             </p>
             <div class="stack-input">
-                <label for="stackLetters">Ingresa tus letras:</label>
-                <input type="text" id="stackLetters" placeholder="Ej., ABCD, AAAA, PENE">
+                <label for="stackLetters">Ingresa tus letras:</label><br>
+                <input type="text" id="stackLetters" placeholder="Ej., AAAA, PENE, PITO">
+                <br>
                 <button id="generateStack">Generar Stack</button>
             </div>
             <div class="stack-results">
@@ -134,10 +142,15 @@
             </div>
         </section>
 
-        <button id="toggleButton">¡Contáctate conmigo!</button>
-
+        <button data-aos="fade-up" data-aos-duration="2000" id="toggleButton">Seguime!
+            <br><i>Clickeando acá</i>
+            <br>
+            <p>No seas Chupapija</p>
+        </button>
+        
+        <!-- Links -->
         <section class="social-networks" id="socialNetworks">
-            <h2>¡Conéctate Conmigo!</h2>
+            <h2>He aquí el resto de mi personalidad</h2>
             <ul class="social-links">
                 <li>
                     <a href="https://www.youtube.com/@DotDager" target="_blank">
@@ -176,6 +189,13 @@
                     </a>
                 </li>
                 <li>
+                    <a href="https://open.spotify.com/intl-es/artist/6bkClBMJd4qKxJp0J5vHsz?si=GbLs3UPwQzCdJH-HU45lnA&utm_medium=share&utm_source=linktree&nd=1&dlsi=b8b8682c85c3460e" target="_blank">
+                        <img src="images/spotify-icon-2.png" alt="Ícono de Spotify" class="icon">
+                        <span>Spotify</span>
+                    </a>
+                </li>
+                
+                <li>
                     <a href="https://discord.com/invite/2NessfQFvY" target="_blank">
                         <img src="images/discord-icon.svg" alt="Ícono de Discord" class="icon">
                         <span>Únete al servidor</span>
@@ -210,7 +230,7 @@
             </ul>
         </section>
 
-
+        <!-- Sidebar -->
         <div id="st-2" class=" st-sticky-share-buttons st-left st-toggleable st-has-labels ">
             <div class="st-btn st-first" data-network="facebook" style="display: inline-block;">
                 <a href="#home" style="text-decoration: none;">
@@ -228,7 +248,7 @@
 
             <div class="st-btn" data-network="linkedin" style="display: inline-block;">
                 <a href="#books" style="text-decoration: none;">
-                    <img src="images/logo-dotdager.png" alt="Ícono de linkedin" class="icon">
+                    <img src="images/dager14.png" alt="Ícono de linkedin" class="icon">
                 </a>
                 <span class="st-label">Libro</span>
             </div>
@@ -248,8 +268,9 @@
 
             <div class="st-toggle">
                 <div class="st-left">
-                    <a href="#home" style="text-decoration: none;">
-                        <img alt="arrow_left sharing button" src="https://platform-cdn.sharethis.com/img/arrow_left.svg">
+                    <a href="#toggleButton" style="text-decoration: none;">
+                        <img alt="arrow_left sharing button"
+                            src="https://platform-cdn.sharethis.com/img/arrow_left.svg">
                     </a>
                 </div>
                 <div class="st-right">
@@ -257,10 +278,11 @@
                 </div>
             </div>
         </div>
+
         <footer class="footer">
             <p>Hecho con
                 <img src="images/pickle.svg" alt="Pepino" class="icon">por <a
-                    style="text-decoration: none; color: #444;" href="http://www.wegher.com.ar">CachoPetruzzo</a>
+                    style="text-decoration: none; color: #e1e1e1; font-weight: 900;" href="http://www.wegher.com.ar">CachoPetruzzo</a>
             </p>
         </footer>
     </div>
@@ -274,7 +296,10 @@
     <script src="js/lumberjack.js"></script>
     <script src="js/toggleSound.js"></script>
     <script src="js/contact.js"></script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

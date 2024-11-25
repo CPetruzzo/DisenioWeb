@@ -29,13 +29,27 @@ body {
   width: 1200px;
   max-width: 85%;
   text-align: center;
-  background: #1f1f1f;
-  /* Fondo más oscuro para el contenedor */
+  position: relative; /* Necesario para el pseudo-elemento */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: none;
-  /* Eliminar sombra */
+  background: #1f1f1f; /* Fondo sólido para el contenido */
+  z-index: 1; /* Para mantener el contenido visible */
+  overflow: hidden; /* Para que el pseudo-elemento respete los bordes redondeados */
 }
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(135deg, rgba(132, 16, 99, 0.6), rgba(34, 169, 90, 0.6));
+  z-index: -1; /* Detrás del contenido */
+  border-radius: 12px; /* Ajusta para que sobresalga como el borde */
+  pointer-events: none; /* Evita interferencias con el pseudo-elemento */
+}
+
 
 .header {
   margin-bottom: 20px;
@@ -115,6 +129,9 @@ body {
   border-radius: 8px;
   box-shadow: none;
   /* Eliminar sombra */
+    -webkit-mask-image: -webkit-linear-gradient(rgb(25, 25, 25), transparent);
+  mask-image: linear-gradient(rgb(25, 25, 25), 80%, transparent);
+
 }
 
 .game p {
@@ -386,9 +403,10 @@ iframe {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  -webkit-mask-image: -webkit-linear-gradient(rgb(25, 25, 25), transparent);
+  mask-image: linear-gradient(rgb(25, 25, 25), 80%, transparent);
 
 }
-
 
 .book-cards {
   display: flex;
@@ -398,6 +416,9 @@ iframe {
   overflow-x: auto; /* Habilita el desplazamiento horizontal */
   padding: 10px;
   scroll-snap-type: x mandatory; /* Mejora la experiencia de desplazamiento */
+  -webkit-mask-image: -webkit-linear-gradient(rgb(25, 25, 25), transparent);
+  mask-image: linear-gradient(rgb(25, 25, 25), 80%, transparent);
+
 }
 
 .book-cards::-webkit-scrollbar {
@@ -457,28 +478,11 @@ iframe {
 
 .banner-image {
   width: 100%;
+  -webkit-mask-image: -webkit-linear-gradient(rgb(25, 25, 25), transparent);
+  mask-image: linear-gradient(rgb(25, 25, 25), 80%, transparent);
+
   height: auto;
   display: block;
-}
-
-@media only screen and (max-width: 650px) {
-  .tagline {
-    font-size: 0.8rem;
-  }
-
-  .card {
-
-    width: 210px;
-    height: 280px;
-  }
-
-  p,
-  .game p,  
-  .about p,
-  .community-stacks p {
-    font-size: 1.1rem;
-
-  }
 }
 
 /* Botón de música */
@@ -521,18 +525,76 @@ iframe {
   margin-bottom: 20px;
 }
 
+#toggleImg{
+
+  background-size: contain; 
+  max-width: 100%;
+}
 
 #toggleButton {
-  padding: 10px 20px;
+  padding: 145px 250px;
   font-size: 1rem;
+  font-weight: bolder;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: #fff;
   background-color: #42f5d7;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   cursor: pointer;
+  background-image: url("../images/dager11.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-mask-image: -webkit-radial-gradient(rgb(25, 25, 25), transparent);
+  mask-image: radial-gradient(rgb(25, 25, 25), transparent);
+}
+
+#toggleButton p {
+  opacity: 0;
+  font-weight: bolder;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #toggleButton:hover {
   background-color: #36c9aa;
+  background-image: url(../images/dager10.jpg);
 }
 
+#toggleButton:active {
+  background-color: #36c9aa;
+  background-image: url(../images/dager10.jpg);
+}
+
+#toggleButton:hover p {
+  opacity: 1;
+}
+
+#generateStack {
+  margin-top: 15px;
+}
+
+label {
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 650px) {
+  .tagline {
+    font-size: 0.8rem;
+  }
+
+  .card {
+
+    width: 210px;
+    height: 280px;
+  }
+
+  p,
+  .game p,  
+  .about p,
+  .community-stacks p {
+    font-size: 1.1rem;
+  }
+
+  #toggleButton {
+    padding: 55px 90px;
+  }  
+}
