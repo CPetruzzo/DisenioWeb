@@ -1,0 +1,720 @@
+ /* Webfont: Nohemi-SemiBold */
+ @font-face {
+     font-family: 'NohemiSemBd';
+     src: url('Nohemi-SemiBold.eot');
+     /* IE9 Compat Modes */
+     src: url('Nohemi-SemiBold.eot?#iefix') format('embedded-opentype'),
+         /* IE6-IE8 */
+         url('Nohemi-SemiBold.woff') format('woff'),
+         /* Modern Browsers */
+         url('Nohemi-SemiBold.woff2') format('woff2'),
+         /* Modern Browsers */
+         url('Nohemi-SemiBold.ttf') format('truetype');
+     /* Safari, Android, iOS */
+     font-style: normal;
+     font-weight: normal;
+     text-rendering: optimizeLegibility;
+ }
+
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     background-color: #252525;
+     margin: 0;
+     overflow-x: hidden;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: start;
+     min-height: 100vh;
+     min-height: 100svh;
+     width: 100%;
+ }
+
+ /* Sección principal (todo el contenido antes del footer) */
+ main {
+    /* background-image: url("images/mate.png"); */
+     flex: 1;
+     margin: auto;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: start;
+ }
+
+
+ footer {
+     width: 100%;
+     margin: 0;
+     background-color: #222;
+     color: white;
+     text-align: center;
+     padding: 20px;
+     font-size: 1rem;
+     box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
+     position: relative;
+ }
+
+ footer p {
+     line-height: clamp(1.5rem, 2.2vw, 2.2vw);
+     font-size: clamp(0.9rem, 1.3vw, 1.3vw);
+     font-family: NohemiSemBd, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
+
+ .container {
+     position: relative;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     overflow: hidden;
+ }
+
+ div.container.parallax {
+    background-color: #252525;
+ }
+ 
+ img {
+     width: 100%;
+     height: auto;
+     object-fit: contain;
+     display: block;
+ }
+
+ .gradient {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 30%;
+     background: linear-gradient(to top, #252525, transparent);
+     z-index: 1000;
+ }
+
+ h1 {
+     position: absolute;
+     top: 50%;
+     left: 10%;
+     transform: translateY(-50%);
+     font-family: NohemiSemBd, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     font-size: clamp(2rem, 6vw, 6vw);
+     color: white;
+     text-shadow: 0 7px 4px rgba(0, 0, 0, 0.9);
+     text-align: center;
+     z-index: 1;
+ }
+
+ .container p {
+     position: absolute;
+     top: 68%;
+     left: 10%;
+     font-family: NohemiSemBd, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     font-size: clamp(1rem, 2.5vw, 2.5rem);
+     color: white;
+     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+     text-align: center;
+     z-index: 1;
+ }
+
+ /* Estilos para los iconos de redes sociales */
+ .social-icons {
+     position: absolute;
+     top: 76%;
+     left: 10%;
+     /* transform: translateY(50%); */
+     display: flex;
+     gap: 15px;
+     z-index: 1001;
+ }
+
+ .social-icons a {
+     text-decoration: none;
+     font-size: clamp(1rem, 2vw, 2vw);
+     color: white;
+     transition: color 0.3s ease;
+ }
+
+ .social-icons a:hover {
+     color: #00aaff;
+ }
+
+ .scroll-button {
+     position: absolute;
+     top: 80%;
+     left: 50%;
+     transform: translateX(-50%);
+     background-color: #00aaff;
+     color: white;
+     padding: 10px 20px;
+     border: none;
+     border-radius: 5px;
+     font-size: 1.5rem;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+     z-index: 1001;
+ }
+
+ .scroll-button:hover {
+     background-color: #0088cc;
+ }
+
+ a.scroll-button button {
+     background-color: transparent;
+     border: none;
+     border-radius: 5px;
+     font-family: NohemiSemBd, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
+
+ h2 {
+     font-family: NohemiSemBd, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     font-size: clamp(2rem, 3.8vw, 3.8vw);
+     color: white;
+     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+     text-align: center;
+ }
+
+ .books ul {
+     font-size: 1.5rem;
+     color: #bbb;
+     /* Texto gris claro */
+ }
+
+ .books ul {
+     list-style-type: none;
+     padding: 0;
+ }
+
+ .books li {
+     margin: 15px 0;
+     text-align: left;
+ }
+
+ .books strong {
+     font-size: 1.1rem;
+     color: #42f5d7;
+     /* Resaltar con color brillante */
+ }
+
+ .books p {
+     font-size: 0.9rem;
+     color: #ddd;
+     /* Gris más claro para el texto de los párrafos */
+     margin-top: 5px;
+ }
+
+ .books {
+     text-align: center;
+     margin: auto;
+     max-width: 900px;
+     padding-top: 20px;
+     border-radius: 10px;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+     -webkit-mask-image: -webkit-linear-gradient(rgb(25, 25, 25), transparent);
+     mask-image: linear-gradient(rgb(25, 25, 25), 80%, transparent);
+ }
+
+ .book-cards {
+     display: flex;
+     gap: 10px;
+     padding: 20px;
+     max-width: 900px;
+     width: 100vw;
+     width: 100svw;
+     margin: auto;
+     overflow-x: auto;
+     /* Habilita el desplazamiento horizontal */
+     padding: 10px;
+     scroll-snap-type: x mandatory;
+     /* Mejora la experiencia de desplazamiento */
+     -webkit-mask-image: -webkit-linear-gradient(rgb(25, 25, 25), transparent);
+     mask-image: linear-gradient(rgb(25, 25, 25), 80%, transparent);
+ }
+
+ .book-cards::-webkit-scrollbar {
+     height: 8px;
+     /* Tamaño del scroll */
+ }
+
+ .book-cards::-webkit-scrollbar-thumb {
+     background: #ccc;
+     border-radius: 4px;
+ }
+
+ .card {
+     background: #fff;
+     border-radius: 10px;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     overflow: hidden;
+     max-width: 205px;
+     width: 100%;
+     flex-shrink: 0;
+     /* Evita que las tarjetas se reduzcan */
+     max-height: 185px;
+     text-align: left;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     scroll-snap-align: start;
+     /* Ajusta las tarjetas al contenedor */
+ }
+
+ .card:hover {
+     transform: translateY(-8px);
+     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+ }
+
+ .card img.book-cover {
+     width: 100%;
+     height: auto;
+     display: block;
+ }
+
+ .card-content {
+     padding: 15px;
+ }
+
+ .card-content h3 {
+     margin: 10px 0;
+     font-size: 1.2em;
+     color: #4CAF50;
+ }
+
+ .card-content p {
+     margin: 5px 0;
+     color: #666;
+     font-size: 0.9em;
+ }
+
+ .section {
+     max-width: 800px;
+     padding: 50px 35px 30px 35px;
+ }
+
+ .section p {
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     font-size: clamp(0.9rem, 1.5vw, 1.5vw);
+     color: white;
+     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+     text-align: left;
+     line-height: clamp(1.5rem, 2.2vw, 2.2vw);
+ }
+
+ /* Estilos para Redes Sociales */
+ .social-networks {
+     margin-top: 30px;
+     text-align: center;
+ }
+
+ .social-networks h2 {
+     font-size: 1.8em;
+     margin-bottom: 20px;
+     color: #f9f9f9;
+     /* Texto blanco */
+ }
+
+ .social-links {
+     list-style: none;
+     /* Quitar los puntos */
+     padding: 0;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 20px;
+ }
+
+ .social-links li {
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     background: #333;
+     /* Fondo oscuro */
+     border-radius: 10px;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+     /* Ligera sombra */
+     padding: 10px 15px;
+     /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+ }
+
+ .social-links li:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+     /* Efecto de sombra más fuerte */
+ }
+
+ .social-links a {
+     text-decoration: none;
+     display: flex;
+     align-items: center;
+     color: #f9f9f9;
+     /* Texto blanco */
+ }
+
+ .social-links a:hover {
+     color: #fff;
+     /* Color blanco al pasar el mouse */
+ }
+
+ .icon {
+     width: 30px;
+     height: 30px;
+     margin-right: 10px;
+ }
+
+ .social-links span {
+     font-size: 1.1em;
+     font-weight: bold;
+     font-family: NohemiSemBd, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
+
+ .about-me-container {
+     display: flex;
+     align-items: center;
+     gap: 20px;
+ }
+
+ .about-me-text {
+     flex: 1;
+ }
+
+
+ .about-me-image {
+     flex-shrink: 0;
+ }
+
+ .about-me-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00aaff;
+    /* Efecto inicial de sombra */
+    box-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
+    /* Animación de glow */
+    animation: glowEffect 2s ease-in-out infinite;
+}
+
+/* Animación para el glow */
+@keyframes glowEffect {
+    0%, 100% {
+        box-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 15px 5px rgba(0, 170, 255, 0.8);
+    }
+}
+
+
+
+ .contact__form {
+     width: 100%;
+ }
+
+ .contact__info {
+     font-size: 2em;
+     text-align: left;
+ }
+
+ .section__title {
+     /* color: #79db75; */
+     text-transform: uppercase;
+     font-size: 2em;
+     font-weight: lighter;
+ }
+
+ .section__subtitle {
+     color: #79db75;
+     text-transform: uppercase;
+     font-size: 1em;
+     font-weight: lighter;
+ }
+
+ .desc {
+     margin: 1rem 0;
+ }
+
+ .field {
+     display: block;
+     margin: 1rem 0;
+     width: 100%;
+     height: 34px;
+     padding: 6px 12px;
+     font-size: 14px;
+     line-height: 1.42857143;
+     color: #ddd;
+     background-color: rgb(25, 25, 25);
+     background-image: none;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -webkit-transition: border-color ease-in-out 0.15s,
+         -webkit-box-shadow ease-in-out 0.15s;
+     -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+ }
+
+ .field--textarea {
+     height: auto;
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     margin-bottom: 0;
+ }
+
+ .field:focus {
+     border-color: #79db75;
+     outline: 0;
+     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px #79db75;
+     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px #79db75;
+ }
+
+ .fields-requirements {
+     margin-top: 0;
+     font-style: italic;
+     font-size: 0.9rem;
+ }
+
+ .btn {
+     display: inline-block;
+     background: #191919;
+     border: 0.1rem solid #ddd;
+     text-decoration: none;
+     color: #ddd;
+     text-align: center;
+     padding: 1rem;
+     margin: 0.3rem 0;
+     transition: all 0.2s ease;
+     cursor: pointer;
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
+
+ .btn:hover {
+     border-radius: 1rem;
+     opacity: 0.7;
+ }
+
+
+ .about-me-image img.circular-image {
+     width: 150px;
+     /* Ajusta el tamaño según necesites */
+     height: 150px;
+     border-radius: 50%;
+     object-fit: cover;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+ }
+
+ /* Diseño responsivo */
+ @media (max-width: 768px) {
+     .about-me-container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         text-align: right;
+     }
+
+     .about-me-image {
+         margin-top: 20px;
+     }
+
+     .about-me-text {
+         text-align: right;
+     }
+ }
+
+ /* Contenedor de botones flotantes */
+ .floating-buttons {
+     position: fixed;
+     right: 20px;
+     top: 50%;
+     transform: translateY(-50%);
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+     z-index: 1000;
+ }
+
+ /* Botones individuales */
+ .floating-button {
+     background-color: #00aaff;
+     /* Verde moderno */
+     color: white;
+     text-decoration: none;
+     font-size: 1.2rem;
+     width: 30px;
+     height: 30px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     box-shadow: 0 15px 16px rgba(0, 0, 0, 0.9);
+     transition: all 0.3s ease;
+ }
+
+ /* Efectos hover */
+ .floating-button:hover {
+     background-color: #0088cc;
+     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+     transform: scale(1.1);
+ }
+
+ /* Iconos */
+ .floating-button i {
+     pointer-events: none;
+     /* Evita interferencias al hacer clic */
+ }
+
+ /* Animación de aparición */
+ .floating-button {
+     animation: fadeIn 0.5s ease;
+ }
+
+ /* Keyframes para la animación */
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+         transform: translateY(-20px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ .skills {
+     padding: 2rem;
+     margin: 0 auto;
+     max-width: 50rem;
+ }
+
+ .skills__container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .skill {
+     text-align: center;
+ }
+
+ .skill__icon {
+     font-size: 3rem;
+     color: #79db75;
+ }
+
+ .skill__name {
+     margin-top: 1rem;
+     font-size: 1.2rem;
+     color: #fff;
+ }
+
+ /* Estilos para el contenedor principal */
+ .skillscontainer {
+     max-width: 1350px;
+     margin: auto;
+     margin-top: 25px;
+     overflow-x: auto;
+     flex-wrap: wrap;
+     /* Envolver elementos si no caben en una sola fila */
+     justify-content: space-between;
+     /* Espacio uniforme entre elementos */
+     align-items: stretch;
+     /* Igualar la altura de todos los elementos */
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+     border-radius: 25px;
+ }
+
+ .eachskillcontainer {
+     -webkit-animation: scroll 20s linear infinite;
+     animation: scroll 20s linear infinite;
+     /* display: block; Usar display: flex para igualar la altura de las columnas */
+     flex: 0 0 calc(100px);
+     /* Ajustar el ancho de los elementos */
+     /* El 33.33% asegura que haya tres elementos por fila en una pantalla ancha */
+     margin: 20px 0;
+     transition: transform 0.3s ease-in-out;
+     padding: 0;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
+     cursor: pointer;
+     display: flex;
+     gap: 50px;
+     max-width: clamp(50vw, 85vw, 85vw);
+     width: 100%;
+ }
+
+ /* Estilos para las imágenes */
+ .imgBx {
+     width: 100px;
+     height: 100px;
+     margin-bottom: 10px;
+     /* Espacio entre la imagen y el texto */
+     border: 2px solid #333;
+     border-radius: 50%;
+     overflow: hidden;
+ }
+
+ .imgBx img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ .imgBx:hover {
+     transform: scale(1.1);
+     animation: scaleanimation 0.2s ease-in-out;
+ }
+
+ /* Estilos para el contenido del box */
+ .content {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     /* Alinear el contenido verticalmente */
+ }
+
+ .content h2 {
+     /* font-size: 24px; */
+     margin: 0;
+ }
+
+ .content p {
+     font-size: 16px;
+     margin: 0;
+     flex-grow: 1;
+     /* Hace que el texto ocupe todo el espacio vertical disponible */
+ }
+
+ ::-webkit-scrollbar {
+     display: none;
+ }
+
+ /* por cada cosa que quiera agregar en skill tengo que agregar 150 px y en el html agregarlo doble */
+ @keyframes scroll {
+     0% {
+         -webkit-transform: translateX(0);
+         transform: translateX(0);
+     }
+
+     100% {
+         -webkit-transform: translateX(calc(-1350Px));
+         transform: translateX(calc(-1350px));
+     }
+ }
+
+ /* por cada cosa que quiera agregar en skill tengo que agregar 150 px y en el html agregarlo doble */
+ @keyframes scaleanimation {
+     0% {
+         -webkit-transform: scale(1);
+         transform: scale(1);
+     }
+
+     100% {
+         -webkit-transform: scale(1.1);
+         transform: scale(1.1);
+     }
+ }
