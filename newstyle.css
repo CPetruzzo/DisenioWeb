@@ -42,7 +42,7 @@
 
  /* Sección principal (todo el contenido antes del footer) */
  main {
-    /* background-image: url("images/mate.png"); */
+     /* background-image: url("images/mate.png"); */
      flex: 1;
      margin: auto;
      display: flex;
@@ -80,9 +80,9 @@
  }
 
  div.container.parallax {
-    background-color: #252525;
+     background-color: #252525;
  }
- 
+
  img {
      width: 100%;
      height: auto;
@@ -218,8 +218,8 @@
      padding-top: 20px;
      border-radius: 10px;
      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-     -webkit-mask-image: -webkit-linear-gradient(rgb(25, 25, 25), transparent);
-     mask-image: linear-gradient(rgb(25, 25, 25), 80%, transparent);
+     /* -webkit-mask-image: -webkit-linear-gradient(rgb(25, 25, 25), transparent);
+     mask-image: linear-gradient(rgb(25, 25, 25), 80%, transparent); */
  }
 
  .book-cards {
@@ -235,8 +235,8 @@
      padding: 10px;
      scroll-snap-type: x mandatory;
      /* Mejora la experiencia de desplazamiento */
-     -webkit-mask-image: -webkit-linear-gradient(rgb(25, 25, 25), transparent);
-     mask-image: linear-gradient(rgb(25, 25, 25), 80%, transparent);
+     /* -webkit-mask-image: -webkit-linear-gradient(rgb(25, 25, 25), transparent);
+     mask-image: linear-gradient(rgb(25, 25, 25), 80%, transparent); */
  }
 
  .book-cards::-webkit-scrollbar {
@@ -389,26 +389,29 @@
  }
 
  .about-me-image img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #00aaff;
-    /* Efecto inicial de sombra */
-    box-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
-    /* Animación de glow */
-    animation: glowEffect 2s ease-in-out infinite;
-}
+     width: 150px;
+     height: 150px;
+     border-radius: 50%;
+     object-fit: cover;
+     border: 3px solid #00aaff;
+     /* Efecto inicial de sombra */
+     box-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
+     /* Animación de glow */
+     animation: glowEffect 2s ease-in-out infinite;
+ }
 
-/* Animación para el glow */
-@keyframes glowEffect {
-    0%, 100% {
-        box-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
-    }
-    50% {
-        box-shadow: 0 0 15px 5px rgba(0, 170, 255, 0.8);
-    }
-}
+ /* Animación para el glow */
+ @keyframes glowEffect {
+
+     0%,
+     100% {
+         box-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
+     }
+
+     50% {
+         box-shadow: 0 0 15px 5px rgba(0, 170, 255, 0.8);
+     }
+ }
 
 
 

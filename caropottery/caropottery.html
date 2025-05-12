@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pottery Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Carma Pottery</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Handmade Pottery</h1>
+        <p>Discover the beauty of artisanal ceramics, crafted with love and care.</p>
+    </div>
+
+    <div class="product-grid">
+        <div class="product">
+            <img src="images/POT1.jfif" alt="Placeholder Image">
+            <h3>Product Name 1</h3>
+            <p>Short description of the product.</p>
+            <div class="price">$20.00</div>
+            <button onclick="addToCart('Product Name 1', '$20.00')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="images/POT2.jfif" alt="Placeholder Image">
+            <h3>Product Name 2</h3>
+            <p>Short description of the product.</p>
+            <div class="price">$25.00</div>
+            <button onclick="addToCart('Product Name 2', '$25.00')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="images/POT3.jfif" alt="Placeholder Image">
+            <h3>Product Name 3</h3>
+            <p>Short description of the product.</p>
+            <div class="price">$20.00</div>
+            <button onclick="addToCart('Product Name 3', '$20.00')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="images/POT4.jfif" alt="Placeholder Image">
+            <h3>Product Name 4</h3>
+            <p>Short description of the product.</p>
+            <div class="price">$25.00</div>
+            <button onclick="addToCart('Product Name 4', '$25.00')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="images/POT5.jfif" alt="Placeholder Image">
+            <h3>Product Name 5</h3>
+            <p>Short description of the product.</p>
+            <div class="price">$20.00</div>
+            <button onclick="addToCart('Product Name 5', '$20.00')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="images/POT6.jfif" alt="Placeholder Image">
+            <h3>Product Name 6</h3>
+            <p>Short description of the product.</p>
+            <div class="price">$25.00</div>
+            <button onclick="addToCart('Product Name 6', '$25.00')">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="cart" onclick="toggleCart()">
+        <img src="https://cdn-icons-png.flaticon.com/512/126/126510.png" alt="Cart Icon">
+    </div>
+
+    <div class="cart-panel" id="cartPanel">
+        <div class="cart-header">Your Cart</div>
+        <div class="cart-content" id="cartContent">
+            <ul id="cart-items"></ul>
+        </div>
+        <div class="cart-footer">
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <button class="close-cart" onclick="toggleCart()">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Pottery Store. All rights reserved.
+    </footer>
+
+    <script>
+        let cart = []; // Declarar el arreglo cart aquí
+
+        function toggleCart() {
+            cartPanel.classList.toggle('open');
+        }
+
+        function addToCart(productName, productPrice) {
+            // Convertir el precio a número y agregar al carrito
+            const price = parseFloat(productPrice.replace('$', ''));
+            cart.push({ name: productName, price });
+
+            // Actualizar el carrito completo
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+
+            // Limpiar la lista de productos
+            cartItems.innerHTML = '';
+            let total = 0;
+
+            // Recorrer el arreglo cart y actualizar la lista
+            cart.forEach((item, index) => {
+                total += item.price;
+
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.style.marginLeft = '10px';
+                removeButton.onclick = () => {
+                    cart.splice(index, 1); // Eliminar del arreglo
+                    updateCart(); // Actualizar el carrito visual
+                };
+
+                li.appendChild(removeButton);
+                cartItems.appendChild(li);
+            });
+
+            // Actualizar el total
+            cartTotal.textContent = total.toFixed(2);
+        }
+
+    </script>
+
+</body>
+
+</html>
