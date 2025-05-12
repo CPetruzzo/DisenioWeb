@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beleza Concept</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <div class="logo">
+        <img src="logo.jpg" alt="logo"></div>
+      <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1>Redefiní tu Belleza</h1>
+      <p>Calidad. Personalización. Belleza con Estándar.</p>
+      <a href="#contacto" class="btn-primary">Reservá tu cita</a>
+    </div>
+  </header>
+
+  <section id="servicios" class="section">
+    <h2>Nuestros Servicios</h2>
+    <div class="cards">
+      <div class="card" data-aos="fade-up" data-aos-duration="1500">
+        <h3>Estética Facial</h3>
+        <p>Tratamientos diseñados para tu tipo de piel y necesidades únicas.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-duration="1500">
+        <h3>Asesoría de Imagen</h3>
+        <p>Te ayudamos a encontrar tu mejor versión.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-duration="1500">
+        <h3>Maquillaje Profesional</h3>
+        <p>Para eventos, bodas o el día a día. Todo a tu medida.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="productos" class="section alt">
+    <h2>Productos Exclusivos</h2>
+    <div class="cards">
+      <div class="card" data-aos="fade-up" data-aos-duration="1500">
+        <h3>Línea Natural</h3>
+        <p>Cosmética consciente con resultados reales.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-duration="1500">
+        <h3>SkinCare Pro</h3>
+        <p>Rutinas adaptadas a tu tipo de piel con ingredientes premium.</p>
+      </div>
+      <div class="card" data-aos="fade-up" data-aos-duration="1500">
+        <h3>Edición Boutique</h3>
+        <p>Productos limitados con diseño y esencia únicos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="section">
+    <h2>Contactanos</h2>
+    <form id="contact-form">
+      <input type="text" name="nombre" placeholder="Tu nombre" required />
+      <input type="email" name="email" placeholder="Tu email" required />
+      <textarea name="mensaje" placeholder="Escribinos tu consulta..." required></textarea>
+      <button type="submit" class="btn-primary">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Beleza Concept · Belleza hecha a tu medida</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+      AOS.init();
+  </script>
+</body>
+</html>

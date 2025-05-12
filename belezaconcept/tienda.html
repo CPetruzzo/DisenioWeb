@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tienda – Beleza Concept</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero small-hero">
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="logo.jpg" alt="logo"></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="tienda.html" class="active">Tienda</a></li>
+      </ul>
+      <div class="cart-container">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-count">0</span>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <h1>Nuestra Tienda</h1>
+      <p>Descubrí productos de belleza seleccionados para ti</p>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="product-grid" id="product-grid">
+      <!-- Los productos se insertan aquí vía JS -->
+    </div>
+  </main>
+
+  <!-- Panel del carrito -->
+  <div id="cart-panel" class="cart-panel">
+    <button id="close-cart" class="close-btn">&times;</button>
+    <h2>Tu Carrito</h2>
+    <ul id="cart-items"></ul>
+    <div class="cart-total">
+      Total: $<span id="cart-total">0.00</span>
+    </div>
+    <button id="checkout-btn" class="btn-primary">Finalizar compra</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Beleza Concept · Belleza hecha a tu medida</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
